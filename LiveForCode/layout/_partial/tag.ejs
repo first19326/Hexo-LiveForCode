@@ -1,0 +1,8 @@
+<div class="tags">
+    <div class="tags-title">
+        <%= _p('tag', site.tags.count()) %>
+    </div>
+    <div class="tags-content">
+        <%- tagcloud({min_font: 12, max_font: 25, amount: 300, color: true, start_color: '#CCC', end_color: '#111'}) %>
+    </div>
+</div>

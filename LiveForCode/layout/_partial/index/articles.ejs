@@ -1,0 +1,44 @@
+<div class="articles">
+    <% page.posts.each(function(post) { %>
+        <div class="article">
+            <div class="article-title">
+                <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                <% if (post.sticky) { %>
+                    <span class="article-sticky"><%= __('post.sticky') %></span>
+                <% } %>
+            </div>
+            <div class="article-abstract">
+                <% if (post.description && post.description != '') { %>
+                    <%= __('post.description') %><%= post.description %>
+                    <a href="<%- url_for(post.path) %>"><%= __('post.more') %></a>
+                <% } %>
+            </div>
+            <div class="clear"></div>
+            <div class="article-info">
+                <span>
+                    <i class="iconfont icon-time"></i> <%= __('post.date') %><%- date(post.date, 'YYYY-MM-DD') %>
+                </span>
+                <% if (theme.Valine.visitor) { %>
+                    <span id="/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+                        <i class="iconfont icon-browse"></i> <%= __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
+                    </span>
+                <% } %>
+                <span>
+                    <i class="iconfont icon-interactive"></i> <%= __('post.comment') %><span class="valine-comment-count" data-xid="/<%- post.path %>"></span>
+                </span>
+            </div>
+            <div class="clear"></div>     
+        </div>
+    <% }) %>
+    <% if (page.total > 1) { %>
+        <div class="pagination-bottom">
+            <div class="pagination">
+                <% if (page.current == 1) { %>
+                    <a href="<%- url_for(page.next_link) %>"><%= __('pagination.next') %></a>
+                <% } else { %>
+                    <%- paginator({prev_text: __('pagination.prev'), next_text: __('pagination.next')}) %>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
+</div>

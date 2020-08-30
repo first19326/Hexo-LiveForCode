@@ -1,0 +1,12 @@
+<div id="container">
+    <div id="content">
+        <div id="article">
+            <div class="article-body">
+                <%- partial('_partial/friend') %>
+                <%- page.content %>
+            </div>
+            <%- partial('_partial/comment', { post : page }) %>        
+        </div>
+    </div>
+    <%- partial('_partial/sidebar') %>
+</div>

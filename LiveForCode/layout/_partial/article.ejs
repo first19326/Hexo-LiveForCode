@@ -1,0 +1,53 @@
+<div id="article">
+    <%- partial('_partial/toc') %>
+    <div class="article-body">
+        <%- post.content %>
+        <p class="suffix-end">__END__</p>
+        <div class="suffix-box">
+            <div class="suffix-box-left">
+                <img src="<%- post.avatar ? post.avatar : theme.BlogAvatar %>" alt="<%- post.author ? post.author : theme.BlogUser %>">
+            </div>
+            <div class="suffix-box-right">
+                <span class="suffix-box-title"><%- __('suffix.author') %></span>：<%- post.author ? post.author : theme.BlogUser %>
+                <br>
+                <span class="suffix-box-title"><%- __('suffix.from') %></span>：<a href="<%- post.url ? post.url : url_for(post.path) %>" target="_blank"><%- post.from ? post.from : post.title %></a>
+                <br>
+                <span class="suffix-box-title"><%- __('suffix.about') %></span>：<%- post.about ? post.about : theme.Suffix.about %>
+                <br>
+                <span class="suffix-box-title"><%- __('suffix.theme') %></span>：<a href="<%- theme.Theme.url %>" target="_blank"><%- theme.Theme.name %></a>
+                <br>
+                <span class="suffix-box-title"><%- __('suffix.license.title') %></span>：<%- __('suffix.license.content') %>
+                <br>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="article-footer">
+        <% if (post.categories.count() > 0) { %>
+            <div class="category">
+                <%= __('post.categories') %>
+                <% post.categories.each((category) => { %>
+                    <a href="<%- url_for(category.path) %>"><%- category.name %></a>
+                <% }) %>
+            </div>
+        <% } %>
+        <% if (post.tags.count() > 0) { %>
+            <div class="tag">
+                <%= __('post.tags') %>
+                <% post.tags.each((tag) => { %>
+                    <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
+                <% }) %>
+            </div>
+        <% } %>
+        <div class="article-prev-next">
+            <% if (post.prev) { %>
+                <a href="<%- url_for(post.prev.path) %>" class="prev-prefix">« </a> <%= __('post.prev') %>    <a href="<%- url_for(post.prev.path) %>" title="<%= __('post.post') %> <%- date(post.prev.date, 'YYYY-MM-DD hh:mm') %>"><%- post.prev.title %></a>
+                <br>
+            <% } %>
+            <% if (post.next) { %>
+                <a href="<%- url_for(post.next.path) %>" class="next-prefix">» </a> <%= __('post.next') %>    <a href="<%- url_for(post.next.path) %>" title="<%= __('post.post') %> <%- date(post.next.date, 'YYYY-MM-DD hh:mm') %>"><%- post.next.title %></a>
+            <% } %>
+        </div>
+    </div>
+    <%- partial('_partial/comment') %>
+</div>

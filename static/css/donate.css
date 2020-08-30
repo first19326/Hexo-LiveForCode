@@ -1,0 +1,215 @@
+.donate {
+	position: relative;
+	height: 210px
+}
+
+.list, .list li {
+	margin: 0px !important;
+	padding: 0px !important;
+	list-style: none;
+	list-style-type: none
+}
+
+.blur {
+	-webkit-filter: blur(3px);
+	filter: blur(3px)
+}
+
+#Github {
+	position: absolute;
+	top: calc(50% - 30px);
+	left: calc(50% + 135px);
+	width: 24px;
+	height: 24px;
+	background: no-repeat center center url(../image/donate/github.svg);
+	background-size: contain;
+	opacity: 0.3;
+	transform: rotatez(15deg);
+	transition: all .3s
+}
+
+#DonateText {
+	position: absolute;
+	top: calc(50% - 60px);
+	left: calc(50% - 120px);
+	z-index: 1;
+	width: 70px;
+	height: 70px;
+	background: #FFD886 url(../image/donate/like.svg) no-repeat center 10px;
+	background-size: 20px;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 70px;
+	text-align: center;
+	border-radius: 35px;
+	transform: rotatez(-15deg);
+	transition: all .3s
+}
+
+#DonateBox {
+	position: absolute;
+	float: left;
+	top: calc(50% - 15px);
+	left: calc(50% - 150px);
+	z-index: 10;
+	width: 299px;
+	height: 28px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 6px;
+	transition: all .3s
+}
+
+#DonateBox li {
+	float: left;
+	width: 74px;
+	height: 28px;
+	background: no-repeat center center;
+	background-color: rgba(204, 217, 220, 0.1);
+	background-size: 45px;
+	text-align: center;
+	line-height: 600px;
+	opacity: 0.5;
+	cursor: pointer;
+	overflow: hidden;
+	border-left: 1px solid #DDD;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	transition: all .3s
+}
+
+#DonateBox li:hover {
+	background-color: rgba(204, 217, 220, 0.3);
+	opacity: 1;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0)
+}
+
+#DonateBox > li:first-child {
+	border-width: 0
+}
+
+#DonateBox a {
+	display: block
+}
+
+#DonateBox #PayPal {
+	background-image: url(../image/donate/paypal.svg)
+}
+
+#DonateBox #Bitcoin {
+	background-image: url(../image/donate/bitcoin.svg)
+}
+
+#DonateBox #AliPay {
+	background-image: url(../image/donate/alipay.svg)
+}
+
+#DonateBox #WeChat {
+	background-image: url(../image/donate/wechat.svg)
+}
+
+#QRBox {
+	display: none;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	perspective: 400px
+}
+
+#MainBox {
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+	width: 200px;
+	height: 200px;
+	background: #FFF no-repeat center center;
+	background-size: 190px;
+	text-align: center;
+	opacity: 0;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+	transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+    transform-origin: center center
+}
+
+#MainBox.showQR {
+	opacity: 1;
+    animation-name: showQR;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation: showQR 3s ease-in-out 0s 1 normal forwards
+}
+
+@keyframes showQR {
+	from {
+		transform: rotateX(90deg)
+	}
+	8% {
+		opacity: 1;
+		transform: rotateX(-60deg)
+	}
+	18% {
+		opacity: 1;
+		transform: rotateX(40deg)
+	}
+	34% {
+		opacity: 1;
+		transform: rotateX(-28deg)
+	}
+	44% {
+		opacity: 1;
+		transform: rotateX(18deg)
+	}
+	58% {
+		opacity: 1;
+		transform: rotateX(-12deg)
+	}
+	72% {
+		opacity: 1;
+		transform: rotateX(9deg)
+	}
+	88% {
+		opacity: 1;
+		transform: rotateX(-5deg)
+	}
+	96% {
+		opacity: 1;
+		transform: rotateX(2deg)
+	}
+	to {
+		opacity: 1
+	}
+}
+
+#MainBox.hideQR {
+	opacity: 1;
+    animation-name: hideQR;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation: hideQR 0.5s ease-in-out 0s 1 normal forwards
+}
+
+@keyframes hideQR {
+	from {
+	}
+	20%, 50% {
+		opacity: 1;
+		transform: scale(1.08, 1.08)
+	}
+	to {
+		opacity: 0;
+		transform: rotateZ(40deg) scale(0.6, 0.6)
+	}
+}

@@ -1,0 +1,25 @@
+<div id="header">
+    <div class="header">
+        <div class="vertical">
+            <div class="inner">
+                <h1 class="header-subtitle"><%- post.title %></h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> <%= __('post.date') %><%- date(post.date, 'YYYY-MM-DD') %>
+                        </span>
+                        <% if (theme.Valine.visitor) { %>
+                            <span id="/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+                                <i class="iconfont icon-browse"></i> <%= __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        <% } %>
+                        <span>
+                            <i class="iconfont icon-interactive"></i> <%= __('post.comment') %><span class="valine-comment-count" data-xid="/<%- post.path %>"></span>
+                        </span>  
+                    </p>                 
+                </div>
+            </div>
+        </div>
+        <canvas id="articleHeaderCanvas"></canvas>
+    </div>
+</div>

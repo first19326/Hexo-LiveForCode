@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title><%= page.title %></title>
+
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.LongCang %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Monda %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.NotoSansSC %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Playball %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.PTMono %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.RobotoSlab %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Rosario %>">
+    <link type="text/css" rel="stylesheet" href="<%= theme.Font.UbuntuMono %>">
+
+    <link type="text/css" rel="stylesheet" href="<%= theme.Style.post %>">
+
+    <script type="text/javascript" src="<%= theme.Script.jQuery %>"></script>
+
+</head>
+<body>
+    <%- partial('_partial/cover') %>
+    <%- partial('_partial/post/header', {post: page}) %>
+    <%- partial('_partial/post/container', {post: page}) %>
+    <%- partial('_partial/footer') %>
+    <%- partial('_partial/search') %>
+    <%- partial('_partial/tools') %>
+    <%- partial('_partial/config') %>
+    <script type="text/javascript" src="<%= theme.Script.index %>"></script>
+</body>
+</html>

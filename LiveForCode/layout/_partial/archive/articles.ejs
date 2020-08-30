@@ -1,0 +1,60 @@
+<% if (!page.year) { %>
+    <div class="articles">
+        <% var year; %>
+        <% page.posts.each(function(post, i) { %>
+            <% if (year != post.date.year()) { %>
+                <% if (year) { %>
+                        </div>
+                    </div>
+                <% } %>
+                    <% year = post.date.year(); %>
+                    <div class="archives-wrap">      
+                        <div class="archive-year-wrap">
+                            <a href="<%- url_for('/archive/' + post.date.year()) %>" class="archive-year">
+                                <%= post.date.year() %>
+                            </a>
+                        </div>
+                        <div class="archives">
+            <% } %>
+                            <div class="archive">
+                                <div class="article">
+                                    <a href="javascript:;">
+                                        <span><%= date(post.date, 'MM/DD') %></span>
+                                    </a>
+                                    <h2>
+                                        <a class="article-title" href="<%- url_for(post.path) %>"><%= post.title %></a> 
+                                    </h2>
+                                </div>
+                            </div>     
+        <% }); %>
+        <% if (page.posts.count() > 0) { %>
+            </div>
+        </div>
+        <% } %>
+    </div>   
+<% } else { %>  
+    <div class="articles-year">
+        <h2><%= page.year %></h2>
+        <ul class="list">
+            <% page.posts.each(function(post, i) { %>
+                <li>
+                    <span class="date"><%= date(post.date, 'YYYY/MM/DD') %></span>
+                    <a href="<%- url_for(post.path) %>" title="<%= post.title %>">    
+                        <span><%= post.title %></span>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+<% } %>
+<% if (page.total > 1) { %>
+    <div class="pagination-bottom">
+        <div class="pagination">
+            <% if (page.current == 1) { %>
+                <a href="<%- url_for(page.next_link) %>"><%= __('pagination.next') %></a>
+            <% } else { %>
+                <%- paginator({prev_text: __('pagination.prev'), next_text: __('pagination.next')}) %>
+            <% } %>
+        </div>
+    </div>
+<% } %>

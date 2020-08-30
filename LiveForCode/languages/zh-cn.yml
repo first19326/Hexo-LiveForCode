@@ -1,0 +1,47 @@
+category:
+  zero: 暂无分类
+  one: 目前共计 1 个分类
+  other: "目前共计 %d 个分类"
+
+comment:
+  title: 评论列表
+
+donate:
+  text: 赞赏
+
+menu:
+  home: 首页
+  tag: 标签
+  category: 分类
+  archive: 归档
+
+pagination:
+  prev: 上一页
+  next: 下一页
+
+post:
+  sticky: 置顶
+  description: 摘要：
+  more: 阅读全文
+  date: 发表时间：
+  visitor: 阅读：
+  comment: 评论：
+  post: 发布于
+  tags: 标签：
+  categories: 分类：
+  prev: 上一篇：
+  next: 下一篇：
+
+suffix:
+  author: 作&emsp;&emsp;者
+  from: 出&emsp;&emsp;处
+  about: 签&emsp;&emsp;名
+  theme: 关于主题
+  license: 
+    title: 版权声明
+    content: 知识共享署名-非商业性使用-相同方式共享 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" alt="协议普通文本" title="协议普通文本" target="_blank">协议普通文本</a> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" alt="协议法律文本" title="协议法律文本" target="_blank">协议法律文本</a>
+
+tag:
+  zero: 暂无标签
+  one: 目前共计 1 个标签
+  other: "目前共计 %d 个标签"

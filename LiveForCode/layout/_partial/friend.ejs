@@ -1,0 +1,51 @@
+<% if (page.style == 'rotate' || !page.style) { %>
+<style type="text/css">
+    .friends .friend-content .friend-card:hover .friend-left .avatar {
+        box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1), 0 4px 8px 0px rgba(0, 0, 0, 0.1), 0 8px 16px 0px rgba(0, 0, 0, 0.1);
+        transform: scale(1.2) rotate(12deg)
+    }
+</style>
+<% } %>
+<% if (page.style == 'translate') { %>
+<style type="text/css">
+    .friends .friend-content .friend-card:hover {
+        background: rgba(255, 87, 34, 0.15) !important
+    }
+    
+    .friends .friend-content .friend-card:hover p {
+        color: #FF5722 !important
+    }
+    
+    .friends .friend-content .friend-card:hover .friend-left .avatar {
+        box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.1);
+        transform: scale(1.1) translateY(-8px)    
+    } 
+</style>
+<% } %>
+<% page.friends.forEach(function(friends) { %>
+    <div class="friends">
+        <% if (friends.head) { %>
+            <div class="friend-head">
+                <span><%= friends.head %></span>
+            </div>
+        <% } %>
+        <% if (friends.description) { %>
+            <p><%= friends.description %></p>
+        <% } %>
+        <div class="friend-content">
+            <% friends.friend.forEach(function(friend) { %>
+                <a class="friend-card" target="_blank" href="<%- friend.url %>">
+                    <div class="friend-left">
+                        <img class="avatar" src="<%- theme.LazyLoad.default %>" data-original="<%- friend.avatar %>"> 
+                    </div>
+                    <div class="friend-right">
+                        <p class="friend-name"><%= friend.name %></p>
+                        <div class="friend-about">
+                            <p><%= friend.about ? friend.about : '这家伙很懒 ~' %></p>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+<% }) %>

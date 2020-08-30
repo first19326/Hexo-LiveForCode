@@ -1,0 +1,345 @@
+# ---- GitHub文件源配置 ----
+# GitHub用户名(不是昵称), 注意大小写
+GitHubUserName: first19326
+# GitHub主题仓库名称
+GitHubRepositories: Hexo-LiveForCode
+
+
+# ---- 基础信息配置 ----
+# 博主名称, 文章后缀和主页图片上都会使用此名称
+BlogUser: Live For Code
+# 用户头像URL
+BlogAvatar: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg
+# 创建时间
+BlogStartDate: "2020-01-01"
+
+
+# ---- 网站配置 ----
+# 当前页失去焦点, 页面Title显示文字
+WebsiteTitleBlur: (◍´꒳`◍) Hi, Live For Code
+# 当前页失去焦点, 页面Title变化, 延时时间, 单位毫秒
+WebsiteTitleBlurTimeOut: 500
+# 当前页获取焦点, 页面Title显示文字, 显示后延时恢复原Title
+WebsiteTitleFocus: (*´∇｀*) 欢迎回来!
+# 当前页获取焦点, 页面title变化, 延时时间, 单位毫秒
+WebsiteTitleFocusTimeOut: 1000
+# 网站图标
+WebsiteFavicon: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png
+
+
+# ---- 进度条配置 ----
+ProgressBar:
+  id: topProgressBar
+  color: "#77B6FF"
+  height: 2px
+  duration: 0.2
+
+
+# ---- Loading配置 ----
+Loading: 
+  rebound: 
+    tension: 16
+    friction: 5
+  spinner: 
+    id: spinner
+    radius: 90
+    sides: 3
+    depth: 4
+    colors: 
+      background: "#F0F0F0"
+      stroke: "#272633"
+      base: null
+      child: "#272633"
+    # When false the spring will reverse normally.
+    alwaysForward: true
+    # A number from 0.1 to 0.9 || null for full rotation. 
+    restAt: 0.5
+    renderBase: false
+
+
+# ---- 页面动效配置 ----
+# true || false, 是否渲染主页头图动效
+HomeHeaderAnimationRendered: true
+# 主页头图动效设置
+HomeHeaderAnimation:    
+  radius: 15
+  density: 0.2
+  # 颜色设置, "random" 为随机颜色
+  color: rgba(255, 255, 255, .2)
+  clearOffset: 0.3
+# true || false, 是否渲染文章详情页头图动效
+ArticleHeaderAnimationRendered: false
+# 文章详情页头图动效设置 
+ArticleHeaderAnimation: 
+  triW: 14
+  triH: 20
+  neighbours: 
+    - side
+    - top
+    - bottom
+  speedTrailAppear: .1
+  speedTrailDisappear: .1
+  speedTriOpen: 1
+  trailMaxLength: 30
+  trailIntervalCreation: 100
+  delayBeforeDisappear: 2
+  colors: 
+    - "#96EDA6"
+    - "#5BC6A9"
+    - "#38668C"
+    - "#374D84"
+    - "#BED5CB"
+    - "#62ADC6"
+    - "#8EE5DE"
+    - "#304E7B"
+# true || false, 是否渲染背景动效
+BackAnimationRendered: true
+# true || false, IE浏览器是否渲染背景动效（默认为false）
+IEBrowserBackAnimationRendered: false
+# 背景动效设置
+BackAnimation:
+  colorSaturation: 60%
+  colorBrightness: 50%
+  colorAlpha: 0.5
+  colorCycleSpeed: 5
+  verticalPosition: random
+  horizontalSpeed: 200
+  ribbonCount: 3
+  strokeSize: 0
+  parallaxAmount: -0.2
+  animateSections: true
+
+
+# ---- 主页配置 ----
+# 主页图片URL, 推荐尺寸 >= 1920 * 1080, 支持多张, 每次刷新随机设置一张
+HomeHeaderImage: 
+  - https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpg
+  - https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpeg
+# 主页头图上的标语, 设置此选项会固定显示文字, 默认为空, 自动获取一句
+HomeBannerText: ""
+
+
+# ---- 文章详情页配置 ----
+# 文章详情页图片URL, 支持多张, 每次刷新随机设置一张
+ArticleHeaderImage: 
+  - https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/article.jpg
+
+
+# ---- 其他页面配置 ----
+# 其他页面头图上的标语, 设置此选项会固定显示文字, 默认为空, 自动获取一句
+OtherBannerText: ""
+
+
+# ---- 菜单配置 ----
+# 当链接地址为''时, 则链接自动设置为失效
+# 菜单列表
+MenuList:
+  -
+    name: 首页
+    href: /
+  - 
+    name: 标签
+    href: /tag
+  - 
+    name: 分类
+    href: /category
+  -
+    name: 归档
+    href: /archive
+  -
+    name: 赞赏
+    href: /donate
+  -
+    name: 关于
+    href: /about
+  -
+    name: 订阅
+    href: /atom.xml
+    target: _blank
+  -
+    name: 搜索
+    href: ""
+    class: search
+  -
+    name: 留言板
+    href: /comment
+  -
+    name: 友情链接
+    href: /friend
+# 菜单链接
+MenuLink:
+  -
+    icon: icon-weibo
+    url: ""
+  -
+    icon: icon-wechat
+    url: ""
+  -
+    icon: icon-qq
+    url: ""
+  -
+    icon: icon-github
+    url: https://github.com/first19326
+
+
+# ---- 页脚配置 ----
+# 页脚样式
+FooterStyle: 2
+# 页脚标语
+BottomText: 
+  # 图标  
+  icon: like-fill
+  # 图标左侧文字
+  left: 人生若只如初见
+  # 图标右侧文字
+  right: 何事秋风悲画扇  
+# 是否显示主题信息
+ThemeInfo: true 
+
+
+# ---- 控制台输出 ----
+ConsoleList:
+  -
+    - Based on cnblogs theme SimpleMemory.
+    - ""
+  -
+    - "SimpleMemory Author:"
+    - BNDong
+  -
+    - "Theme:"
+    - LiveForCode
+
+
+# ---- 字体图标扩展 ----
+FontIconExtend: ""
+
+
+# ---- 赞赏配置 ----
+Donate: 
+  paypal : ""
+  bitcoin: ""
+  alipay : https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png
+  wechat : https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png
+
+
+# ---- Algolia配置 ----
+Search:
+  applicationID: U8CZAW9G9Z
+  apiKey: b479add179b24524aa5f8773e9694c62
+  indexName: Notes
+  hits:
+    page: 10
+  labels:
+    placeholder: 搜索
+    empty: 未发现与 「${query}」 相关的内容
+    stats: ${hits} 条相关条目，使用了 ${time} 毫秒
+
+
+# ---- Valine配置 ----
+Valine: 
+  switch: true
+  el: .comments-content
+  appId: srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz
+  appKey: 8uVSP1q6UlALVC5igYfIfv2h
+  placeholder: 你是我一生只会遇见一次的惊喜...
+  avatar: mm
+  meta: nick,mail,link
+  requiredFields: nick,mail
+  pageSize: 5
+  lang: zh-cn
+  visitor: true
+  enableQQ: true
+
+
+# ---- Tocbot配置 ----
+Tocbot: 
+  switch: true
+  tocSelector: .toc
+  contentSelector: .article-body
+  headingSelector: h1, h2, h3, h4, h5
+  headingsOffset: 0
+  scrollSmooth: true
+  scrollSmoothOffset: -5
+  positionFixedSelector: .toc
+  positionFixedClass: toc-fixed
+
+
+# ---- Require配置 ----
+Require:
+  baseUrl: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/
+  waitSeconds: 100
+
+
+# ---- Meting配置 ----
+Meting:
+  id: "3778678" 
+  lrcshow: false 
+  server: netease 
+  type: playlist 
+  fixed: true 
+  autoplay: false 
+  loop: all 
+  order: random 
+  preload: auto 
+  volume: 0.67 
+  mutex: true
+
+# ---- Lazy Load ----
+LazyLoad:
+  default: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/lazyload.svg
+
+
+# ---- Style配置 ----
+Style:
+  aplayer: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/APlayer.css
+  archive: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/archive.css
+  donate: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css
+  fancybox: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css
+  footer: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css
+  highlight: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/dark.css
+  iconfont: https://at.alicdn.com/t/font_1546312_l3yohatebw.css
+  index: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css
+  mCustomScrollbar: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.mCustomScrollbar.css
+  menuBubble: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css
+  optiscroll: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/optiscroll.css
+  page: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css
+  post: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css
+  search: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css
+  tocbot: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css
+
+
+# ---- Script配置 ----
+Script:
+  aplayer: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js
+  config: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.config.js
+  index: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js
+  instantSearch: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js
+  jQuery: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js
+  loading: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js
+  mCustomScrollbar: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mCustomScrollbar.js
+  meting: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js
+  mousewheel: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mousewheel.min.js
+  require: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js
+
+
+# ---- Font配置 ----
+Font:
+  LongCang: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css
+  Monda: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css
+  NotoSansSC: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css
+  Playball: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css
+  PTMono: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css
+  RobotoSlab: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css
+  Rosario: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css
+  UbuntuMono: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css
+
+
+# ---- 文章尾缀配置 ----
+Suffix: 
+  about: 简单地活着, 肆意又精彩.
+
+
+# ---- 主题信息配置 ----
+Theme: 
+  url: https://github.com/first19326/Hexo-LiveForCode
+  name: Hexo - Live For Code
