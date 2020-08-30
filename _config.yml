@@ -116,6 +116,6 @@ feed:
 
 # Algolia Search
 algolia:
-  applicationID: U8CZAW9G9Z
-  apiKey: b479add179b24524aa5f8773e9694c62
+  applicationID: 010C3EANT8
+  apiKey: c7abab9f11b79102b9aff7fe6d41447d
   indexName: Notes

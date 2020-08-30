@@ -194,9 +194,8 @@ mCustomScroll 目前暂不支持 `jQuery3.5` 以及以上版本，否则会导�
 由于背景动画的 `z-index` 为 `-1`，导致在IE浏览器中，菜单等多处 `position: fixed` 样式的部件出现闪烁抖动的问题，所以默认在IE浏览器中关闭了背景动画。如果是高版本IE，例如IE11则可在设置 -> Internet选项 -> 高级，将浏览中的'使用平滑滚动'选项勾掉，也可以解决这个问题。
 
 ### 关于 Github Page 的使用
-Github Page 必须使用公有库，同时在 Hexo 需要集成插件 `Hexo-Deployer`，在 Hexo 的配置文件中，添加相关设置。
-Github 的仓库名称为 Github 名称 + .github.io
-同时 Github Page 支持设置自己的域名，建议在 Hexo 主题的 source 文件夹下新增一个 CNAME 的文件，将自己的域名配置进去，否则每次提交的时候会覆盖掉相关域名设置。
+详情请参见 [将 Hexo 部署到 GitHub Pages](https://hexo.io/zh-cn/docs/github-pages)。
+Github Page 支持设置自己的域名，建议在 Hexo 主题的 source 文件夹下新增一个 CNAME 的文件，将自己的域名配置进去，否则每次提交的时候会覆盖掉相关域名设置。
 在域名的解析设置中，可以使用 CNAME 解析方式，也可以使用 A记录 的方式。如果是 A记录 的方式，则需要检索当前 Github Page 对应的服务器 IP 地址。
 
 ### 关于 CDN
