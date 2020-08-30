@@ -105,7 +105,7 @@ algolia:
 4.当配置完成，在站点根目录下执行一下命令更新 Index。请注意观察命令的输出。
 
 ```shell
-export HEXO_ALGOLIA_INDEXING_KEY = Admin API Key
+export HEXO_ALGOLIA_INDEXING_KEY=Admin API Key
 hexo algolia
 ```
 
