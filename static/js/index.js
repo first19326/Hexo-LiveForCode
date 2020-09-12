@@ -191,6 +191,9 @@
             alipay : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png",
             wechat : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png"
         },
+        Code: {
+            style: "normal"
+        },    
         Search: {
             applicationID: "U8CZAW9G9Z",
             apiKey: "b479add179b24524aa5f8773e9694c62",
@@ -254,16 +257,17 @@
             donate: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css",
             fancybox: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css",
             footer: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css",
-            highlight: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/dark.css",
             iconfont: "https://at.alicdn.com/t/font_1546312_l3yohatebw.css",
             index: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css",
-            mCustomScrollbar: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.mCustomScrollbar.css",
             menuBubble: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css",
             optiscroll: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/optiscroll.css",
             page: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css",
             post: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css",
             search: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css",
-            tocbot: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css"
+            tocbot: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css",
+            normal: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css",
+            night: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/night.css",
+            clipboard: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/clipboard.css"
         },
         Script: {
             aplayer: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js",
@@ -272,7 +276,6 @@
             instantSearch: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js",
             jQuery: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js",
             loading: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js",
-            mCustomScrollbar: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mCustomScrollbar.min.js",
             meting: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js",
             mousewheel: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mousewheel.min.js",
             require: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js"
@@ -311,16 +314,14 @@
         loading.initSpinner();
         loading.spinner.init(loading.spring, true);
 
-        $.getScript(window.config.Script.mCustomScrollbar, function () {
-            $.getScript(window.config.Script.require, function () {
-                $.getScript(window.config.Script.config, function () {
-                    var staticResource = [
-                        'Optiscroll', 'ToProgress', 'Rotate',
-                        'SnapSvg', 'Classie', 'Main4', 'Tools'];
-                    require(staticResource, function() {
-                        require(['Base'], function() {
-                            (new Base).init();
-                        });
+        $.getScript(window.config.Script.require, function () {
+            $.getScript(window.config.Script.config, function () {
+                var staticResource = [
+                    'Optiscroll', 'ToProgress', 'Rotate',
+                    'SnapSvg', 'Classie', 'Main4', 'Tools'];
+                require(staticResource, function() {
+                    require(['Base'], function() {
+                        (new Base).init();
                     });
                 });
             });

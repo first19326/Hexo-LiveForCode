@@ -401,7 +401,9 @@ blockquote {
 
 .article-body pre {
 	margin: 10px 20px;
-	border-radius: 5px
+	border-radius: 5px;
+	white-space: pre;
+	word-break: break-all
 }
 
 .article-body ul {

@@ -415,7 +415,9 @@ blockquote {
 
 .article-body pre {
 	margin: 10px 20px;
-	border-radius: 5px
+	border-radius: 5px;
+	white-space: pre;
+	word-break: break-all
 }
 
 .article-body ul {
@@ -516,6 +518,11 @@ blockquote {
 	font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace !important;
 	border: 0;
 	border-radius: 3px  
+}
+
+.article-body figure {
+	margin: 10px 20px !important;
+	border-radius: 5px
 }
 
 .suffix-end {
@@ -2553,6 +2560,10 @@ a.prev-prefix:hover, a.next-prefix:hover {
 
 	.article-body ol {
 		padding-left: 30px
+	}
+
+	.article-body figure {
+		margin: 10px 10px !important
 	}
 
 	.suffix-box-right {

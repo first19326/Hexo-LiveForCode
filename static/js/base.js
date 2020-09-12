@@ -635,8 +635,8 @@ function Base() {
             script.wrapRightMous('.attention', '.attention span');
             // 触发一次滚动处理，防止未有对象，初始化失败
             script.scrollMonitor(); 
-            script.clearIntervalTimer(timers.setWrapRightTimer);
         }
+        script.clearIntervalTimer(timers.setWrapRightTimer);
     };
 
 //=================== 逻辑处理：非主页处理
@@ -663,6 +663,7 @@ function Base() {
         script.setOtherHeaderImage();
 
         script.setLightBox();
+
         // 设置代码样式
         script.setCodeStyle();
         
@@ -748,8 +749,8 @@ function Base() {
                 let category = $(categories[i]);
                 $('.header-subinfo').append('<span class="category-color">' + (category.text()) + '</span>');
             });
-            script.clearIntervalTimer(timers.setArticleHeaderCategoryTimer);
         }
+        script.clearIntervalTimer(timers.setArticleHeaderCategoryTimer);
     };
 
     /**
@@ -762,8 +763,8 @@ function Base() {
                 let tag = $(tags[i]);
                 $('.header-subinfo').append('<span class="tag-color">' + (tag.text()) + '</span>');
             });
-            script.clearIntervalTimer(timers.setArticleHeaderTagTimer);
         }
+        script.clearIntervalTimer(timers.setArticleHeaderTagTimer);
     };
 
     /**
@@ -901,21 +902,24 @@ function Base() {
      * 设置代码
      */
     this.setCodeStyle = function () {
-        let pre       = $('pre'),
-            codePre   = $('.post pre'),
-            codeStyle = 'highlight',
-            codeTheme = 'ally-dark';
+        let codeBlock = $('.highlight'),
+            pre       = $('.highlight .code pre');
 
-        switch (codeStyle) {
-            case 'highlight': ;
-            default: highlight(); break;
-        }
-        setScrollbarStyle();
+        loadCodeStyle();
         setCopyBtn();
+
+        // 计算代码块的宽度
+        function loadCodeStyle() {
+            if (codeBlock.length > 0) {             
+                codeBlock.each(function (i, block) {
+                    let lineNumWidth = $(block).find(".gutter").width();
+                    $(block).find(".code").css("width", "calc(100% - " + lineNumWidth + "px)");
+                });
+            }
+        }
 
         // 设置代码复制
         function setCopyBtn() {
-
             require(['Clipboard'], function (Clipboard) {
                 pre.each(function (i) {
                     window.Clipboard = Clipboard;
@@ -923,31 +927,7 @@ function Base() {
                     object.wrap('<code-box id="' + id + '" style="position: relative; display: block;"></code-box>');
                     object.attr('code-id', id);
 
-                    let html = '<button code-id="' + id + '" type="button" class="clipboard" data-clipboard-action="copy" data-clipboard-target="pre[code-id=' + id + ']" aria-label="复制代码" style="' +
-                        '    position: absolute;' +
-                        '    top: 8px;' +
-                        '    right: 28px;' +
-                        '    display: flex;' +
-                        '    justify-content: center;' +
-                        '    align-items: center;' +
-                        '    width: 30px;' +
-                        '    height: 25px;' +
-                        '    cursor: pointer;' +
-                        '    font-size: 14px;' +
-                        '    padding: 0;' +
-                        '    border: none;' +
-                        '    border-radius: 5px;' +
-                        '    color: #CCC;' +
-                        '    opacity: 0;' +
-                        '    visibility: hidden;' +
-                        '    background-color: hsla(0, 0%, 90.2%, .2);' +
-                        '    -webkit-user-select: none;' +
-                        '    -moz-user-select: none;' +
-                        '    -ms-user-select: none;' +
-                        '    user-select: none;' +
-                        '    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;' +
-                        '    z-index: 1;' +
-                        '"><i class="iconfont icon-copy"></i></button>';
+                    let html = '<button code-id="' + id + '" type="button" class="clipboard" data-clipboard-action="copy" data-clipboard-target="pre[code-id=\'' + id + '\']" aria-label="复制代码"><i class="iconfont icon-copy"></i></button>';
 
                     $('#'+id).prepend(html);
                 });
@@ -974,48 +954,6 @@ function Base() {
 
                 new Clipboard('.clipboard');
             });
-        }
-
-        // 使用 highlight.js 代码样式
-        function highlight() {
-            tools.dynamicLoadingCss(window.config.Style.highlight);
-            setCodeBefore();
-            require(['HighLight'], function() {
-                let arr = ['arduino-light', 'ascetic', 'color-brewer', 'github-gist', 'googlecode', 'grayscale', 'idea', 'isbl-editor-light', 'lightfair', 'qtcreator_light', 'tomorrow', 'vs', 'xcode'];
-                $('pre').each(function(i, block) {
-                    if ($.inArray(codeTheme, arr) !== -1){
-                        pre.css('background-color', '#F6F8FA');
-                    } 
-                    hljs.highlightBlock(block);
-                });
-            });
-        }
-
-        function setCodeBefore() {
-            $.each(codePre, function (i) {
-                let object = $(codePre[i]);
-                object.find('br').after('&#10;');
-                let codetext = object.text();
-                object.html('').text(codetext).css('overflow-x', 'auto');
-            });
-        }
-
-        // 设置代码滚动条样式
-        function setScrollbarStyle() {
-            tools.dynamicLoadingCss(window.config.Style.mCustomScrollbar);
-            let scrollbarTimer = window.setInterval( function () {
-                if ($('.article-body pre span').length > 0) {
-                    $('.article-body pre').mCustomScrollbar({
-                        theme : "minimal-dark",
-                        axis  : "yx"
-                    });
-                    switch (codeStyle) {
-                        case 'highlight': ;
-                        default: $('.mCSB_dragger_bar').css('background-color', $('.hljs-comment').css('color')); break;
-                    }
-                    script.clearIntervalTimer(scrollbarTimer);
-                }
-            }, 500);
         }
     };
 

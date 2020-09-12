@@ -40,8 +40,6 @@ require.config({
         Valine: 'Valine.min',
         //-- Tools
         Tools: 'tools',
-        //-- Code High Light
-        HighLight: 'highlight.min',
         //-- Clipboard
         Clipboard: 'clipboard.min',
         //-- FancyBox
@@ -80,6 +78,9 @@ require.config({
         },
         Tocbot: {
             deps: ['css!' + window.config.Style.tocbot]
+        },
+        Clipboard: {
+            deps: ['css!' + window.config.Style.clipboard]
         },
         FancyBox: {
             deps: ['css!' + window.config.Style.fancybox]
