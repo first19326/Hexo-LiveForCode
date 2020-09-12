@@ -19,6 +19,11 @@
     <link type="text/css" rel="stylesheet" href="<%= theme.Font.UbuntuMono %>">
 
     <link type="text/css" rel="stylesheet" href="<%= theme.Style.page %>">
+    <% if (theme.Code.style == "night") { %>
+        <link type="text/css" rel="stylesheet" href="<%= theme.Style.night %>">
+    <% } else { %>
+        <link type="text/css" rel="stylesheet" href="<%= theme.Style.normal %>">
+    <% } %>
 
     <script type="text/javascript" src="<%= theme.Script.jQuery %>"></script>
 </head>

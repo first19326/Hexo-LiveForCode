@@ -441,7 +441,7 @@ blockquote {
 	padding-left: 20px
 }
 
-.article-body table {
+.article-body > table {
 	display: table !important;
 	position: relative;
 	overflow: hidden !important;
@@ -459,11 +459,11 @@ blockquote {
 	border-collapse: initial !important
 }
 
-.article-body table tr {
+.article-body > table tr {
 	border: 0
 }
 
-.article-body table th, .article-body table td {
+.article-body > table th, .article-body > table td {
 	position: relative;
 	display: table-cell;
 	height: 40px;
@@ -475,7 +475,7 @@ blockquote {
 	border-collapse: collapse
 }
 
-.article-body table th {
+.article-body > table th {
 	min-width: 100px;
 	padding: 0 18px;
 	background-color: #EEF0F6;
@@ -485,7 +485,7 @@ blockquote {
 	border-bottom: 1px solid #DFE3EC
 }
 
-.article-body table td {
+.article-body > table td {
 	min-width: 0;
 	padding: 0 20px;
 	background-color: #FFF;

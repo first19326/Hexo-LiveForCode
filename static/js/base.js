@@ -913,7 +913,7 @@ function Base() {
             if (codeBlock.length > 0) {             
                 codeBlock.each(function (i, block) {
                     let lineNumWidth = $(block).find(".gutter").width();
-                    $(block).find(".code").css("width", "calc(100% - " + lineNumWidth + "px)");
+                    $(block).find(".code").css("width", "calc(100% - " + ( lineNumWidth ? lineNumWidth : 0 ) + "px)");
                 });
             }
         }
