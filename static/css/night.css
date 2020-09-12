@@ -1,0 +1,190 @@
+.highlight, pre {
+    margin: 0 auto 20px;
+    background: #2D2D2D;
+    color: #CCC;
+    line-height: 1.6
+}
+
+pre, code {
+    font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
+}
+
+code {
+    padding: 2px 4px;
+    background: #EEE;
+    color: #555;
+    border-radius: 3px;
+    overflow-wrap: break-word;
+    word-wrap: break-word
+}
+
+.highlight *::selection {
+    background: #515151
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 10px 0;
+    border: 0
+}
+
+.highlight table, .highlight tbody, .highlight tr {
+    display: block
+}
+
+.highlight td {
+    display: inline-block;
+}
+
+.highlight table {
+    margin: 0;
+    width: auto;
+    border: 0
+}
+
+.highlight td {
+    padding: 0;
+    border: 0
+}
+
+.highlight figcaption {
+    display: flex;
+    padding: 0.5em;
+    background: #1B1B1B;
+    color: #CCC;
+    font-size: 0.875em;
+    line-height: 1.2;
+    justify-content: space-between
+}
+
+.highlight figcaption a {
+    color: #CCC
+}
+
+.highlight figcaption a:hover {
+    border-bottom-color: #CCC
+}
+
+.highlight .gutter {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.highlight .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #2D2D2D;
+    color: #999;
+    text-align: right
+}
+
+.highlight .code pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #2D2D2D
+}
+
+.gist table {
+    width: auto
+}
+
+.gist table td {
+    border: 0
+}
+
+pre {
+    padding: 10px;
+    overflow: auto
+}
+
+pre code {
+    padding: 0;
+    background: none;
+    color: #CCC;
+    font-size: 0.875em;
+    text-shadow: none
+}
+
+pre .deletion {
+    background: #800000
+}
+
+pre .addition {
+    background: #008000
+}
+
+pre .meta {
+    color: #FC6;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+pre .comment {
+    color: #999
+}
+
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .name,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+    color: #F2777A
+}
+
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .builtin-name,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+    color: #F99157
+}
+
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .symbol,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .formula {
+    color: #9C9
+}
+
+pre .title,
+pre .css .hexcolor {
+    color: #6CC
+}
+
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+    color: #69C
+}
+
+pre .keyword,
+pre .javascript .function {
+    color: #C9C
+}
