@@ -572,12 +572,10 @@ blockquote {
 
 /* 如果需要 y 个字两端对齐，则为 (x - y) / (y - 1)，x 为对齐的最大字数 */
 .word-two {
-	margin-right: -2em;
 	letter-spacing: 2em
 }
 
 .word-three {
-	margin-right: -0.5em;
 	letter-spacing: 0.5em
 }
 
