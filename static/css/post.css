@@ -304,7 +304,7 @@ blockquote {
 	color: #FFF;
 	font-size: 12px;
 	font-weight: 500;
-	font-family: 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif;
+	font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
 	letter-spacing: 1px;
 	text-decoration: none;
 	box-shadow: none
@@ -540,7 +540,7 @@ blockquote {
 	background: hsl(220, 23%, 98%) !important;
 	color: #414857;
 	font-size: 14px;
-	font-family: Microsoft YaHei, 微软雅黑, MicrosoftJhengHei, 华文细黑, STHeiti, MingLiu;
+	font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
 	text-indent: 0
 }
 
@@ -563,8 +563,22 @@ blockquote {
 }
 
 .suffix-box-title {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
 	font-weight: bold;
 	white-space: nowrap
+}
+
+/* 如果需要 y 个字两端对齐，则为 (x - y) / (y - 1)，x 为对齐的最大字数 */
+.word-two {
+	margin-right: -2em;
+	letter-spacing: 2em
+}
+
+.word-three {
+	margin-right: -0.5em;
+	letter-spacing: 0.5em
 }
 
 .article-footer {

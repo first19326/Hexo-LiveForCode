@@ -33,13 +33,13 @@ post:
   next: 下一篇：
 
 suffix:
-  author: 作&emsp;&emsp;者
-  from: 出&emsp;&emsp;处
-  about: 签&emsp;&emsp;名
+  author: 文章作者
+  from: 文章出处
+  about: 作者签名
   theme: 关于主题
   license: 
     title: 版权声明
-    content: 知识共享署名-非商业性使用-相同方式共享 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" alt="协议普通文本" title="协议普通文本" target="_blank">协议普通文本</a> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" alt="协议法律文本" title="协议法律文本" target="_blank">协议法律文本</a>
+    content: 文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
 
 tag:
   zero: 暂无标签
