@@ -891,6 +891,7 @@ function Base() {
         if (articleBody.length > 0 && images.length > 0) {
             $.each(images, function (i) {
                 let image = $(images[i]);
+                image.parent('p').css('text-align', 'center');
                 image.wrap('<a data-fancybox href="' + image.attr('src') + '"></a>');
             });
         }
