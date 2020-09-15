@@ -162,18 +162,6 @@ blockquote {
 	-o-text-overflow: ellipsis
 }
 
-#sidebar {
-    float: right;
-	width: 230px;
-	margin-top: -15px;
-	padding: 0 0 0 5px;
-	font-size: 12px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	word-wrap: break-word
-}
-
 #footer {
 	position: absolute;
 	left: 0;
@@ -285,8 +273,8 @@ blockquote {
 	font-size: 16px
 }
 
-.header-subinfo .article-info-text > span:not(:first-child) {
-	margin-left: 10px
+.header-subinfo .article-info-text > span:not(:last-child) {
+	margin-right: 10px
 }
 
 .header-subinfo > span {

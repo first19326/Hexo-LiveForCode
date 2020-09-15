@@ -142,18 +142,6 @@ b {
 	width: 100%
 }
 
-#sidebar {
-    margin-top: -15px;
-	width: 230px;
-	padding: 0 0 0 5px;
-    float: right;
-    font-size: 12px;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-    overflow: hidden;
-	word-wrap: break-word
-}
-
 #footer {
 	position: absolute;
 	left: 0;
@@ -481,8 +469,8 @@ b {
 	font-size: 1.4rem
 }
 
-.article-info > span:not(:first-child) {
-	margin-left: 10px
+.article-info > span:not(:last-child) {
+	margin-right: 10px
 }
 
 .article-info a:link, .article-info a:visited, .article-info a:active {
