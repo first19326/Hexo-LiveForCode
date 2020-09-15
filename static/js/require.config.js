@@ -7,15 +7,13 @@ require.config({
         }
     },
     paths: {
-        //-- Menu Scroll
-        Optiscroll: 'jquery.optiscroll',
         //-- Rotate
         Rotate: 'jquery.rotate.min',
         //-- Snap Svg
         SnapSvg: 'snap.svg-min',
         //-- Menu
         Classie: 'classie',
-        Main4: 'main4',
+        Menu: 'menu',
         //-- Search
         InstantSearch: 'instantsearch.min',
         Search: 'search',
@@ -48,13 +46,10 @@ require.config({
         Base: 'base'
     },
     shim:{
-        Optiscroll: {
-            deps: ['css!' + window.config.Style.optiscroll]
-        },
         Classie: {
             deps: ['SnapSvg'],
         },
-        Main4: {
+        Menu: {
             deps: [
                 'SnapSvg', 
                 'Classie', 

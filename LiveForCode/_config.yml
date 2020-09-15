@@ -305,7 +305,6 @@ Style:
   iconfont: https://at.alicdn.com/t/font_1546312_l3yohatebw.css
   index: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css
   menuBubble: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css
-  optiscroll: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/optiscroll.css
   page: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css
   post: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css
   search: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css
@@ -323,7 +322,7 @@ Script:
   jQuery: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js
   loading: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js
   meting: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js
-  mousewheel: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mousewheel.min.js
+  iscroll: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js
   require: https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js
 
 
