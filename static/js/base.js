@@ -79,9 +79,6 @@ function Base() {
         // 设置名称
         $('.header-title').text(window.config.BlogUser);
 
-        // 初始化菜单滚动条样式
-        $('.menu-wrap').optiscroll({ forceScrollbars: true, maxTrackSize: 20, preventParentScroll: true });
-
         // 初始化样式
         script.initStyle();
 

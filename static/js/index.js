@@ -1,28 +1,4 @@
 {
-    var sidebar = 
-        '<div class="menu-wrap optiscroll" style="display:none">' + 
-        '   <nav class="menu">' +
-        '       <div class="menu-introduce">' +
-        '           <div class="introduce-avatar"></div>' +
-        '           <div class="introduce-info">' +
-        '               <div class="introduce-user"><span></span></div>' +       
-        '           </div>' +
-        '       </div>' +
-        '       <div class="menu-list">' +
-        '           <ul></ul>' +
-        '       </div>' +
-        '       <div class="menu-link"></div>' +
-        '   </nav>' +
-        '   <button class="menu-button-close">Close Menu</button>' +
-        '   <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">' +
-        '       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">' +
-        '           <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>' +
-        '       </svg>' +
-        '   </div>' +
-        '</div>' +
-        '<button class="menu-button-open">MENU</button>' +
-        '<div class="content-wrap"></div>';
-
     window.defaultConfig = {
         GitHubUserName: 'first19326',
         GitHubRepositories: 'Hexo-LiveForCode',
@@ -260,7 +236,6 @@
             iconfont: "https://at.alicdn.com/t/font_1546312_l3yohatebw.css",
             index: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css",
             menuBubble: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css",
-            optiscroll: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/optiscroll.css",
             page: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css",
             post: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css",
             search: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css",
@@ -277,7 +252,7 @@
             jQuery: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js",
             loading: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js",
             meting: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js",
-            mousewheel: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery.mousewheel.min.js",
+            iscroll: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js",
             require: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js"
         },
         Font: {
@@ -299,8 +274,6 @@
         }
     };
 
-    $("#sidebar").prepend(sidebar);
-
     window.config = $.extend(true, window.defaultConfig, window.config);
 
     // Start Cache
@@ -317,8 +290,9 @@
         $.getScript(window.config.Script.require, function () {
             $.getScript(window.config.Script.config, function () {
                 var staticResource = [
-                    'Optiscroll', 'ToProgress', 'Rotate',
-                    'SnapSvg', 'Classie', 'Main4', 'Tools'];
+                    'ToProgress', 'Rotate',
+                    'SnapSvg', 'Classie', 'Menu', 'Tools'
+                ];
                 require(staticResource, function() {
                     require(['Base'], function() {
                         (new Base).init();
