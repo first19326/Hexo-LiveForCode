@@ -1,6 +1,6 @@
 html, 
 .container, 
-.content-wrap {
+.menu-cover {
 	width: 100%;
 	height: 100%;
 }
@@ -9,18 +9,18 @@ body{
 	width: 100%;
 }
 
-.content-wrap {
+.menu-cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.3);
     -webkit-overflow-scrolling: touch;
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
-    position: fixed;
-    width: 100%;
-    height: 101%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 999;
-	display: none;
 }
 
 .content {
@@ -34,9 +34,9 @@ body{
 	left: 0;
 	z-index: 10;
 	width: 100%;
-	height: 100%;
+    height: 100%;
+    content: '';
 	background: rgba(0, 0, 0, 0.3);
-	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
 	transition: opacity 0.4s, transform 0s 0.4s;
@@ -47,25 +47,26 @@ body{
 /* Menu Button Open */
 .menu-button-open {
     position: fixed;
+    top: 10px;
+    left: 10px;
     z-index: 1000;
     margin: 1em;
     padding: 0;
+    padding-right: 13px;
     width: 100px;
     height: 35px;
-    text-indent: 2.5em;
     background: transparent;
-    top: 10px;
-    left: 10px;
-    outline: none;
-    cursor: pointer;
     color: #FFF;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 3px;
     font-size: 12px;
+    font-family: 'Monda', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    text-align: center;
+    text-indent: 2.5em;
     text-transform: uppercase;
     line-height: 35px;
-    padding-right: 13px;
-    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
 }
 
 .menu-button-open::before {
@@ -86,27 +87,28 @@ body{
 
 /* Menu Button Close */
 .menu-button-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1001;
+    padding: 0 !important;
     width: 16px;
     height: 16px;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    overflow: hidden;
-    text-indent: 16px;
-    border: none;
-    z-index: 1001;
     background: transparent;
     color: transparent;
+    text-indent: 16px;
+    border: none;
+    overflow: hidden;  
 }
 
 .menu-button-close::before,
 .menu-button-close::after {
-    content: '';
     position: absolute;
-    width: 2px;
-    height: 100%;
     top: 0;
     left: 50%;
+    width: 2px;
+    height: 100%;
+    content: '';
     background: rgb(150, 150, 150);
 }
 
@@ -123,24 +125,30 @@ body{
 /* Menu */
 .menu-wrap {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1001;
-    width: 280px;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    max-width: 280px;
+    max-height: 100vh;
     font-size: 1.15em;
+    overflow: auto;
     -webkit-transform: translate3d(-280px, 0, 0);
     transform: translate3d(-280px, 0, 0);
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
-    top: 0;
-    left: 0;
-	overflow: auto;
-    max-height: 100vh;
 }
 
 .menu {
     position: relative;
     z-index: 1000;
-    padding: 220px 1em 2em 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overscroll-behavior: contain;
 }
 
 .menu,
@@ -163,40 +171,40 @@ body{
 }
 
 .menu-introduce {
-	width: 100%;
-	position: absolute;
+    position: absolute;
 	top: 0;
 	left: 0;
-	color: #F5F5F5;
-	z-index: 1;
-	opacity: 1;
-	height: 225px;
+    z-index: 1;
+    width: 280px;
+    height: 225px;
+    color: #F5F5F5;
+    opacity: 1;
+	outline: 0;
+	cursor: pointer;
 	-webkit-transition: opacity .3s,-webkit-transform .3s;
 	transition: opacity .3s,transform .3s;
 	-webkit-transition-delay: .4s;
-	transition-delay: .4s;
-	outline: 0;
-	cursor: pointer;
+    transition-delay: .4s;
 }
 
 .introduce-avatar {
-    width: 100%;
     margin-top: 20px;
+    width: 100%;
 	text-align: center;
 }
 
 .introduce-avatar img {
+    margin-top: 40px;
 	width: 66px;
     height: 66px;
-    margin-top: 40px;
 	border: 4px solid rgba(255, 255, 255, 0.5);
 	border-radius: 100%;
 	box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .introduce-info {
-    width: 100%;
     margin-top: 10px;
+    width: 100%;
     text-align: center;
 }
 
@@ -229,6 +237,11 @@ body{
     font-family: 'Playball', cursive;
 }
 
+.menu-list {
+    margin-top: 230px;
+    width: 280px;
+}
+
 .menu-list ul {
 	padding: 5px 5% 0;
     list-style: none;
@@ -236,19 +249,19 @@ body{
 }
 
 .menu-list a {
-    line-height: 1.4;
-    font-size: 1.4rem;
     display: block;
-    overflow: hidden;
+    color: #B8B8B8 !important;
+    font-size: 1.4rem;
+    font-family: "Merriweather", "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.01rem;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: #B8B8B8 !important;
-    font-family: "Merriweather", "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif;
-    letter-spacing: 0.01rem;
+    overflow: hidden;
 }
 
 .menu-list a {
-	padding: 0.6rem 4%;
+	padding: 0.6rem 0;
 }
 
 .menu-list li {
@@ -258,38 +271,38 @@ body{
 
 .menu-list li:before {
     display: inline-block;
-    font-size: 1.2rem;
-    vertical-align: bottom;
-    color: #999;
-    content: counter(item);
-    text-align: center;
-    counter-increment: item;
     position: absolute;
     right: -38px;
-    width: 15px;
-    height: 20px;
     bottom: 6px;
     z-index: 1;
     padding: 0 40px 0 5px;
+    width: 15px;
+    height: 20px;
+    content: counter(item);
+    font-size: 1.2rem;
+    color: #999;
+    text-align: center;
+    vertical-align: bottom;
+    counter-increment: item;
 }
 
 .menu-list li a:after {
     display: inline-block;
-    content: ".................................................................................................";
-    color: rgba(255, 255, 255, .2);
     position: absolute;
-    overflow: hidden;
-    width: 235px;
-    vertical-align: bottom;
     margin-top: 2px;
     margin-left: 5px;
+    width: 235px;
+    content: ".................................................................................................";
+    color: rgba(255, 255, 255, .2);
+    vertical-align: bottom;
+    overflow: hidden;
 }
 
 .menu-link {
-    width: 100%;
-    margin-top: 400px;
-    text-align: center;
+    margin: 350px 0 50px;
+    width: 280px;
     color: #B8B8B8;
+    text-align: center;
 }
 
 .menu-link a:active, .menu-link a:hover, .menu-link a:visited, .menu-link a:link {
@@ -311,12 +324,12 @@ body{
 
 /* Morph Shape */
 .morph-shape {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
+    position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
+	width: 100%;
+	height: 100%;
     fill: rgba(0, 0, 0, 0.5);
 }
 
@@ -338,13 +351,13 @@ body{
 
 .show-menu .menu,
 .show-menu .menu-button-close {
-	opacity: 1;
+    opacity: 1;
+    outline: none;
+	cursor: pointer;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
-	outline: none;
-	cursor: pointer;
 }
 
 .show-menu .content::before {
