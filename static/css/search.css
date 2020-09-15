@@ -71,9 +71,13 @@
     border: none    
 }
 
+.search-scroll {
+    position: relative;
+    overflow: auto
+}
+
 .search-result {
     position: relative;
-    height: calc(100% - 50px);
     padding: 0 30px;
     overflow: auto
 }

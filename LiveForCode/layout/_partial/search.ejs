@@ -1,4 +1,5 @@
 <link type="text/css" rel="stylesheet" href="<%= theme.Style.search %>">
+<script type="text/javascript" src="<%= theme.Script.iscroll %>"></script>
 <script type="text/javascript" src="<%= theme.Script.instantSearch %>"></script>
 <div class="search-window">
     <div class="search-content">
@@ -8,10 +9,12 @@
         <div id="search-input" class="search-input"></div>
     </div>
 
-    <div class="search-result">
-        <div id="search-stats" class="search-stats"></div>
-        <div id="search-hits"></div>
-        <div id="search-pagination" class="search-pagination"></div>
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
     </div>
 
     <span class="search-close-icon">
