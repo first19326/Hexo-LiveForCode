@@ -1,17 +1,7 @@
-/**
- * main4.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
 (function() {
 
 	var bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
+		cover = document.querySelector( '.menu-cover' ),
 		openbtn = document.querySelector( '.menu-button-open' ),
 		closebtn = document.querySelector( '.menu-button-close' ),
 		isOpen = false,
@@ -20,7 +10,7 @@
 		s = Snap( morphEl.querySelector( 'svg' ) );
 		path = s.select( 'path' );
 		initialPath = this.path.attr('d'),
-		steps = morphEl.getAttribute( 'data-morph-open' ).split(';');
+		steps = morphEl.getAttribute( 'data-morph-open' ).split( ';' );
 		stepsTotal = steps.length;
 		isAnimating = false;
 
@@ -35,12 +25,12 @@
 		}
 
 		// close the menu element if the target it's not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
+		cover.addEventListener( 'click', function(ev) {
 			var target = ev.target;
 			if( isOpen && target !== openbtn ) {
 				toggleMenu();
 			}
-		} );
+		});
 	}
 
 	function toggleMenu() {
@@ -48,16 +38,15 @@
 		isAnimating = true;
 		$('.menu-wrap').show();
 		
-		var homeMarginLeft = $('#container').css('margin-left');
-		homeMarginLeft = parseFloat(homeMarginLeft.replace(/px/g,''));
+		var homeMarginLeft = $('#container').css( 'margin-left' );
+		homeMarginLeft = parseFloat(homeMarginLeft.replace(/px/g, ''));
 		
 		if( isOpen ) {
 			
-			$('body').removeClass('show-menu');
-			
-			$('.content-wrap').fadeOut(300);
-			$('body').css('overflow', 'auto');
-			$("#content").off("touchmove");
+			classie.remove( bodyEl, 'show-menu' );
+
+			$('.menu-cover').fadeOut( 300 );
+			$('body').css( 'overflow', 'auto' );
 
 			// animate path
 			setTimeout( function() {
@@ -67,8 +56,7 @@
 				// show menu button
 				$(".menu-button-open").show(); 
 			}, 300 );
-		}
-		else {
+		} else {
 			// hide menu button
 			$(".menu-button-open").hide();
 			classie.add( bodyEl, 'show-menu' );
@@ -84,21 +72,18 @@
 					pos++;
 				};
 			
-			$('.content-wrap').fadeIn(300);
-			$('body').css('overflow', 'hidden');
+			$('.menu-cover').fadeIn( 300 );
+			$('body').css( 'overflow', 'hidden' );
 			
 			// 防止移动端滚动
-			$("#content").on("touchmove",function(event){
+			$(".menu-cover").on( "touchmove", function(event){
 				event.preventDefault;
-			}, false)
-			$(".content-wrap").on("touchmove",function(event){
-				event.preventDefault;
-			}, false)
+			}, false );
+
+			// 将菜单滚动条移动至顶端
+			$('.menu').scrollTop( 0 );
 			
-			// 初始化滚动条到顶部
-			$('.menu-wrap').optiscroll('scrollTo', false, 'top', 'auto');
-			
-			nextStep(pos);
+			nextStep( pos );
 		}
 		isOpen = !isOpen;
 	}
