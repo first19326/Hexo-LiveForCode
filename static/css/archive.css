@@ -142,18 +142,6 @@ b {
 	width: 100%
 }
 
-#sidebar {
-    margin-top: -15px;
-	width: 230px;
-	padding: 0 0 0 5px;
-    float: right;
-    font-size: 12px;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-    overflow: hidden;
-	word-wrap: break-word
-}
-
 #footer {
 	position: absolute;
 	left: 0;

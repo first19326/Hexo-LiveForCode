@@ -162,18 +162,6 @@ blockquote {
 	-o-text-overflow: ellipsis
 }
 
-#sidebar {
-    float: right;
-	width: 230px;
-	margin-top: -15px;
-	padding: 0 0 0 5px;
-	font-size: 12px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	word-wrap: break-word
-}
-
 #footer {
 	position: absolute;
 	left: 0;
