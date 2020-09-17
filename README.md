@@ -17,7 +17,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 ## 修改说明
 - 2020/09/17
 1. `U` 修改了菜单样式，适配手机端的 `Safari` 浏览器。`Safari` 浏览器在上滑的时候会隐藏底部的工具栏，此时点击工具栏所在区域的链接时，默认触发 __底部工具栏显示__ 的事件，然后触发页面调整，将点击元素内容移出工具栏所在区域，并且阻止元素后续事件。但是当元素样式为 `position: fixed` 时，底部工具栏显示会直接将元素内容遮盖，并阻止元素后续事件，导致元素无法点击。（`ios 13` 新的特性，可以将 `Safari` 浏览器的底部工具栏设置为时刻隐藏的状态，但是这也出现了一个问题，那就是隐藏了工具栏以后，工具栏对应位置的所有 __点击事件__ 全部失效）  
-2. `U` 修改 `sidebar` 位置，使页面布局更加合理。  
+2. `U` 修改了 `sidebar` 元素的位置，使页面布局更加合理。  
 
 - 2020/09/15
 1. `F` 修复了菜单滚动条在移动端穿透的问题。  
@@ -37,10 +37,10 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 - 2020/09/13  
 
-1. `A` 新增了 `word-two`、`word-three` 样式，用于文章信息卡片。文章信息卡片中的信息标题默认为 `4` 字，如果修改为 `2` 字或者 `3` 字，添加对应样式即可。
+1. `A` 新增了 `word-two`、`word-three` 样式，用于文章信息卡片。文章信息卡片中的信息标题默认为 `4` 字，如果修改为 `2` 字或者 `3` 字，添加对应样式即可。  
 2. `U` 修改了文章页样式，包括：文章标签与分类信息字体、文章信息卡片字体以及信息标题样式。  
 3. `U` 修改了评论列表样式，`Valine.js` 在没有评论下的字体颜色。  
-4. `U` 修改了文章页图片样式，图片修改为居中放置。
+4. `U` 修改了文章页图片样式，图片修改为居中放置。  
 
 - 2020/09/12   
 
@@ -50,7 +50,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 <br/>
 
 1. `A` 新增了 `Hexo` 自带的代码高亮配置，因其是通过生成静态页面的时候，直接解析 `Markdown` 内容，生成对应的代码格式，并通过页面的 `Style` 文件，实现代码高亮。  
-2. `A` 新增了新的代码高亮样式 `normal` 以及 `night`，分别为 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 中的 `Tomorrow` 以及 `Tomorrow Night Eighties`，稍有修改。
+2. `A` 新增了新的代码高亮样式 `normal` 以及 `night`，分别为 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 中的 `Tomorrow` 以及 `Tomorrow Night Eighties`，稍有修改。  
 3. `D` 删除了 `mCustomScrollbar.js` 代码块的滚动条插件。（由于 IE 浏览器以及手机端兼容性问题）  
 4. `D` 删除了 `highlight.js` 代码高亮插件。（由于 `highlight.js` 插件必须在 `javascript` 中动态处理代码块高亮，若 `Markdown` 中的代码块过多，则会导致页面加载速度略慢、客户端性能开销稍大）  
 5. `U` 修改了代码块的样式，固定代码行，设置仅代码内容可以水平滚动。  
