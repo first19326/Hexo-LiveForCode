@@ -45,13 +45,15 @@ Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至 Hexo 
 
 ```shell
 cd your-hexo-site
-git clone https://github.com/first19326/hexo-liveforcode themes/LiveForCode
+git clone https://github.com/first19326/hexo-liveforcode
 ```
+
+将克隆下来的文件夹中的 `LiveForCode` 文件夹移动至站点的 themes 目录下。
 
 2. 下载稳定版本
 前往 LiveForCode 版本 发布页面。
 选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。
-解压所下载的压缩包至站点的 themes 目录下，并将 解压后的文件夹名称更改为 LiveForCode。
+解压所下载的压缩包，并将解压后的文件夹中的 `LiveForCode` 文件夹移动至站点的 themes 目录下。
 
 ### 启用主题
 与所有 Hexo 主题启用的模式一样。当 克隆/下载 完成后，打开 __站点配置文件__ ，找到 theme 字段，并将其值更改为 `LiveForCode`。
