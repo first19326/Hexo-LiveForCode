@@ -1,6 +1,7 @@
 # Hexo - Live For Code
 Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介绍](https://www.notes.worstone.cn/2020/08/01/Hexo主题LiveForCode介绍/)   
 
+## 问题说明
 > 目前 `Aplayer.js` 在 __网易云音乐__ 只能获取 __3__ 首歌曲，只能等待修复，也可以选择其他的方式，例如切换其他的平台。  
 
 ## 资源说明
