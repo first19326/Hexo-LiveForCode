@@ -2,7 +2,7 @@
 Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介绍](https://www.notes.worstone.cn/2020/08/01/Hexo主题LiveForCode介绍/)   
 
 ## 问题说明
-> 目前 `Meting.js` 在 __网易云音乐__ 获取歌曲列表存在问题，可以考虑不使用 `Meting.js` 直接使用 `Aplayer.js`。  
+> 目前 `Meting.js` 中解析音乐的 `API` 出了问题，导致目前音乐播放器出现了问题。我将暂时替换 `Meting.js` 中的 `API`，也可以放弃 `Meting.js` 直接使用 `Aplayer.js`。   
 
 ## 资源说明
 | 名称 | 说明 |
