@@ -139,7 +139,7 @@
             <% }) %>
         ],
 
-        FontIconExtend : "<%= theme.FontIconExtend %>",
+        FontIconExtend : '<%= theme.FontIconExtend %>',
 
         Donate : {
             paypal  : '<%= theme.Donate.paypal %>',
@@ -195,68 +195,92 @@
         },
 
         Require : {
-            baseUrl     : "<%= theme.Require.baseUrl %>",
+            baseUrl     : '<%= theme.Require.baseUrl %>',
             waitSeconds : <%= theme.Require.waitSeconds %>
         },
 
+        Music : {
+            type : '<%= theme.Music.type %>'
+        },
+        APlayer : {
+            container : '<%= theme.APlayer.container %>',
+            fixed     : <%= theme.APlayer.fixed %>,
+            autoplay  : <%= theme.APlayer.autoplay %>,
+            loop      : '<%= theme.APlayer.loop %>',
+            order     : '<%= theme.APlayer.order %>',
+            preload   : '<%= theme.APlayer.preload %>',
+            volume    : <%= theme.APlayer.volume %>,
+            mutex     : <%= theme.APlayer.mutex %>,
+            lrcType   : <%= theme.APlayer.lrcType %>,
+            audio     : [
+                <% theme.APlayer.audio.forEach(function(audio) { %>
+                    {
+                        name   : '<%= audio.name %>',
+                        artist : '<%= audio.artist %>',
+                        cover  : '<%= audio.cover %>',
+                        url    : '<%= audio.url %>',
+                        lrc    : '<%= audio.lrc %>'
+                    },
+                <% }) %>
+            ]
+        },
         Meting : {
-            id       : "<%= theme.Meting.id %>", 
+            id       : '<%= theme.Meting.id %>', 
             lrcshow  : <%= theme.Meting.lrcshow %>, 
-            server   : "<%= theme.Meting.server %>", 
-            type     : "<%= theme.Meting.type %>", 
+            server   : '<%= theme.Meting.server %>', 
+            type     : '<%= theme.Meting.type %>', 
             fixed    : <%= theme.Meting.fixed %>, 
             autoplay : <%= theme.Meting.autoplay %>, 
-            loop     : "<%= theme.Meting.loop %>", 
-            order    : "<%= theme.Meting.order %>", 
-            preload  : "<%= theme.Meting.preload %>", 
+            loop     : '<%= theme.Meting.loop %>', 
+            order    : '<%= theme.Meting.order %>', 
+            preload  : '<%= theme.Meting.preload %>', 
             volume   : <%= theme.Meting.volume %>, 
             mutex    : <%= theme.Meting.mutex %>
         },
 
         LazyLoad : {
-            default : "<%= theme.LazyLoad.default %>"
+            default : '<%= theme.LazyLoad.default %>'
         },
   
-
         Style : {
-            aplayer          : "<%= theme.Style.aplayer %>",
-            archive          : "<%= theme.Style.archive %>",
-            donate           : "<%= theme.Style.donate %>",
-            fancybox         : "<%= theme.Style.fancybox %>",
-            footer           : "<%= theme.Style.footer %>",
-            iconfont         : "<%= theme.Style.iconfont %>",
-            index            : "<%= theme.Style.index %>",
-            menuBubble       : "<%= theme.Style.menuBubble %>",
-            page             : "<%= theme.Style.page %>",
-            post             : "<%= theme.Style.post %>",
-            search           : "<%= theme.Style.search %>",
-            tocbot           : "<%= theme.Style.tocbot %>",
-            normal           : "<%= theme.Style.normal %>",
-            night            : "<%= theme.Style.night %>",
-            clipboard        : "<%= theme.Style.clipboard %>"
+            aplayer          : '<%= theme.Style.aplayer %>',
+            archive          : '<%= theme.Style.archive %>',
+            donate           : '<%= theme.Style.donate %>',
+            fancybox         : '<%= theme.Style.fancybox %>',
+            footer           : '<%= theme.Style.footer %>',
+            iconfont         : '<%= theme.Style.iconfont %>',
+            index            : '<%= theme.Style.index %>',
+            menuBubble       : '<%= theme.Style.menuBubble %>',
+            page             : '<%= theme.Style.page %>',
+            post             : '<%= theme.Style.post %>',
+            search           : '<%= theme.Style.search %>',
+            tocbot           : '<%= theme.Style.tocbot %>',
+            normal           : '<%= theme.Style.normal %>',
+            night            : '<%= theme.Style.night %>',
+            clipboard        : '<%= theme.Style.clipboard %>'
         },
 
         Script: {
-            aplayer          : "<%= theme.Script.aplayer %>",
-            config           : "<%= theme.Script.config %>",
-            index            : "<%= theme.Script.index %>",
-            instantSearch    : "<%= theme.Script.instantSearch %>",
-            jQuery           : "<%= theme.Script.jQuery %>",
-            loading          : "<%= theme.Script.loading %>",
-            meting           : "<%= theme.Script.meting %>",
-            iscroll          : "<%= theme.Script.iscroll %>",
-            require          : "<%= theme.Script.require %>"
+            aplayer          : '<%= theme.Script.aplayer %>',
+            config           : '<%= theme.Script.config %>',
+            index            : '<%= theme.Script.index %>',
+            instantSearch    : '<%= theme.Script.instantSearch %>',
+            jQuery           : '<%= theme.Script.jQuery %>',
+            loading          : '<%= theme.Script.loading %>',
+            meting           : '<%= theme.Script.meting %>',
+            iscroll          : '<%= theme.Script.iscroll %>',
+            require          : '<%= theme.Script.require %>'
         },
 
         Font: {
-            LongCang   : "<%= theme.Font.LongCang %>",
-            Monda      : "<%= theme.Font.Monda %>",
-            NotoSansSC : "<%= theme.Font.NotoSansSC %>",
-            Playball   : "<%= theme.Font.Playball %>",
-            PTMono     : "<%= theme.Font.PTMono %>",
-            RobotoSlab : "<%= theme.Font.RobotoSlab %>",
-            Rosario    : "<%= theme.Font.Rosario %>",
-            UbuntuMono : "<%= theme.Font.UbuntuMono %>"
+            LongCang   : '<%= theme.Font.LongCang %>',
+            Monda      : '<%= theme.Font.Monda %>',
+            NotoSansSC : '<%= theme.Font.NotoSansSC %>',
+            Playball   : '<%= theme.Font.Playball %>',
+            PTMono     : '<%= theme.Font.PTMono %>',
+            RobotoSlab : '<%= theme.Font.RobotoSlab %>',
+            Rosario    : '<%= theme.Font.Rosario %>',
+            UbuntuMono : '<%= theme.Font.UbuntuMono %>'
         },
 
         Suffix : {
