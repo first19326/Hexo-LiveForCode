@@ -1,7 +1,7 @@
 {
     window.defaultConfig = {
-        GitHubUserName: 'first19326',
-        GitHubRepositories: 'Hexo-LiveForCode',
+        GitHubUserName: "first19326",
+        GitHubRepositories: "Hexo-LiveForCode",
         BlogUser: "LiveForCode",
         BlogAvatar: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg",
         BlogStartDate: "2020-01-01",
@@ -11,9 +11,9 @@
         WebsiteTitleFocusTimeOut: 1000,
         WebsiteFavicon: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png",
         ProgressBar: {
-            id: 'topProgressBar',
-            color: '#77B6FF',
-            height: '2px',
+            id: "topProgressBar",
+            color: "#77B6FF",
+            height: "2px",
             duration: 0.2
         },
         Loading: {
@@ -22,15 +22,15 @@
                 friction: 5
             },
             spinner: {
-                id: 'spinner',
+                id: "spinner",
                 radius: 90,
                 sides: 3,
                 depth: 4,
                 colors: {
-                    background: '#F0F0F0',
-                    stroke: '#272633',
+                    background: "#F0F0F0",
+                    stroke: "#272633",
                     base: null,
-                    child: '#272633'
+                    child: "#272633"
                 },
                 alwaysForward: true,
                 restAt: 0.5,
@@ -41,7 +41,7 @@
         HomeHeaderAnimation: {
             radius: 15,
             density: 0.2,
-            color: 'rgba(255, 255, 255, .2)',
+            color: "rgba(255, 255, 255, .2)",
             clearOffset: 0.3
         },
         ArticleHeaderAnimationRendered: false,
@@ -56,10 +56,10 @@
             trailIntervalCreation: 100,
             delayBeforeDisappear: 2,
             colors: [
-                '#96EDA6', '#5BC6A9',
-                '#38668C', '#374D84',
-                '#BED5CB', '#62ADC6',
-                '#8EE5DE', '#304E7B'
+                "#96EDA6", "#5BC6A9",
+                "#38668C", "#374D84",
+                "#BED5CB", "#62ADC6",
+                "#8EE5DE", "#304E7B"
             ]
         },
         BackAnimationRendered: true,
@@ -212,6 +212,29 @@
             baseUrl: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/",
             waitSeconds: 100
         },
+        Music: {
+            type: "APlayer"
+        },
+        APlayer: {
+            container: ".aplayer",
+            fixed: true,
+            autoplay: false, 
+            loop: "all",
+            order: "random", 
+            preload: "auto",
+            volume: 0.67,
+            mutex: true,
+            lrcType: 3,
+            audio: [
+                {
+                    name: "Endless Tears",
+                    artist: "CLIFF EDGE",
+                    cover: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/cover/Endless Tears.jpg",
+                    url: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/song/Endless Tears.mp3",
+                    lrc: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/lrc/Endless Tears.lrc"
+                }
+            ]
+        },
         Meting: {
             setting: {
                 id: "3778678", 
@@ -290,11 +313,11 @@
         $.getScript(window.config.Script.require, function () {
             $.getScript(window.config.Script.config, function () {
                 var staticResource = [
-                    'ToProgress', 'Rotate',
-                    'SnapSvg', 'Classie', 'Menu', 'Tools'
+                    "ToProgress", "Rotate",
+                    "SnapSvg", "Classie", "Menu", "Tools"
                 ];
                 require(staticResource, function() {
-                    require(['Base'], function() {
+                    require(["Base"], function() {
                         (new Base).init();
                     });
                 });
