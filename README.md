@@ -16,6 +16,12 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 - 2020/11/09
+1. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，安装主题时 `source` 文件夹处理的相关内容，解决安装主题后，分类、标签、赞赏等页面出现的 `404` 情况，__十分抱歉给各位带来不好的体验__。  
+2. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，`404` 错误页面的设置内容。  
+3. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，音乐播放器相关内容。  
+4. `U` 修改了 `Hexo主题LiveForCode介绍` 文章的排版格式。  
+
+- 2020/11/08
 1. `A` 新增了 `APlayer` 相关的音乐文件 `music`，其中包括封面、歌曲以及歌词。  
 2. `A` 新增了 `APlayer` 相关设置，可以不再依赖 `Meting.js` 实现音乐播放器功能，并且保留 `Meting.js` 的实现方式，可以相互切换。  
 
