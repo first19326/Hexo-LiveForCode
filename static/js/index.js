@@ -87,71 +87,12 @@
         MenuList : [
             {
                 name: "首页",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "标签",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "分类",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "归档",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "赞赏",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "关于",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "订阅",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "搜索",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "留言板",
-                href: "",
-                target: "",
-                class: ""
-            },
-            {
-                name: "友情链接",
-                href: "",
+                href: "/",
                 target: "",
                 class: ""
             }
         ],
-        MenuLink : [
-            {icon: "icon-weibo", url: ""},
-            {icon: "icon-wechat", url: ""},
-            {icon: "icon-qq", url: ""},
-            {icon: "icon-github", url: ""}
-        ],
+        MenuLink : [],
         FooterStyle: 2,
         BottomText: {
             icon: "like-fill",
@@ -213,7 +154,7 @@
             waitSeconds: 100
         },
         Music: {
-            type: "APlayer"
+            type: "Meting"
         },
         APlayer: {
             container: ".aplayer",

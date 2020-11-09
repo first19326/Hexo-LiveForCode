@@ -431,12 +431,8 @@ function Base() {
 
         // 清除定时器
         if (
-            menuListArr.length > 0
-             && menuLinkArr.length > 0
-             && menuList.html() != ''
-             && menuLink.html() != ''
-             && menuListArr.length == menuList.find('li').length
-             && menuLinkArr.length == menuLink.find('a').length
+            menuListArr.length == menuList.find('li').length 
+            && menuLinkArr.length == menuLink.find('a').length
         ) {
             script.clearIntervalTimer(timers.setMenuDataTimer);
         }

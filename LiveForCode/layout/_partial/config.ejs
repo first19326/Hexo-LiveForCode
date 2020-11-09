@@ -100,7 +100,7 @@
             <% }) %>
         ],
 
-        OtherBannerText  : '<%= theme.OtherBannerText %>',
+        OtherBannerText : '<%= theme.OtherBannerText %>',
 
         MenuList : [
             <% theme.MenuList.forEach(function(menuList){ %>
@@ -113,12 +113,14 @@
             <% }) %>
         ],
         MenuLink : [
-            <% theme.MenuLink.forEach(function(menuLink){ %>
-                {
-                    icon : '<%= menuLink.icon %>', 
-                    url  : '<%= menuLink.url %>'
-                },
-            <% }) %>
+            <% if (theme.MenuLink) { %>
+                <% theme.MenuLink.forEach(function(menuLink){ %>
+                    {
+                        icon : '<%= menuLink.icon %>', 
+                        url  : '<%= menuLink.url %>'
+                    },
+                <% }) %>
+            <% } %>
         ],
 
         FooterStyle : <%= theme.FooterStyle %>,
@@ -130,13 +132,17 @@
         ThemeInfo   : <%= theme.ThemeInfo %>,
 
         ConsoleList : [
-            <% theme.ConsoleList.forEach(function(consoleList){ %>
-                [
-                    <% consoleList.forEach(function(console){ %>
-                        '<%= console %>',
-                    <% }) %>
-                ],
-            <% }) %>
+            <% if (theme.ConsoleList) { %>
+                <% theme.ConsoleList.forEach(function(consoleList){ %>
+                    [
+                        <% if (consoleList) { %>
+                            <% consoleList.forEach(function(console){ %>
+                                '<%= console %>',
+                            <% }) %>
+                        <% } %>
+                    ],
+                <% }) %>
+            <% } %>
         ],
 
         FontIconExtend : '<%= theme.FontIconExtend %>',
