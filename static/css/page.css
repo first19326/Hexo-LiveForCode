@@ -414,7 +414,8 @@ blockquote {
 }
 
 .article-body ol {
-	padding-left: 40px
+	padding-left: 40px;
+	padding-right: 20px
 }
 
 .article-body ol li {
@@ -2615,7 +2616,8 @@ blockquote {
 	}
 
 	.article-body ol {
-		padding-left: 30px
+		padding-left: 30px;
+		padding-right: 10px
 	}
 
 	.friends {

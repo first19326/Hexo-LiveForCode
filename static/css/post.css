@@ -428,11 +428,16 @@ blockquote {
 }
 
 .article-body ol {
-	padding-left: 40px
+	padding-left: 40px;
+	padding-right: 20px
 }
 
 .article-body ol li {
 	list-style-type: decimal
+}
+
+.article-body ol figure {
+	margin: 10px 0 !important
 }
 
 .article-body blockquote ul {
@@ -2559,7 +2564,8 @@ a.prev-prefix:hover, a.next-prefix:hover {
 	}
 
 	.article-body ol {
-		padding-left: 30px
+		padding-left: 30px;
+		padding-right: 10px
 	}
 
 	.article-body figure {
