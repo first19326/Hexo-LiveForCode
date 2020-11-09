@@ -9,6 +9,10 @@ html {
 	height: 100%;
 	max-height: 100%;
 	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
@@ -576,17 +580,17 @@ blockquote {
 	margin-top: 20px
 }
 
-.category {
+.article-footer .category {
 	margin-bottom: 10px;
 }
 
-.category, .tag {
+.article-footer .category, .article-footer .tag {
 	color: #666;
 	font-size: 9pt;
 	line-height: 1.6
 }
 
-.category a, .tag a {
+.article-footer .category a, .article-footer .tag a {
 	height: 20px;
 	line-height: 20px;
 	margin: 2px 5px 0 5px;
@@ -597,11 +601,11 @@ blockquote {
 	text-decoration: none
 }
 
-.category a:link, .category a:visited, .category a:active, .tag a:link, .tag a:visited, .tag a:active {
+.article-footer .category a:link, .article-footer .category a:visited, .article-footer .category a:active, .article-footer .tag a:link, .article-footer .tag a:visited, .article-footer .tag a:active {
 	color: #666
 }
 
-.category a:hover, .tag a:hover {
+.article-footer .category a:hover, .article-footer .tag a:hover {
 	background: #21759B;
 	color: #F5F5F5;
 	transition: all .4s linear 0s
