@@ -278,7 +278,7 @@ Require:
 # ---- Music配置 ----
 # 默认为Meting, 值包含APlayer, Meting
 Music: 
-  type: APlayer
+  type: Meting
 # APlayer
 APlayer:
   container: .aplayer

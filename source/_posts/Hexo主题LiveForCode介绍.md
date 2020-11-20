@@ -204,7 +204,7 @@ Valine 会自动查找页面中 class 值为 `leancloud_visitors` 的元素，�
 主题中默认以 __第一种实现方式__ 实现，第二种实现方式为备选方案，在第一种实现方式出现问题的时候，可以切换到第二种实现方式，保证网站的稳定运行。  
 针对第二种实现方式需要 __注意__ 的地方：  
 `APlayer.js` 是基于 `HTML 5 Audio` 实现的一款音乐播放器插件，故而支持的音频格式有限，包括：`MP3`、`Wav` 以及 `Ogg` 格式，并且不同浏览器对这三种音频格式的支持也各有不同，详细信息大家参考 [HTML5 Audio(音频)](https://www.runoob.com/html/html5-audio.html)。如果音频格式不支持，可以通过音频转换工具进行格式转换。  
-`APlayer.js` 是通过 `XMLHttpRequest` 获取歌词文件，所以存在 __跨域__ 问题。可以考虑将歌词文件放在主题文件夹 `LiveForCode` 的 `source` 文件夹下（ __注意__ ：这里的 `source` 文件夹不是 `Hexo` 站点目录下的 `source` 文件夹），解决跨域的问题。由于主题使用 `jsDelivr` 增加静态资源的访问速度，而 `jsDelivr` 在响应请求的时候，会添加 `access-control-allow-origin: *` 的响应标头信息，故而不存在跨域问题。  
+`APlayer.js` 是通过 `XMLHttpRequest` 获取歌词文件，所以存在 __跨域__ 问题。可以考虑将歌词文件放在主题文件夹 `LiveForCode` 的 `source` 文件夹下（ __注意__ ：这里的 `source` 文件夹不是 `Hexo` 站点目录下的 `source` 文件夹），解决跨域的问题。由于 `jsDelivr` 在响应请求的时候，会添加 `access-control-allow-origin: *` 的响应标头信息，故而不存在跨域问题，也可以使用这种方式。不过需要注意的是，`jsDelivr` 对资源的大小有所限制，不可以超过 __50M__ 。  
 `APlayer.js` 获取到歌词后会将歌词中的空白行去掉，由于是单行显示歌词，所以有译文的双行歌词，只会显示下面一行歌词，可以将译文歌词拼接在歌词原文的后面解决这个问题。  
 
 ## 常见问题
