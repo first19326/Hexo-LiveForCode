@@ -15,6 +15,11 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 如果不想要在 `javascript` 中使用，或者只是修改 __主题配置文件__ 中的配置信息，则不需要同步配置。  
 
 ## 修改说明
+- 2021/03/20
+1. `A` 新增了 `友情链接` 页面的图片，解决了由于网络原因图片加载失败的问题。    
+2. `U` 修改了 `友情链接` 页面图片 `url`。    
+3. `U` 修改了 `Hexo` 配置文件，修改了 `use_date_for_updated` 属性为 `updated_option` 以适应高版本的 `Hexo`，详细信息参考官方文档 [日期 / 时间格式](https://hexo.io/zh-cn/docs/configuration#%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F)。    
+
 - 2020/11/20
 1. `F` 修复了 `jsDelivr` 超过 __50M__ 失效的问题。  
 
