@@ -13,22 +13,22 @@ friends  :
     friend      :
       - 
         name    : Hexo
-        avatar  : https://www.notes.worstone.cn/image/hexo.png
+        avatar  : /image/hexo.png
         url     : https://hexo.io/zh-cn/
         about   : 简洁、高效的博客框架
       - 
         name    : BNDong
-        avatar  : https://blog.dbnuo.com/images/avatar.gif
+        avatar  : /image/bndong.gif
         url     : https://blog.dbnuo.com/
         about   : SimpleMemory 作者
       - 
         name    : IIssNan
-        avatar  : https://notes.iissnan.com/uploads/m3.jpg
+        avatar  : /image/iissnan.jpg
         url     : https://notes.iissnan.com/
         about   : Hexo-NexT 作者
       - 
         name    : Volantis
-        avatar  : https://www.notes.worstone.cn/image/volantis.png
+        avatar  : /image/volantis.png
         url     : https://volantis.js.org/
         about   : Hexo-Volantis 主题
   - 
