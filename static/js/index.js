@@ -3,13 +3,13 @@
         GitHubUserName: "first19326",
         GitHubRepositories: "Hexo-LiveForCode",
         BlogUser: "LiveForCode",
-        BlogAvatar: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg",
+        BlogAvatar: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/sidebar/avatar.jpg",
         BlogStartDate: "2020-01-01",
         WebsiteTitleBlur: "(◍´꒳`◍) Hi, Live For Code",
         WebsiteTitleBlurTimeOut: 500,
         WebsiteTitleFocus: "(*´∇｀*) 欢迎回来!",
         WebsiteTitleFocusTimeOut: 1000,
-        WebsiteFavicon: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png",
+        WebsiteFavicon: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/website/logo.png",
         ProgressBar: {
             id: "topProgressBar",
             color: "#77B6FF",
@@ -77,11 +77,11 @@
             animateSections: true
         },
         HomeHeaderImage: [
-            "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpg"
+            "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/header/home.jpg"
         ],
         HomeBannerText: "",
         ArticleHeaderImage: [
-            "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/article.jpg"
+            "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/header/article.jpg"
         ],
         OtherBannerText: "",
         MenuList : [
@@ -105,8 +105,8 @@
         Donate: {
             paypal : "",
             bitcoin: "",
-            alipay : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png",
-            wechat : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png"
+            alipay : "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/donate/alipay.png",
+            wechat : "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/donate/wechat.png"
         },
         Code: {
             style: "normal"
@@ -150,7 +150,7 @@
             positionFixedClass: "toc-fixed"
         }, 
         Require: {
-            baseUrl: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/",
+            baseUrl: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/",
             waitSeconds: 100
         },
         Music: {
@@ -170,9 +170,9 @@
                 {
                     name: "Endless Tears",
                     artist: "CLIFF EDGE",
-                    cover: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/cover/Endless Tears.jpg",
-                    url: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/song/Endless Tears.mp3",
-                    lrc: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/music/lrc/Endless Tears.lrc"
+                    cover: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/music/cover/Endless Tears.jpg",
+                    url: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/music/song/Endless Tears.mp3",
+                    lrc: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/music/lrc/Endless Tears.lrc"
                 }
             ]
         },
@@ -192,42 +192,42 @@
             }
         },
         Style: {
-            aplayer: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/APlayer.css",
-            archive: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/archive.css",
-            donate: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css",
-            fancybox: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css",
-            footer: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css",
+            aplayer: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/APlayer.css",
+            archive: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/archive.css",
+            donate: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/donate.css",
+            fancybox: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/jquery.fancybox.css",
+            footer: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/footer.css",
             iconfont: "https://at.alicdn.com/t/font_1546312_l3yohatebw.css",
-            index: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css",
-            menuBubble: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css",
-            page: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css",
-            post: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css",
-            search: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css",
-            tocbot: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css",
-            normal: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css",
-            night: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/night.css",
-            clipboard: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/clipboard.css"
+            index: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/index.css",
+            menuBubble: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/menu-bubble.css",
+            page: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/page.css",
+            post: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/post.css",
+            search: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/search.css",
+            tocbot: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/tocbot.css",
+            normal: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/normal.css",
+            night: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/night.css",
+            clipboard: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/clipboard.css"
         },
         Script: {
-            aplayer: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js",
-            config: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.config.js",
-            index: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js",
-            instantSearch: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js",
-            jQuery: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js",
-            loading: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js",
-            meting: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js",
-            iscroll: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js",
-            require: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js"
+            aplayer: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/APlayer.min.js",
+            config: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/require.config.js",
+            index: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/index.js",
+            instantSearch: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/instantsearch.min.js",
+            jQuery: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/jquery-3.4.1.min.js",
+            loading: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/loading.js",
+            meting: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/Meting.min.js",
+            iscroll: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/iscroll.js",
+            require: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/require.min.js"
         },
         Font: {
-            LongCang: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css",
-            Monda: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css",
-            NotoSansSC: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css",
-            Playball: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css",
-            PTMono: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css",
-            RobotoSlab: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css",
-            Rosario: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css",
-            UbuntuMono: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css"
+            LongCang: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/LongCang.css",
+            Monda: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/Monda.css",
+            NotoSansSC: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/NotoSansSC.css",
+            Playball: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/Playball.css",
+            PTMono: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/PTMono.css",
+            RobotoSlab: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/RobotoSlab.css",
+            Rosario: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/Rosario.css",
+            UbuntuMono: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/UbuntuMono.css"
         },
         Suffix: {
             about: "简单地活着, 肆意又精彩."
