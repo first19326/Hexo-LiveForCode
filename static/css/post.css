@@ -1,4 +1,4 @@
-/* Global CSS */
+﻿/* Global CSS */
 
 * {
 	margin: 0;
@@ -39,6 +39,10 @@ body {
 ::selection {
 	background: #D6EDFF
 }
+
+::cue {
+	background: none
+} 
 
 table {
 	border-collapse: collapse;
