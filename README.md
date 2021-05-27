@@ -7,17 +7,21 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 ## 资源说明
 | 名称 | 说明 |
 | :- | :- |
-| 404 | 此为主题 404 页面文件 | 
-| static | 此为主题 Style、Script、Font、Image 等静态资源文件 | 
-| source | 此为主题 文章、标签、分类 等模板文件 | 
+| 404 | 此为主题 404 页面文件 |
+| static | 此为主题 Style、Script、Font、Image 等静态资源文件 |
+| source | 此为主题 文章、标签、分类 等模板文件 |
 | _config.yml | 此为 Hexo 站点配置文件，仅供参考 |
-| LiveForCode | 此为主题 Live For Code 页面模板等主要内容 |   
+| LiveForCode | 此为主题 Live For Code 页面模板等主要内容 |
 
 提示：  
 如果在 __主题配置文件__ 中添加新的配置信息，并且想要在 `javascript` 中使用，那么请将其同步配置到 `config.ejs` 中。在 `javascript` 中使用 `window.config.xxx` 获取对应的配置信息。  
 如果不想要在 `javascript` 中使用，或者只是修改 __主题配置文件__ 中的配置信息，则不需要同步配置。  
 
 ## 修改说明
+
+- 2021/05/28
+1. `U` 修改了网站首页的标题设置，即 `<title>` 标签内容。现在的网站首页的标题为 __站点配置文件__ 中的 `title` 属性。
+
 - 2021/03/31
 1. `F` 修复了 `jsDelivr` 超过 __50M__ 失效的问题。
 
