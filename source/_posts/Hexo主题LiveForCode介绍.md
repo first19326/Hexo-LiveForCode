@@ -207,6 +207,7 @@ Valine 会自动查找页面中 class 值为 `leancloud_visitors` 的元素，�
 `APlayer.js` 是通过 `XMLHttpRequest` 获取歌词文件，所以存在 __跨域__ 问题。可以考虑将歌词文件放在主题文件夹 `LiveForCode` 的 `source` 文件夹下（ __注意__ ：这里的 `source` 文件夹不是 `Hexo` 站点目录下的 `source` 文件夹），解决跨域的问题。由于 `jsDelivr` 在响应请求的时候，会添加 `access-control-allow-origin: *` 的响应标头信息，故而不存在跨域问题，也可以使用这种方式。不过需要注意的是，`jsDelivr` 对资源的大小有所限制，不可以超过 __50M__ 。  
 `APlayer.js` 获取到歌词后会将歌词中的空白行去掉，由于是单行显示歌词，所以有译文的双行歌词，只会显示下面一行歌词，可以将译文歌词拼接在歌词原文的后面解决这个问题。  
 
+
 ## 常见问题
 
 ### 关于 jQuery 版本
@@ -222,6 +223,22 @@ Github Page 支持设置自己的域名，建议在 Hexo 主题的 source 文件
 
 ### 关于 CDN
 CDN 可以在阿里云购买相关的 CDN 服务器，效果肯定是更好，这里使用的是 [jsDelivr](https://www.jsdelivr.com/) 免费的 CDN 加速服务。但是有一个弊端，如果修改代码的时候没有Github的相关版本信息，则很容易读取到 jsDelivr 的缓存数据，而不是修改后的最新代码。至于这个缓存时间，我也拿捏不准。不过免费而且效果不错的东西，大家就不要要求太多了。  
+
+### Cannot read property 'LongCang' of undefined  
+这个问题比较常见，是主题文件路径不正确导致的。因为很多小伙伴都询问这个问题，所以在这里进行一个说明。    
+
+![Hexo-LiveForCode](https://notes.worstone.cn/image/structure.png)
+
+直接从 Github 下载 `Zip` 格式的文件解压后或 Github `Clone` 后的文件结构应该如上图所示。这里需要注意，是将解压后文件夹中的 `LiveForCode` 文件夹复制到 `Hexo` 的 `themes` 文件夹下，而不是将解压后的 `Hexo-LiveForCode` 复制到 `themes` 文件夹下。
+
+### 标签、分类、归档等页面 `404` 或 `Cannot GET`
+由于 `Hexo` 的标签、分类、归档等页面的目录修改为了 `tag`、`category`、`archive`，故使用默认的 __站点配置文件__ 会出现这个问题。需要将 __站点配置文件__ 中的 `Directory` 相关配置修改为：
+
+```yml
+tag_dir: tag
+archive_dir: archive
+category_dir: category
+```
 
 
 ## 阶段计划
