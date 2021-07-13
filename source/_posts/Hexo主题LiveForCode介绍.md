@@ -227,7 +227,7 @@ CDN 可以在阿里云购买相关的 CDN 服务器，效果肯定是更好，�
 ### Cannot read property 'LongCang' of undefined  
 这个问题比较常见，是主题文件路径不正确导致的。因为很多小伙伴都询问这个问题，所以在这里进行一个说明。    
 
-![Hexo-LiveForCode](https://notes.worstone.cn/image/structure.png)
+![Hexo-LiveForCode](https://www.notes.worstone.cn/image/structure.png)
 
 直接从 Github 下载 `Zip` 格式的文件解压后或 Github `Clone` 后的文件结构应该如上图所示。这里需要注意，是将解压后文件夹中的 `LiveForCode` 文件夹复制到 `Hexo` 的 `themes` 文件夹下，而不是将解压后的 `Hexo-LiveForCode` 复制到 `themes` 文件夹下。
 
