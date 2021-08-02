@@ -19,6 +19,10 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2021/08/02
+
+1. `U` 修改了 `Hexo主题LiveForCode介绍` 文章中，**Algolia Search** 设置中的错误内容。**感谢提供信息的小伙伴**。
+
 - 2021/07/01
 1. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，`Cannot read property 'LongCang' of undefined` 问题 以及 标签、分类、归档等页面 `404` 或 `Cannot GET` 问题的说明以及解决方案。    
 
