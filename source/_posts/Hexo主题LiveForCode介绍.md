@@ -112,7 +112,7 @@ algolia:
   indexName: '...'
 ```
 
-注：这里的 applicationID 为 `Search-Only API Key`  
+注：这里的 **apiKey** 为 `Search-Only API Key`  
 4.当配置完成，在站点根目录下执行一下命令更新 Index。请注意观察命令的输出。  
 
 ```shell
