@@ -2588,7 +2588,7 @@ a.prev-prefix:hover, a.next-prefix:hover {
 		font-size: 12px
 	}
 
-	#animationSwitch, #articleHeaderCanvas, #backCanvas, .suffix-box-left {
+	#animationSwitch, #articleHeaderCanvas, #backCanvas, .suffix-box {
 		display: none !important
 	}
 
