@@ -9,8 +9,8 @@ function mouse() {
     let cursorY = 0;
     let pageX = 0;
     let pageY = 0;
-    let size = 8;
-    let sizeF = 24;
+    let size = window.config.Mouse.options.size;
+    let sizeF = window.config.Mouse.options.sizeF;
     let followSpeed = .16;
 
     document.body.appendChild(cursor);

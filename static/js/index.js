@@ -192,7 +192,7 @@
             }
         },
         Mouse: {
-            enable: true,
+            enable: false,
             options: {
               size: 6,
               sizeF: 24
