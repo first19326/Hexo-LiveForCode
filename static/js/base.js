@@ -56,7 +56,10 @@ function Base() {
         script.addFooter();
 
         // 背景动画
-        script.setBackAnimation();   
+        script.setBackAnimation();
+        
+        // 设置鼠标动画
+        script.setMouseAnimation();
 
         // 更换网站图标
         let favicon = $('link[rel="shortcut icon"]');
@@ -514,6 +517,18 @@ function Base() {
         script.clearIntervalTimer(timers.setLazyLoadTimer);
     }
 
+    /**
+     * 设置鼠标动画
+     */
+    this.setMouseAnimation = function() {
+
+        if (window.config.Mouse.enable) {
+            require(['Gsap'], function() {
+                require(['Mouse']);
+            });
+        }
+    }
+
 //=================== 逻辑处理：主页处理
 
     /**
@@ -817,7 +832,7 @@ function Base() {
     }
  
     /**
-     * 设置目录Fixed定位（相对于浏览器窗口进行定位）
+     * 设置目录 Fixed 定位（相对于浏览器窗口进行定位）
      */
     this.setTocPositionFixed =  function() {
         if (window.config.Tocbot.switch && $('.toc').length > 0) {

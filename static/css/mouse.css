@@ -1,0 +1,20 @@
+.cursor {
+    border-radius: 50%;
+    background: #333;
+}
+
+.cursor-f {
+    top: 0;
+    left: 0;
+    background-image: url("../image/website/mouse.svg");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.cursor, .cursor-f {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+}

@@ -354,6 +354,14 @@ Meting:
   mutex: true
 
 
+# ---- Mouse动画配置 ----
+Mouse:
+  enable: true
+  options: 
+    size: 6
+    sizeF: 24
+
+
 # ---- Lazy Load ----
 LazyLoad:
   default: https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/website/lazyload.svg

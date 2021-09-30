@@ -191,6 +191,16 @@
                 mutex: true
             }
         },
+        Mouse: {
+            enable: true,
+            options: {
+              size: 6,
+              sizeF: 24
+            }
+        },
+        LazyLoad: {
+            default: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/website/lazyload.svg"
+        },
         Style: {
             aplayer: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/APlayer.css",
             archive: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/archive.css",
@@ -206,7 +216,8 @@
             tocbot: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/tocbot.css",
             normal: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/normal.css",
             night: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/night.css",
-            clipboard: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/clipboard.css"
+            clipboard: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/clipboard.css",
+            mouse: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/mouse.css"
         },
         Script: {
             aplayer: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/APlayer.min.js",

@@ -42,6 +42,10 @@ require.config({
         Clipboard: 'clipboard.min',
         //-- FancyBox
         FancyBox: 'jquery.fancybox',
+        //-- Gsap
+        Gsap: 'gsap.min',
+        //-- Mouse
+        Mouse: 'mouse',
         //-- Base
         Base: 'base'
     },
@@ -79,6 +83,9 @@ require.config({
         },
         FancyBox: {
             deps: ['css!' + window.config.Style.fancybox]
+        },
+        Mouse: {
+            deps: ['css!' + window.config.Style.mouse]
         },
         Base: {
             deps: [
