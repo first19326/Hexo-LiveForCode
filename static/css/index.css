@@ -115,6 +115,10 @@ b {
 
 
 /* Layout CSS */
+#index {
+	display: none
+}
+
 #cover {
 	background-color: #F0F0F0;
     z-index: 1099;

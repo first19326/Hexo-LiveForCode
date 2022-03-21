@@ -129,6 +129,7 @@
             el: ".comments-content",
             appId: "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz",
             appKey: "8uVSP1q6UlALVC5igYfIfv2h",
+            serverURLs: "",
             placeholder: "你是我一生只会遇见一次的惊喜...",
             notify: false,
             verify: false,
