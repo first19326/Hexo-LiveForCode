@@ -25,7 +25,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 <br/>
 
 1. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 **Valine** 的相关问题。
-2. `U` 修改了 **Valine** 设置，文章路径 `path` 新增域名判断，避免文章评论以及留言内容在别处显示。
+2. `U` 修改了 **Valine** 设置，文章路径 `path` 新增域名判断，解决文章评论以及留言内容数据异常的问题。
 
 - 2021/09/30
 
