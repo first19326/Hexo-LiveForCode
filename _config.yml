@@ -16,9 +16,8 @@ timezone: ''
 url: https://www.notes.worstone.cn
 root: /
 permalink: :year/:month/:day/:title/
+# permalink: article/:abbrlink/
 permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
 
 # Directory
 source_dir: source
@@ -97,6 +96,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugins:
+  hexo-abbrlink
+  hexo-algolia
+  hexo-deployer-git
   hexo-generator-feed
 ## Themes: https://hexo.io/themes/
 theme: LiveForCode
@@ -105,7 +107,7 @@ theme: LiveForCode
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/first19326/first19326.github.io.git
+  repo: https://gitee.com/worstone/worstone
   branch: master
 
 # Feed Atom
@@ -119,3 +121,8 @@ algolia:
   applicationID: 010C3EANT8
   apiKey: c7abab9f11b79102b9aff7fe6d41447d
   indexName: Notes
+
+# Abbrlink
+abbrlink:
+  alg: crc32
+  rep: dec 
