@@ -1,8 +1,9 @@
 # Hexo - Live For Code
 Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介绍](https://www.notes.worstone.cn/2020/08/01/Hexo主题LiveForCode介绍/)    
 
-## 致歉
-由于现在的文章中文链接，以及配置评论提醒功能相关问题，可能需要迁移评论以及阅读量统计的数据，`LeanCloud` 从国内迁移至国际版，不知是什么原因，数据无法成功导入到新的环境中，导致无法将评论以及阅读量统计的数据迁移过去，可能会对一些小伙伴造成影响，在这对有影响的小伙伴表示歉意。由于我的国内版本的 `LeanCloud` 仍记录了许多小伙伴的数据，所以我不会清理其中的数据，大家可以放心地正常使用。后续我会将教程以及评论提醒功能的配置方法整理出来，以供大家去使用，望大家耐心等待。
+## 公告
+
+由于 jsDelivr 中国地区的 DNS 被污染，导致中国地区的 `cdn.jsdelivr.net` 无法正常使用，详情见 [#18397](https://github.com/jsdelivr/jsdelivr/issues/18397) 。很多小伙伴的网站没办法正常使用。大家可以将 主题配置文件 中的 `cdn.jsdelivr.net` 替换为 `fastly.jsdelivr.net` 即可恢复正常。后续会添加其他的方式解决 CDN 的问题。
 
 ## 资源说明
 | 名称 | 说明 |
@@ -18,6 +19,21 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 如果不想要在 `javascript` 中使用，或者只是修改 __主题配置文件__ 中的配置信息，则不需要同步配置。  
 
 ## 修改说明
+
+- 2022/05/21
+
+1. `F` 修复了网站样式丢失的问题，并提供了多种解决方案。
+1. `F` 修复了 **Valine** 相关的问题，将相关设置还原，添加域名判断存在其他问题。
+3. `F` 修复了归档页面样式问题。
+
+<br/>
+
+1. `A` 新增了 **Hexo-Abbrlink** 插件，并引入相关设置，引入文章短链接替换日期加文章名称的形式。
+2. `A` 新增了 **Valine Service**，引入评论邮件通知功能，以及评论后台管理。
+3. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 **Vercel** 部署以及 `Hexo-Abbrlink` 插件相关设置。
+4. `U` 修改了 **Valine** 版本，并针对主题样式对其进行调整。
+5. `U` 修改了静态资源文件引入方式，将其添加到 **Hexo** 主题目录中的 `source` 文件夹中。
+
 - 2022/03/20
 
 1. `F` 修复了 **Valine** 切换国际版 **LeanCloud** 时，由于域名 `us.avoscloud.com` 失效导致的 **Valine** 不可用的问题。需要用户添加 **Valine** 配置中的 `serverURLs`，内容为 **LeanCloud** 的 `Request Domain`。
