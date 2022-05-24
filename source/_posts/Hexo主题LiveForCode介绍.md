@@ -1,26 +1,17 @@
 ---
 title: Hexo主题LiveForCode介绍
-date: 2020-08-01 00:00:00
-# 文章出处名称 #
-from: 
-# 文章出处链接 #
-url: 
-# 文章作者名称 #
-author:
-# 文章作者签名 #
-about: 
-# 文章作者头像 #
-avatar: 
-# 是否开启评论 #
 comments: true
-# 文章标签 #
 tags: Hexo
-# 文章分类 #
 categories: Web
-# 文章摘要 #
 description: Hexo主题LiveForCode介绍.
-# 文章置顶 #
 sticky: 10000
+abbrlink: 1112885395
+date: 2020-08-01 00:00:00
+from:
+url:
+author:
+about:
+avatar:
 ---
 
 [Hexo](https://hexo.io/zh-cn/) 是高效的静态站点生成框架，他基于 [Node.js](https://nodejs.org/en/)。通过 Hexo 你可以轻松地使用 [Markdown](https://daringfireball.net/projects/markdown/) 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 [标签插件](https://hexo.io/zh-cn/docs/tag-plugins.html) 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。  
@@ -159,8 +150,6 @@ feed:
 文章数据统计基于 `Valine.js` 插件实现。  
 实现方式：在文章列表页面加载 `Valine.js`， 只要 Valine 配置项中的 `el` 元素不存在即不会加载评论框相关内容。
 
-> 特别说明 __站点配置文件__ 中的 `url` 即 __网站地址__ ，需要大家根据自己网站地址进行配置，否则会出现 __读取不到数据的情况__ 。
-
 1.文章评论数统计  
 Valine 会自动查找页面中 class 值为 `valine-comment-count` 的元素，获取其 `data-xid` 为查询条件。并将得到的值填充到其 class 的值为 `valine-comment-count` 的元素里：  
 
@@ -229,7 +218,7 @@ Github Page 支持设置自己的域名，建议在 Hexo 主题的 source 文件
 CDN 可以在阿里云购买相关的 CDN 服务器，效果肯定是更好，这里使用的是 [jsDelivr](https://www.jsdelivr.com/) 免费的 CDN 加速服务。但是有一个弊端，如果修改代码的时候没有 Github 的相关版本信息，则很容易读取到 jsDelivr 的缓存数据，而不是修改后的最新代码。至于这个缓存时间，我也拿捏不准。不过免费而且效果不错的东西，大家就不要要求太多了。 
 
 ### 关于 Valine
-由于很多小伙伴直接使用主题中 Valine 的 `appId` 以及 `appKey`，而且 Valine 默认设置的 `path` 为 `window.location.pathname`，会导致大家的留言板数据出现异常。所以这里添加了 __域名信息__ 进行区分（ `window.location.origin + window.location.pathname` ）（`2022-03-20 修改`）。虽说修复了问题，但是可能导致大家的数据出现问题，所以这里还是建议大家设置自己的 LeanCloud，__推荐使用国际版__ ，后续如果想要添加邮件提醒，这样会方便很多。同时由于这样修改，需要读取 __站点配置文件__ 中的 `url` 即网站地址，需要大家进行配置。
+由于很多小伙伴直接使用主题中 Valine 的 `appId` 以及 `appKey`，而且 Valine 默认设置的 `path` 为 `window.location.pathname`，会导致大家的留言板数据出现异常。所以这里还是建议大家设置自己的 LeanCloud，__推荐使用国际版__ ，后续如果想要添加邮件提醒，这样会方便很多。
 
 ### 关于 Vercel
 Github Pages 内容部署的服务器在美国，可能会导致国内部分地区加载速度较慢，大家可以将项目部署到 __Vercel__ ，来提高网站的访问速度，同时也 __方便百度对站点内容进行收录__ 。如果 __网站域名已经备案__ ，则可以考虑 __国内的阿里云或腾讯云的相关产品__ ，效果会更好。
@@ -237,7 +226,7 @@ Github Pages 内容部署的服务器在美国，可能会导致国内部分地�
 ### Cannot read property 'LongCang' of undefined  
 这个问题比较常见，是主题文件路径不正确导致的。因为很多小伙伴都询问这个问题，所以在这里进行一个说明。    
 
-![Hexo-LiveForCode](https://www.notes.worstone.cn/image/structure.png)
+![Hexo-LiveForCode](/image/article/structure.png)
 
 直接从 Github 下载 `Zip` 格式的文件解压后或 Github `Clone` 后的文件结构应该如上图所示。这里需要注意，是将解压后文件夹中的 `LiveForCode` 文件夹复制到 `Hexo` 的 `themes` 文件夹下，而不是将解压后的 `Hexo-LiveForCode` 复制到 `themes` 文件夹下。
 

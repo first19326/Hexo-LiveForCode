@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+body {
+    position: relative;
+    padding: 10vh 0;
+    width: 100%;
+    height: 100%;
+    min-height: calc(20vh + 600px);
+    background: url(../image/404/back.png) center center / cover no-repeat rgb(255, 255, 255)
+}
+
+.error-page {
+    display: flex;
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    min-width: 300px;
+    min-height: 600px;
+    max-width: 1344px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+.error-page .content {
+    text-align: center
+}
+
+.content h1 {
+    position: relative;
+    color: #69A6CE;
+    font-size: 18vw;
+    line-height: 1em   
+}
+
+.content h1::after {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #71B7E6, #69A6CE, #B98ACC, #EE8176, #B98ACC, #69A6CE, #9B59B6);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    animation: animate 10s ease-in-out infinite
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0
+    }
+
+    25% {
+        background-position: 100% 0
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+
+    75% {
+        background-position: 0 100%
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
+
+.content h4 {
+    position: relative;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 2em 
+}
+
+/*
+.content h4 {
+    position: relative;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 2em 
+}
+
+.content h4::after {
+    position: absolute; 
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4)
+}
+*/
+
+.content p {
+    color: #0D0D0D;
+    font-size: 1.2em   
+}
+
+.content .buttons {
+    display: inline-flex;
+    margin: 25px 0
+}
+
+.content .buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 25px;
+    color: #69A6CE;
+    font-weight: 500;
+    border: 2px solid #69A6CE;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease
+}
+
+.content .buttons a:hover {
+    background: #69A6CE;
+    color: #FFF   
+}
+
+@media screen and (max-width: 750px) {
+
+    body {
+        padding: 0;
+        min-height: 600px
+    }
+
+    .error-page {
+        width: 100vw;
+        height: 100vh
+    }
+
+    .content h1 {
+        font-size: 135px !important
+    }
+
+}
+
+@media screen and (min-width: 1921px) {
+
+    body {
+        min-height: calc(20vh + 800px)
+    }
+
+    .error-page {
+        min-height: 800px
+    }
+
+    .content h1 {
+        font-size: 345px !important
+    }
+
+}

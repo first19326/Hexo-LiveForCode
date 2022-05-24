@@ -1,0 +1,25 @@
+.clipboard {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+    padding: 0;
+    width: 30px;
+    height: 25px;
+    background-color: hsla(0, 0%, 90.2%, .2);
+    opacity: 0;
+    color: #CCC;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: opacity .2s ease-in-out, visibility .2s ease-in-out
+}

@@ -9,7 +9,7 @@ GitHubRepositories: Hexo-LiveForCode
 # 博主名称, 文章后缀和主页图片上都会使用此名称
 BlogUser: Live For Code
 # 用户头像URL
-BlogAvatar: /image/sidebar/avatar.jpg
+BlogAvatar: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/sidebar/avatar.jpg
 # 创建时间
 BlogStartDate: "2020-01-01"
 
@@ -24,7 +24,7 @@ WebsiteTitleFocus: (*´∇｀*) 欢迎回来!
 # 当前页获取焦点, 页面title变化, 延时时间, 单位毫秒
 WebsiteTitleFocusTimeOut: 1000
 # 网站图标
-WebsiteFavicon: /image/website/logo.png
+WebsiteFavicon: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/website/logo.png
 
 
 # ---- 进度条配置 ----
@@ -113,8 +113,8 @@ BackAnimation:
 # ---- 主页配置 ----
 # 主页图片URL, 推荐尺寸 >= 1920 * 1080, 支持多张, 每次刷新随机设置一张
 HomeHeaderImage: 
-  - /image/header/home.jpg
-  - /image/header/home.jpeg
+  - https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/header/home.jpg
+  - https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/header/home.jpeg
 # 主页头图上的标语, 设置此选项会固定显示文字, 默认为空, 自动获取一句
 HomeBannerText: ""
 
@@ -122,7 +122,7 @@ HomeBannerText: ""
 # ---- 文章详情页配置 ----
 # 文章详情页图片URL, 支持多张, 每次刷新随机设置一张
 ArticleHeaderImage: 
-  - /image/header/article.jpg
+  - https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/header/article.jpg
 
 
 # ---- 其他页面配置 ----
@@ -218,8 +218,8 @@ FontIconExtend: ""
 Donate: 
   paypal : ""
   bitcoin: ""
-  alipay : /image/donate/alipay.png
-  wechat : /image/donate/wechat.png
+  alipay : https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/donate/alipay.png
+  wechat : https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/donate/wechat.png
 
 
 # ---- Code Style ----
@@ -273,7 +273,7 @@ Tocbot:
 
 # ---- Require配置 ----
 Require:
-  baseUrl: /js/
+  baseUrl: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/
   waitSeconds: 100
 
 
@@ -366,51 +366,51 @@ Mouse:
 
 # ---- Lazy Load ----
 LazyLoad:
-  default: /image/website/lazyload.svg
+  default: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/image/website/lazyload.svg
 
 
 # ---- Style配置 ----
 Style:
-  aplayer: /css/APlayer.css
-  archive: /css/archive.css
-  donate: /css/donate.css
-  fancybox: /css/jquery.fancybox.css
-  footer: /css/footer.css
+  aplayer: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/APlayer.css
+  archive: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/archive.css
+  donate: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/donate.css
+  fancybox: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/jquery.fancybox.css
+  footer: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/footer.css
   iconfont: https://at.alicdn.com/t/font_1546312_l3yohatebw.css
-  index: /css/index.css
-  menuBubble: /css/menu-bubble.css
-  page: /css/page.css
-  post: /css/post.css
-  search: /css/search.css
-  tocbot: /css/tocbot.css
-  normal: /css/normal.css
-  night: /css/night.css
-  clipboard: /css/clipboard.css
-  mouse: /css/mouse.css
+  index: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/index.css
+  menuBubble: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/menu-bubble.css
+  page: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/page.css
+  post: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/post.css
+  search: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/search.css
+  tocbot: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/tocbot.css
+  normal: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/normal.css
+  night: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/night.css
+  clipboard: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/clipboard.css
+  mouse: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/css/mouse.css
 
 # ---- Script配置 ----
 Script:
-  aplayer: /js/APlayer.min.js
-  config: /js/require.config.js
-  index: /js/index.js
-  instantSearch: /js/instantsearch.min.js
-  jQuery: /js/jquery-3.4.1.min.js
-  loading: /js/loading.js
-  meting: /js/Meting.min.js
-  iscroll: /js/iscroll.js
-  require: /js/require.min.js
+  aplayer: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/APlayer.min.js
+  config: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/require.config.js
+  index: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/index.js
+  instantSearch: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/instantsearch.min.js
+  jQuery: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/jquery-3.4.1.min.js
+  loading: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/loading.js
+  meting: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/Meting.min.js
+  iscroll: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/iscroll.js
+  require: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/js/require.min.js
 
 
 # ---- Font配置 ----
 Font:
-  LongCang: /font/LongCang.css
-  Monda: /font/Monda.css
-  NotoSansSC: /font/NotoSansSC.css
-  Playball: /font/Playball.css
-  PTMono: /font/PTMono.css
-  RobotoSlab: /font/RobotoSlab.css
-  Rosario: /font/Rosario.css
-  UbuntuMono: /font/UbuntuMono.css
+  LongCang: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/LongCang.css
+  Monda: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/Monda.css
+  NotoSansSC: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/NotoSansSC.css
+  Playball: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/Playball.css
+  PTMono: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/PTMono.css
+  RobotoSlab: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/RobotoSlab.css
+  Rosario: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/Rosario.css
+  UbuntuMono: https://fastly.jsdelivr.net/gh/first19326/cdn@master/static/font/UbuntuMono.css
 
 
 # ---- 文章尾缀配置 ----
