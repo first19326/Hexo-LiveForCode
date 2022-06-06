@@ -180,11 +180,11 @@ Options:
 hexo algolia --flush true --layouts post
 ```
 
-## Vercel
+### Vercel
 
 [Vercel](https://vercel.com/) 是一个开箱即用的网站托管平台，方便开发者快速部署自己的网站。它在全球都拥有 CDN 节点，因此比 Github 官方自带的 Github Pages 更加稳定，访问速度更快。
 
-### Vercel 部署方式
+#### Vercel 部署方式
 
 进入到 Vercel 官网后，可以选择使用 Github 进行授权登录。Vercel 部署有两种方式（**推荐第一种方式**）：
 
@@ -218,11 +218,11 @@ hexo algolia --flush true --layouts post
 
 点击 **Deploy**，然后等待部署完成即可。部署完成后，Vercel 会提供几个默认的域名，可以在对应项目中查看。
 
-### Vercel 自定义域名
+#### Vercel 自定义域名
 
 进入到 Vercel 的 **Dashboard**，然后点击对应项目，然后点击 **View Domains**，进入到项目的 **Domains** 界面，在这里可以进行域名管理。如果想要使用 Vercel 提供的二级域名，可以直接添加 `xxx.vercel.app`；如果想要绑定自己的域名，在添加域名后，会提示 **Invalid Config**，需要添加 DNS 解析。
 
-### Vercel 自定义域名 DNS 解析
+#### Vercel DNS 解析
 
 1.如果是根域名，请在你的 DNS 解析处添加 **A 记录**，指向 `76.76.21.21`。
 
