@@ -894,7 +894,7 @@ function Base() {
 
         // 设置图片点击查看
         const articleBody = $('.article-body'), 
-              images      = $('.article-body > p > img');
+              images      = $('.article-body p > img');
 
         if (articleBody.length > 0 && images.length > 0) {
             $.each(images, function (i) {
