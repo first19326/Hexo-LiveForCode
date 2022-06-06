@@ -83,8 +83,58 @@ category_dir: category
 </div>
 ```
 
-
 ## 第三方服务
+
+### Abbrlink
+
+Hexo 默认的文章链接是以时间和文件名称命名的，如果文件名称是中文，那么文章链接会被转译，而转义后的链接很长，并且也不美观。[Hexo-Abbrlink](https://github.com/rozbo/hexo-abbrlink) 插件基于文章的标题自动为文章生成固定的链接。
+
+1.安装 Hexo-Abbrlink 插件。前往站点根目录，执行命令安装：
+
+```
+npm install hexo-abbrlink --save
+```
+
+2.编辑 **站点配置文件**，修改以下配置：
+
+```yml
+permalink: posts/:abbrlink/ 
+# or
+permalink: posts/:abbrlink.html
+```
+
+3.编辑 **站点配置文件**，新增以下配置：
+
+```yml
+# abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: dec        #support dec(default) and hex
+```
+
+Hexo-Abbrlink 插件主要的设置选项：
+
+- 算法（alg）：目前支持 `crc16` 和 `crc32` 算法，默认值为 `crc16`。
+
+- 形式（rep）：生成的链接可以是十进制（`dec`）格式，也可以是十六进制（`hex`）格式，默认值为十进制（`dec`）格式。
+
+生成的链接地址（参考）：
+
+```
+crc16 & hex
+https://notes.worstone.cn/article/66c8.html
+
+crc16 & dec
+https://notes.worstone.cn/article/65535.html
+```
+
+```
+crc32 & hex
+https://notes.worstone.cn/article/8ddf18fb.html
+
+crc32 & dec
+https://notes.worstone.cn/article/1690090958.html
+```
 
 ### Algolia Search
 1.前往 [Algolia](https://www.algolia.com/) 注册页面，注册一个新账户。 可以使用 GitHub 或者 Google 账户直接登录，注册后的 14 天内拥有所有功能（包括收费类别的）。之后若未续费会自动降级为免费账户，免费账户总共有 10,000 条记录，每月有 100,000 的可以操作数。注册完成后，创建一个新的 Index，这个 Index 将在后面使用。  
@@ -130,7 +180,62 @@ Options:
 hexo algolia --flush true --layouts post
 ```
 
+## Vercel
+
+[Vercel](https://vercel.com/) 是一个开箱即用的网站托管平台，方便开发者快速部署自己的网站。它在全球都拥有 CDN 节点，因此比 Github 官方自带的 Github Pages 更加稳定，访问速度更快。
+
+### Vercel 部署方式
+
+进入到 Vercel 官网后，可以选择使用 Github 进行授权登录。Vercel 部署有两种方式（**推荐第一种方式**）：
+
+1.利用 Vercel 的 Hexo 模板进行部署。
+
+> 特别说明 使用这种方式需要已经安装 Hexo。<font color="red">不需要</font> 进行 Hexo 初始化，即 `hexo init` 。
+
+选择 **Clone Template**，点击下方的 **Browse All Templates**，然后找到 **Hexo** 模版。
+
+![template](/image/article/template.PNG)
+
+选择模板后，进入到创建仓库界面，设置好仓库名称，然后点击 **Create** 即可。至于是否设置成私有仓库，根据个人意愿选择，目前 Github 的私有仓库是 **免费** 的。
+
+![repository](/image/article/repository.PNG)
+
+等待 Vercel 部署完成，跳转到部署成功的页面。点击 **Go to Dashboard** 即可查看刚刚的项目。
+
+![congratulations](/image/article/congratulations.PNG)
+
+部署好的模板项目是 Hexo 默认的主题，需要将 Github 对应的项目下载到本地进行修改。项目想要在本地进行运行，需要**安装相关依赖**，通过`npm install` 或 `cnpm install` 或`yarn install`皆可进行安装。依赖安装完成后，即可进行主题安装等相关操作。
+
+2.通过 GitHub 托管 `hexo deploy` 生成的网页文件进行部署。
+
+创建新的项目，选择 **Import Git Repository**，然后选择 Hexo 网站对应的仓库，点击 **Import**。
+
+![import](/image/article/import.PNG)
+
+跳转到 **Configure Project** 页面，项目名称可以自行修改，其他的自定义选项，**建议不要修改**，除非有什么特殊需求。
+
+![configure](/image/article/configure.PNG)
+
+点击 **Deploy**，然后等待部署完成即可。部署完成后，Vercel 会提供几个默认的域名，可以在对应项目中查看。
+
+### Vercel 自定义域名
+
+进入到 Vercel 的 **Dashboard**，然后点击对应项目，然后点击 **View Domains**，进入到项目的 **Domains** 界面，在这里可以进行域名管理。如果想要使用 Vercel 提供的二级域名，可以直接添加 `xxx.vercel.app`；如果想要绑定自己的域名，在添加域名后，会提示 **Invalid Config**，需要添加 DNS 解析。
+
+### Vercel 自定义域名 DNS 解析
+
+1.如果是根域名，请在你的 DNS 解析处添加 **A 记录**，指向 `76.76.21.21`。
+
+2.如果是子域名，请在你的 DNS 解析处添加 **CNAME 记录**，指向 `cname.vercel-dns.com`。
+
+添加 DNS 解析记录之后，在 **Vercel Domains** 界面对应域名下方显示对号即表明验证成功。
+
+![invalid](/image/article/invalid.PNG)
+
+> 特别说明 Github 仓库的分支尽量选择 **master**，否则 Github 推送之后，还需到 Vercel 手动部署项目。
+
 ### 设置 RSS
+
 1.安装 `Hexo-Feed` 插件。前往站点根目录，执行命令安装：  
 
 ```shell
