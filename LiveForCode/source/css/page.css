@@ -128,6 +128,10 @@ blockquote {
 	border-left: 4px solid #49B1F5
 }
 
+.article-body li blockquote {
+	margin: 0 0 24px
+}
+
 .clear {
 	clear: both
 }

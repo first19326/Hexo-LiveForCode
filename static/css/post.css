@@ -132,6 +132,10 @@ blockquote {
 	border-left: 4px solid #DDD
 }
 
+.article-body li blockquote {
+	margin: 0 0 24px
+}
+
 .clear {
 	clear: both
 }
