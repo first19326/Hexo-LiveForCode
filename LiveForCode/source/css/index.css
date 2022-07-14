@@ -197,6 +197,7 @@ b {
 
 .header-title, .header-subtitle {
 	margin: 10px 0 10px 0;
+	padding-left: 0 !important;
 	letter-spacing: -1px;
 	font-weight: 700;
 	font-family: "Open Sans", sans-serif;
@@ -219,6 +220,7 @@ b {
 
 .header-description {
 	margin: 0;
+	padding-left: 0 !important;
 	font-size: 2rem;
 	line-height: 1.5em;
 	font-weight: 400;
@@ -238,6 +240,7 @@ b {
 
 .header-info {
 	margin: 0;
+	padding-left: 0 !important;
 	font-size: 1.4rem!important;
 	line-height: 1.3em;
 	font-weight: 400;

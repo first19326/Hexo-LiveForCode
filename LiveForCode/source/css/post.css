@@ -311,6 +311,7 @@ blockquote {
 }
 
 .category-color {
+	margin-left: 0 !important;
     background-color: #E8A258
 }
 
