@@ -1,11 +1,15 @@
 # Hexo - Live For Code
+
 Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介绍](https://www.notes.worstone.cn/2020/08/01/Hexo主题LiveForCode介绍/)    
 
 ## 公告
 
-由于 jsDelivr 中国地区的 DNS 被污染，导致中国地区的 `cdn.jsdelivr.net` 无法正常使用，详情见 [#18397](https://github.com/jsdelivr/jsdelivr/issues/18397) 。很多小伙伴的网站没办法正常使用。大家可以将 主题配置文件 中的 `cdn.jsdelivr.net` 替换为 `fastly.jsdelivr.net` 即可恢复正常。后续会添加其他的方式解决 CDN 的问题。
+目前，jsDelivr 中国地区的功能已经 __恢复正常__。如果后续再次出现问题，可以切换 __本地的静态资源__，保证网站 __正常运行__。
+
+由于主题修改内容比较多，所以计划拆分版本，将当前的内容切换到 __release-1.0.0__ 分支中，后续 __master__ 分支将为 __最新版本主题__。由于静态资源有些许出入，所以将 __CDN 静态资源__ 仓库同样进行了拆分。使用 __1.0.0 版本__ 主题的小伙伴需要将 __主题配置文件__ 静态资源链接中的 `@master` 修改为 `@release-1.0.0`。给大家带来的不便，深表歉意。
 
 ## 资源说明
+
 | 名称 | 说明 |
 | :- | :- |
 | 404 | 此为主题 404 页面文件 |
@@ -16,13 +20,21 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 提示：  
 如果在 __主题配置文件__ 中添加新的配置信息，并且想要在 `javascript` 中使用，那么请将其同步配置到 `config.ejs` 中。在 `javascript` 中使用 `window.config.xxx` 获取对应的配置信息。  
+
 如果不想要在 `javascript` 中使用，或者只是修改 __主题配置文件__ 中的配置信息，则不需要同步配置。  
 
 ## 修改说明
 
+- 2022/07/15
+
+1. `U` 修改了首页样式。
+2. `U` 修改了文章页面样式。
+3. `U` 修改了 CDN 版本的 __主题配置文件__ 名称。
+3. `U` 修改了 CDN 版本的 __主题配置文件__ 中的静态资源链接。（说明：由于即将 __发布新版本的主题__，静态资源有些出入，所以拆分了版本）
+
 - 2022/06/06
 
-1. `F` 修复了 Github Pages 统一跳转到 `notes.worstone.cn` 的问题。**CNAME 文件** 需要修改为自己的域名，如果出现此问题，请将内容清空。
+1. `F` 修复了 Github Pages 统一跳转到 `notes.worstone.cn` 的问题。__CNAME 文件__ 需要修改为自己的域名，如果出现此问题，请将内容清空。
 2. `F` 修复了图片插件不生效的问题。
 3. `F` 修复了 `<blockquote>` 标签样式异常的问题。
 
@@ -34,30 +46,30 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 - 2022/05/21
 
 1. `F` 修复了网站样式丢失的问题，并提供了多种解决方案。
-1. `F` 修复了 **Valine** 相关的问题，将相关设置还原，添加域名判断存在其他问题。
+1. `F` 修复了 __Valine__ 相关的问题，将相关设置还原，添加域名判断存在其他问题。
 3. `F` 修复了归档页面样式问题。
 
 <br/>
 
-1. `A` 新增了 **Hexo-Abbrlink** 插件，并引入相关设置，引入文章短链接替换日期加文章名称的形式。
-2. `A` 新增了 **Valine Service**，引入评论邮件通知功能，以及评论后台管理。
-3. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 **Vercel** 部署以及 `Hexo-Abbrlink` 插件相关设置。
-4. `U` 修改了 **Valine** 版本，并针对主题样式对其进行调整。
-5. `U` 修改了静态资源文件引入方式，将其添加到 **Hexo** 主题目录中的 `source` 文件夹中。
+1. `A` 新增了 __Hexo-Abbrlink__ 插件，并引入相关设置，引入文章短链接替换日期加文章名称的形式。
+2. `A` 新增了 __Valine Service__，引入评论邮件通知功能，以及评论后台管理。
+3. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 __Vercel__ 部署以及 `Hexo-Abbrlink` 插件相关设置。
+4. `U` 修改了 __Valine__ 版本，并针对主题样式对其进行调整。
+5. `U` 修改了静态资源文件引入方式，将其添加到 __Hexo__ 主题目录中的 `source` 文件夹中。
 
 - 2022/03/20
 
-1. `F` 修复了 **Valine** 切换国际版 **LeanCloud** 时，由于域名 `us.avoscloud.com` 失效导致的 **Valine** 不可用的问题。需要用户添加 **Valine** 配置中的 `serverURLs`，内容为 **LeanCloud** 的 `Request Domain`。
+1. `F` 修复了 __Valine__ 切换国际版 __LeanCloud__ 时，由于域名 `us.avoscloud.com` 失效导致的 __Valine__ 不可用的问题。需要用户添加 __Valine__ 配置中的 `serverURLs`，内容为 __LeanCloud__ 的 `Request Domain`。
 
 <br/>
 
-1. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 **Valine** 的相关问题。
-2. `U` 修改了 **Valine** 设置，文章路径 `path` 新增域名判断，解决文章评论以及留言内容数据异常的问题。
+1. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 __Valine__ 的相关问题。
+2. `U` 修改了 __Valine__ 设置，文章路径 `path` 新增域名判断，解决文章评论以及留言内容数据异常的问题。
 
 - 2021/09/30
 
-1. `A` 新增了鼠标动画相关内容。该动画效果来源于 **@BNDong**。
-2. `U` 修改了文章后缀的样式，在 **720px** 屏幕尺寸设备将隐藏文章后缀。
+1. `A` 新增了鼠标动画相关内容。该动画效果来源于 __@BNDong__。
+2. `U` 修改了文章后缀的样式，在 __720px__ 屏幕尺寸设备将隐藏文章后缀。
 
 - 2021/08/08
 
@@ -65,7 +77,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 - 2021/08/02
 
-1. `U` 修改了 `Hexo主题LiveForCode介绍` 文章中，**Algolia Search** 设置中的错误内容。**感谢提供信息的小伙伴**。
+1. `U` 修改了 `Hexo主题LiveForCode介绍` 文章中，__Algolia Search__ 设置中的错误内容。__感谢提供信息的小伙伴__。
 
 - 2021/07/01
 
