@@ -285,7 +285,7 @@ blockquote {
 	font-size: 16px
 }
 
-.header-subinfo .article-info-text > span:not(:last-child) {
+.header-subinfo .article-info-text > span:not(:nth-last-of-type(1)) {
 	margin-right: 10px
 }
 
@@ -308,6 +308,10 @@ blockquote {
 	letter-spacing: 1px;
 	text-decoration: none;
 	box-shadow: none
+}
+
+.header-subinfo > span:nth-of-type(1) {
+	margin: 0
 }
 
 .category-color {
