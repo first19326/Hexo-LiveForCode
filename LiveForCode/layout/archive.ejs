@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
-    <meta name="referrer" content="origin">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title><%= __('menu.archive') %></title>
-    <link rel="shortcut icon" href="#"/>
-
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.LongCang %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Monda %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.NotoSansSC %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Playball %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.PTMono %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.RobotoSlab %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.Rosario %>">
-    <link type="text/css" rel="stylesheet" href="<%= theme.Font.UbuntuMono %>">
-
-    <link type="text/css" rel="stylesheet" href="<%= theme.Style.archive %>">
-
-    <script type="text/javascript" src="<%= theme.Script.jQuery %>"></script>
-</head>
-<body>
-    <%- partial('_partial/cover') %>
-    <%- partial('_partial/index/header') %>
-    <%- partial('_partial/archive/container') %>
-    <%- partial('_partial/footer') %>
-    <%- partial('_partial/sidebar') %>
-    <%- partial('_partial/search') %>
-    <%- partial('_partial/tools') %>
-    <%- partial('_partial/config') %>
-    <script type="text/javascript" src="<%= theme.Script.index %>"></script>
-</body>
-</html>
+<link type="text/css" rel="stylesheet" href="/css/archive.css">
+<%- partial('_partial/header', { title : __('menu.archive') }) %>
+<%- partial('_partial/container') %>

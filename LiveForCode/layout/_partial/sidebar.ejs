@@ -1,16 +1,37 @@
 <div id="sidebar">
     <div class="menu-wrap" style="display:none;">
+        <% if (theme.MenuNotice.enable) { %>
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span><%- theme.MenuNotice.notice %></span>
+                </div>
+            </div>
+        <% } %>
         <nav class="menu">
             <div class="menu-introduce"> 
-                <div class="introduce-avatar"></div> 
+                <div class="introduce-avatar">
+                    <img src="<%- theme.UserAvatar %>">
+                </div> 
                 <div class="introduce-info"> 
-                    <div class="introduce-user"><span></span></div>        
+                    <div class="introduce-user"><span><%- theme.User %></span></div>
                 </div> 
             </div> 
             <div class="menu-list">
-                <ul></ul> 
+                <ul>
+                    <% theme.MenuList.forEach((li) => { %>
+                        <li class="<% if ((is_home() && li.type == 'index') || (is_archive() && li.type == 'archive') || (is_page() && page.type == li.type)) { %> active <% } %>"><a href="<%- li.href %>" class="<%- li.class %>" target="<%- li.target %>"><span class="iconfont <%- li.icon %>"></span><%- li.name %></a></li>
+                    <% }) %>
+                </ul> 
             </div> 
-            <div class="menu-link"></div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                <% theme.MenuLink.forEach((li) => { %>
+                    <a name="<%- li.name %>" href="<%- li.href %>" class="<%- li.class %>" target="<%- li.target %>" data="<%- li.image %>"><span class="iconfont <%- li.icon %>"></span></a>
+                <% }) %>
+            </div> 
         </nav>
         <button class="menu-button-close"></button>
         <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">

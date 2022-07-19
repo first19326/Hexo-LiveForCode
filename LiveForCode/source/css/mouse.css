@@ -15,6 +15,30 @@
     width: var(--size);
     height: var(--size);
     position: absolute;
-    z-index: 999;
+    z-index: 1010;
     pointer-events: none;
+}
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+
+    :root:not([color-scheme]) .cursor {
+        border-radius: 50%;
+        background: #FFF;
+    }
+
+    :root:not([color-scheme]) .cursor-f {
+        background-image: url("../image/website/mouse-dark.svg");
+    }
+}
+
+[color-scheme=dark] .cursor {
+    border-radius: 50%;
+    background: #FFF;
+}
+
+[color-scheme=dark] .cursor-f {
+    background-image: url("../image/website/mouse-dark.svg");
 }

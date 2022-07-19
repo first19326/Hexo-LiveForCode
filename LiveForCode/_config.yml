@@ -1,37 +1,37 @@
 # ---- GitHub文件源配置 ----
 # GitHub用户名(不是昵称), 注意大小写
-GitHubUserName: first19326
+GitHubUserName: "first19326"
 # GitHub主题仓库名称
-GitHubRepositories: Hexo-LiveForCode
+GitHubRepositories: "Hexo-LiveForCode"
 
 
 # ---- 基础信息配置 ----
 # 博主名称, 文章后缀和主页图片上都会使用此名称
-BlogUser: Live For Code
+User: "Live For Code"
 # 用户头像URL
-BlogAvatar: /image/sidebar/avatar.jpg
+UserAvatar: "/image/sidebar/avatar.jpg"
 # 创建时间
-BlogStartDate: "2020-01-01"
+WebsiteStartDate: "2020-01-01"
 
 
 # ---- 网站配置 ----
 # 当前页失去焦点, 页面Title显示文字
-WebsiteTitleBlur: (◍´꒳`◍) Hi, Live For Code
+WebsiteTitleBlur: "(◍´꒳`◍) Hi, Live For Code"
 # 当前页失去焦点, 页面Title变化, 延时时间, 单位毫秒
 WebsiteTitleBlurTimeOut: 500
 # 当前页获取焦点, 页面Title显示文字, 显示后延时恢复原Title
-WebsiteTitleFocus: (*´∇｀*) 欢迎回来!
+WebsiteTitleFocus: "(*´∇｀*) 欢迎回来!"
 # 当前页获取焦点, 页面title变化, 延时时间, 单位毫秒
 WebsiteTitleFocusTimeOut: 1000
 # 网站图标
-WebsiteFavicon: /image/website/logo.png
+WebsiteFavicon: "/image/website/logo.png"
 
 
 # ---- 进度条配置 ----
 ProgressBar:
-  id: topProgressBar
+  id: "topProgressBar"
   color: "#77B6FF"
-  height: 2px
+  height: "2px"
   duration: 0.2
 
 
@@ -41,7 +41,7 @@ Loading:
     tension: 16
     friction: 5
   spinner: 
-    id: spinner
+    id: "spinner"
     radius: 90
     sides: 3
     depth: 4
@@ -65,44 +65,19 @@ HomeHeaderAnimation:
   radius: 15
   density: 0.2
   # 颜色设置, "random" 为随机颜色
-  color: rgba(255, 255, 255, .2)
+  color: "rgba(255, 255, 255, .2)"
   clearOffset: 0.3
-# true || false, 是否渲染文章详情页头图动效
-ArticleHeaderAnimationRendered: false
-# 文章详情页头图动效设置 
-ArticleHeaderAnimation: 
-  triW: 14
-  triH: 20
-  neighbours: 
-    - side
-    - top
-    - bottom
-  speedTrailAppear: .1
-  speedTrailDisappear: .1
-  speedTriOpen: 1
-  trailMaxLength: 30
-  trailIntervalCreation: 100
-  delayBeforeDisappear: 2
-  colors: 
-    - "#96EDA6"
-    - "#5BC6A9"
-    - "#38668C"
-    - "#374D84"
-    - "#BED5CB"
-    - "#62ADC6"
-    - "#8EE5DE"
-    - "#304E7B"
 # true || false, 是否渲染背景动效
 BackAnimationRendered: true
 # true || false, IE浏览器是否渲染背景动效（默认为false）
 IEBrowserBackAnimationRendered: false
 # 背景动效设置
 BackAnimation:
-  colorSaturation: 60%
-  colorBrightness: 50%
+  colorSaturation: "60%"
+  colorBrightness: "50%"
   colorAlpha: 0.5
   colorCycleSpeed: 5
-  verticalPosition: random
+  verticalPosition: "random"
   horizontalSpeed: 200
   ribbonCount: 3
   strokeSize: 0
@@ -113,8 +88,8 @@ BackAnimation:
 # ---- 主页配置 ----
 # 主页图片URL, 推荐尺寸 >= 1920 * 1080, 支持多张, 每次刷新随机设置一张
 HomeHeaderImage: 
-  - /image/header/home.jpg
-  - /image/header/home.jpeg
+  - "/image/header/home.jpg"
+  - "/image/header/home.jpeg"
 # 主页头图上的标语, 设置此选项会固定显示文字, 默认为空, 自动获取一句
 HomeBannerText: ""
 
@@ -122,7 +97,7 @@ HomeBannerText: ""
 # ---- 文章详情页配置 ----
 # 文章详情页图片URL, 支持多张, 每次刷新随机设置一张
 ArticleHeaderImage: 
-  - /image/header/article.jpg
+  - "/image/header/article.jpg"
 
 
 # ---- 其他页面配置 ----
@@ -130,84 +105,156 @@ ArticleHeaderImage:
 OtherBannerText: ""
 
 
+# ---- 错误页面配置 ----
+Error:
+  icon: "icon-swimming"
+  title: "PAGE NOT FOUND"
+  content:
+    - "很抱歉，您访问的页面不存在！"
+    - "可能是输入地址有误或该地址已变更。"
+  buttons:
+    - 
+      icon: "icon-home"
+      text: "返回首页"
+      href: "/"
+      class: ""
+
+
 # ---- 菜单配置 ----
-# 当链接地址为''时, 则链接自动设置为失效
+# 菜单消息
+MenuNotice:
+  enable: true
+  notice: "简单地活着，肆意而又精彩！"
+  speed: 20
 # 菜单列表
 MenuList:
   -
-    name: 首页
-    href: /
+    name: "首页"
+    icon: "icon-home-fill"
+    href: "/"
+    type: "index"
+    class: ""
+    target: "_self"
   - 
-    name: 标签
-    href: /tag
+    name: "分类"
+    icon: "icon-folder-fill"
+    href: "/category"
+    type: "category"
+    class: ""
+    target: "_self"
   - 
-    name: 分类
-    href: /category
+    name: "标签"
+    icon: "icon-discount-fill"
+    href: "/tag"
+    type: "tag"
+    class: ""
+    target: "_self"
   -
-    name: 归档
-    href: /archive
+    name: "归档"
+    icon: "icon-calendar-fill"
+    href: "/archive"
+    type: "archive"
+    class: ""
+    target: "_self"
   -
-    name: 赞赏
-    href: /donate
+    name: "赞赏"
+    icon: "icon-heart-fill"
+    href: "/donate"
+    type: "donate"
+    class: ""
+    target: "_self"
   -
-    name: 关于
-    href: /about
+    name: "关于"
+    icon: "icon-about-fill"
+    href: "/about"
+    type: "about"
+    class: ""
+    target: "_self"
   -
-    name: 订阅
-    href: /atom.xml
-    target: _blank
+    name: "订阅"
+    icon: "icon-rss"
+    href: "/atom.xml"
+    type: ""
+    class: ""
+    target: "_blank"
   -
-    name: 搜索
-    href: ""
-    class: search
+    name: "搜索"
+    icon: "icon-search-menu"
+    href: "javascript:;"
+    type: ""
+    class: "search"
+    target: "_self"
   -
-    name: 留言板
-    href: /comment
+    name: "留言板"
+    icon: "icon-comments-fill"
+    href: "/comment"
+    type: "comment"
+    class: ""
+    target: "_self"
   -
-    name: 友情链接
-    href: /friend
+    name: "友情链接"
+    icon: "icon-link"
+    href: "/friend"
+    type: "friend"
+    class: ""
+    target: "_self"
 # 菜单链接
 MenuLink:
   -
-    icon: icon-weibo
-    url: ""
+    name: "知乎"
+    icon: "icon-zhihu"
+    href: "https://zhihu.com/people/worstone-29"
+    class: ""
+    target: "_blank"
+    image: ""
   -
-    icon: icon-wechat
-    url: ""
+    name: "微博"
+    icon: "icon-weibo"
+    href: "https://weibo.com/u/5749847477"
+    class: ""
+    target: "_blank"
+    image: ""
   -
-    icon: icon-qq
-    url: ""
+    name: "QQ"
+    icon: "icon-qq"
+    href: "javascript:;"
+    class: "image"
+    target: "_self"
+    image: "/image/sidebar/qq.png"
   -
-    icon: icon-github
-    url: https://github.com/first19326
+    name: "微信"
+    icon: "icon-wechat"
+    href: "javascript:;"
+    class: ""
+    target: "_self"
+    image: ""
+  -
+    name: "GitHub"
+    icon: "icon-github"
+    href: "https://github.com/first19326"
+    class: ""
+    target: "_blank"
+    image: ""
 
 
 # ---- 页脚配置 ----
 # 页脚样式
 FooterStyle: 2
 # 页脚标语
-BottomText: 
-  # 图标  
-  icon: like-fill
-  # 图标左侧文字
-  left: 人生若只如初见
-  # 图标右侧文字
-  right: 何事秋风悲画扇  
-# 是否显示主题信息
-ThemeInfo: true 
+BottomText: "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2022 WorstOne. All Rights Reserved.</div>"
 
 
 # ---- 控制台输出 ----
 ConsoleList:
   -
-    - Based on cnblogs theme SimpleMemory.
+    - "Based on cnblogs theme SimpleMemory."
     - ""
   -
     - "SimpleMemory Author:"
-    - BNDong
+    - "BNDong"
   -
     - "Theme:"
-    - LiveForCode
+    - "LiveForCode"
 
 
 # ---- 字体图标扩展 ----
@@ -218,42 +265,37 @@ FontIconExtend: ""
 Donate: 
   paypal : ""
   bitcoin: ""
-  alipay : /image/donate/alipay.png
-  wechat : /image/donate/wechat.png
-
-
-# ---- Code Style ----
-Code: 
-  style: normal
+  alipay : "/image/donate/alipay.png"
+  wechat : "/image/donate/wechat.png"
 
 
 # ---- Algolia配置 ----
 Search:
-  applicationID: 010C3EANT8
-  apiKey: c7abab9f11b79102b9aff7fe6d41447d
-  indexName: Notes
+  applicationID: "010C3EANT8"
+  apiKey: "c7abab9f11b79102b9aff7fe6d41447d"
+  indexName: "Notes"
   hits:
     page: 10
   labels:
-    placeholder: 搜索
-    empty: 未发现与 「${query}」 相关的内容
-    stats: ${hits} 条相关条目，使用了 ${time} 毫秒
+    placeholder: "搜索"
+    empty: "未发现与 「${query}」 相关的内容"
+    stats: "${hits} 条相关条目，使用了 ${time} 毫秒"
 
 
 # ---- Valine配置 ----
 Valine: 
   switch: true
-  el: .comments-content
-  appId: srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz
-  appKey: 8uVSP1q6UlALVC5igYfIfv2h
+  el: ".comments-content"
+  appId: "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz"
+  appKey: "8uVSP1q6UlALVC5igYfIfv2h"
   # 国内版本 LeanCloud 可以不用设置
   serverURLs: 
-  placeholder: 你是我一生只会遇见一次的惊喜...
-  avatar: mm
-  meta: nick,mail,link
-  requiredFields: nick,mail
+  placeholder: "你是我一生只会遇见一次的惊喜..."
+  avatar: "mm"
+  meta: "nick,mail,link"
+  requiredFields: "nick,mail"
   pageSize: 5
-  lang: zh-cn
+  lang: "zh-cn"
   visitor: true
   enableQQ: true
 
@@ -261,97 +303,55 @@ Valine:
 # ---- Tocbot配置 ----
 Tocbot: 
   switch: true
-  tocSelector: .toc
-  contentSelector: .article-body
-  headingSelector: h1, h2, h3, h4, h5
+  tocSelector: ".toc"
+  contentSelector: ".article-body"
+  headingSelector: "h1, h2, h3, h4, h5"
   headingsOffset: 0
   scrollSmooth: true
   scrollSmoothOffset: -5
-  positionFixedSelector: .toc
-  positionFixedClass: toc-fixed
+  positionFixedSelector: ".toc"
+  positionFixedClass: "toc-fixed"
 
 
 # ---- Require配置 ----
 Require:
-  baseUrl: /js/
+  baseUrl: "/js/"
   waitSeconds: 100
 
 
 # ---- Music配置 ----
 # 默认为Meting, 值包含APlayer, Meting
 Music: 
-  type: Meting
+  type: "Meting"
 # APlayer
 APlayer:
-  container: .aplayer
+  container: ".aplayer"
   fixed: true 
   autoplay: false 
-  loop: all 
-  order: random 
-  preload: auto 
+  loop: "all"
+  order: "random"
+  preload: "auto" 
   volume: 0.67 
   mutex: true
   lrcType: 3
   audio:
     -
-      name: aLIEz
-      artist: mizuki（瑞葵）
-      cover: /music/cover/aLIEz.jpg
-      url: /music/song/aLIEz.mp3
-      lrc: /music/lrc/aLIEz.lrc
-    -
-      name: Endless Tears
-      artist: CLIFF EDGE
-      cover: /music/cover/Endless Tears.jpg
-      url: /music/song/Endless Tears.mp3
-      lrc: /music/lrc/Endless Tears.lrc
-    -
-      name: Miracle
-      artist: Cascada
-      cover: /music/cover/Miracle.jpg
-      url: /music/song/Miracle.mp3
-      lrc: /music/lrc/Miracle.lrc
-    -
-      name: Roll The Dice
-      artist: 高珊
-      cover: /music/cover/Roll The Dice.jpg
-      url: /music/song/Roll The Dice.mp3
-      lrc: /music/lrc/Roll The Dice.lrc
-    -
-      name: See You Again
-      artist: Charlie Puth, Wiz Khalifa
-      cover: /music/cover/See You Again.jpg
-      url: /music/song/See You Again.mp3
-      lrc: /music/lrc/See You Again.lrc
-    -
-      name: Traveling Light
-      artist: Joel Hanson, Sara Groves
-      cover: /music/cover/Traveling Light.jpg
-      url: /music/song/Traveling Light.mp3
-      lrc: /music/lrc/Traveling Light.lrc
-    -
-      name: 痴心绝对
-      artist: 李圣杰
-      cover: /music/cover/痴心绝对.jpg
-      url: /music/song/痴心绝对.mp3
-      lrc: /music/lrc/痴心绝对.lrc
-    -
-      name: 好想大声说爱你
-      artist: BAAD（バード）
-      cover: /music/cover/好想大声说爱你.jpg
-      url: /music/song/好想大声说爱你.mp3
-      lrc: /music/lrc/好想大声说爱你.lrc
+      name: "Endless Tears"
+      artist: "CLIFF EDGE"
+      cover: "/music/cover/Endless Tears.jpg"
+      url: "/music/song/Endless Tears.mp3"
+      lrc: "/music/lrc/Endless Tears.lrc"
 # Meting
 Meting:
   id: "3778678" 
   lrcshow: false 
-  server: netease 
-  type: playlist 
+  server: "netease" 
+  type: "playlist"
   fixed: true 
   autoplay: false 
-  loop: all 
-  order: random 
-  preload: auto 
+  loop: "all"
+  order: "random"
+  preload: "auto" 
   volume: 0.67 
   mutex: true
 
@@ -366,59 +366,62 @@ Mouse:
 
 # ---- Lazy Load ----
 LazyLoad:
-  default: /image/website/lazyload.svg
+  default: "/image/website/lazyload.svg"
 
 
 # ---- Style配置 ----
 Style:
-  aplayer: /css/APlayer.css
-  archive: /css/archive.css
-  donate: /css/donate.css
-  fancybox: /css/jquery.fancybox.css
-  footer: /css/footer.css
-  iconfont: https://at.alicdn.com/t/font_1546312_l3yohatebw.css
-  index: /css/index.css
-  menuBubble: /css/menu-bubble.css
-  page: /css/page.css
-  post: /css/post.css
-  search: /css/search.css
-  tocbot: /css/tocbot.css
-  normal: /css/normal.css
-  night: /css/night.css
-  clipboard: /css/clipboard.css
-  mouse: /css/mouse.css
+  aplayer: "/css/APlayer.css"
+  archive: "/css/archive.css"
+  base: "/css/base.css"
+  clipboard: "/css/clipboard.css"
+  code: "/css/code.css"
+  donate: "/css/donate.css"
+  fancybox: "/css/jquery.fancybox.css"
+  footer: "/css/footer.css"
+  iconfont: "/iconfont/iconfont.css"
+  index: "/css/index.css"
+  menuBubble: "/css/menu-bubble.css"
+  mouse: "/css/mouse.css"
+  page: "/css/page.css"
+  post: "/css/post.css"
+  search: "/css/search.css"
+  tocbot: "/css/tocbot.css"
+  valine: "/css/valine.css"
 
 # ---- Script配置 ----
 Script:
-  aplayer: /js/APlayer.min.js
-  config: /js/require.config.js
-  index: /js/index.js
-  instantSearch: /js/instantsearch.min.js
-  jQuery: /js/jquery-3.4.1.min.js
-  loading: /js/loading.js
-  meting: /js/Meting.min.js
-  iscroll: /js/iscroll.js
-  require: /js/require.min.js
+  aplayer: "/js/APlayer.min.js"
+  config: "/js/require.config.js"
+  index: "/js/index.js"
+  instantSearch: "/js/instantsearch.min.js"
+  iscroll: "/js/iscroll.js"
+  jQuery: "/js/jquery-3.4.1.min.js"
+  loading: "/js/loading.js"
+  meting: "/js/Meting.min.js"
+  require: "/js/require.min.js"
 
 
 # ---- Font配置 ----
 Font:
-  LongCang: /font/LongCang.css
-  Monda: /font/Monda.css
-  NotoSansSC: /font/NotoSansSC.css
-  Playball: /font/Playball.css
-  PTMono: /font/PTMono.css
-  RobotoSlab: /font/RobotoSlab.css
-  Rosario: /font/Rosario.css
-  UbuntuMono: /font/UbuntuMono.css
+  LongCang: "/font/LongCang.css"
+  Monda: "/font/Monda.css"
+  NotoSansSC: "/font/NotoSansSC.css"
+  NotoSerifSC: "/font/NotoSerifSC.css"
+  Playball: "/font/Playball.css"
+  PTMono: "/font/PTMono.css"
+  Roboto: "/font/Roboto.css"
+  RobotoSlab: "/font/RobotoSlab.css"
+  Rosario: "/font/Rosario.css"
+  UbuntuMono: "/font/UbuntuMono.css"
 
 
 # ---- 文章尾缀配置 ----
 Suffix: 
-  about: 简单地活着, 肆意又精彩.
+  about: "简单地活着, 肆意又精彩."
 
 
 # ---- 主题信息配置 ----
 Theme: 
-  url: https://github.com/first19326/Hexo-LiveForCode
-  name: Hexo - Live For Code
+  url: "https://github.com/first19326/Hexo-LiveForCode"
+  name: "Hexo - Live For Code"

@@ -4,12 +4,12 @@
  */
 (function (name, factory)
 {
-    if (typeof window === "object")
+    if (typeof window === 'object')
     {
         window[name] = factory();
     }
 
-})("Ribbons", function ()
+})('Ribbons', function ()
 {
     var _w = window,
     _b = document.body,
@@ -147,15 +147,15 @@
         this._ribbons = [];
         this._options = {
             // ribbon color HSL saturation amount
-            colorSaturation: "80%",
+            colorSaturation: '80%',
             // ribbon color HSL brightness amount
-            colorBrightness: "60%",
+            colorBrightness: '60%',
             // ribbon color opacity amount
             colorAlpha: 0.65,
             // how fast to cycle through colors in the HSL color space
             colorCycleSpeed: 6,
             // where to start from on the Y axis on each side (top|min, middle|center, bottom|max, random)
-            verticalPosition: "center",
+            verticalPosition: 'center',
             // how fast to get to the other side of the screen
             horizontalSpeed: 150,
             // how many ribbons to keep on screen at any given time
@@ -181,7 +181,7 @@
         // Set and merge local options
         setOptions: function (options)
         {
-            if (typeof options === "object")
+            if (typeof options === 'object')
             {
                 for (var key in options)
                 {
@@ -198,31 +198,31 @@
         {
             try
             {
-                this._canvas = document.createElement("canvas");
-                this._canvas.style["display"] = "block";
-                this._canvas.style["position"] = "fixed";
-                this._canvas.style["margin"] = "0";
-                this._canvas.style["padding"] = "0";
-                this._canvas.style["border"] = "0";
-                this._canvas.style["outline"] = "0";
-                this._canvas.style["left"] = "0";
-                this._canvas.style["top"] = "0";
-                this._canvas.style["width"] = "100%";
-                this._canvas.style["height"] = "100%";
-                this._canvas.style["z-index"] = "-1";
-                this._canvas.id = "backCanvas";
+                this._canvas = document.createElement('canvas');
+                this._canvas.style['display'] = 'block';
+                this._canvas.style['position'] = 'fixed';
+                this._canvas.style['margin'] = '0';
+                this._canvas.style['padding'] = '0';
+                this._canvas.style['border'] = '0';
+                this._canvas.style['outline'] = '0';
+                this._canvas.style['left'] = '0';
+                this._canvas.style['top'] = '0';
+                this._canvas.style['width'] = '100%';
+                this._canvas.style['height'] = '100%';
+                this._canvas.style['z-index'] = '-1';
+                this._canvas.id = 'backCanvas';
                 this._onResize();
 
-                this._context = this._canvas.getContext("2d");
+                this._context = this._canvas.getContext('2d');
                 this._context.clearRect(0, 0, this._width, this._height);
                 this._context.globalAlpha = this._options.colorAlpha;
 
-                window.addEventListener("resize", this._onResize);
-                window.addEventListener("scroll", this._onScroll);
-                document.getElementById("tools").appendChild(this._canvas);
+                window.addEventListener('resize', this._onResize);
+                window.addEventListener('scroll', this._onScroll);
+                document.getElementById('tools').appendChild(this._canvas);
             }
             catch (e) {
-                console.warn("Canvas Context Error: " + e.toString());
+                console.warn('Canvas Context Error: ' + e.toString());
                 return;
             }
             this._onDraw();
@@ -232,14 +232,14 @@
         addRibbon: function ()
         {
             // movement data
-            var dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
+            var dir = Math.round(random(1, 9)) > 5 ? 'right' : 'left',
             stop = 1000,
             hide = 200,
             min = 0 - hide,
             max = this._width + hide,
             movex = 0,
             movey = 0,
-            startx = dir === "right" ? min : max,
+            startx = dir === 'right' ? min : max,
             starty = Math.round(random(0, this._height));
 
             // asjust starty based on options
@@ -275,12 +275,12 @@
                 point3 = new Point();
                 point3.copy(point2);
 
-                if (dir === "right")
+                if (dir === 'right')
                 {
                     point3.add(movex, movey);
                     if (point2.x >= max) break;
                 } else
-                if (dir === "left")
+                if (dir === 'left')
                 {
                     point3.subtract(movex, movey);
                     if (point2.x <= min) break;
@@ -327,7 +327,7 @@
                     {
                         var mod = Math.sin(1 + section.phase * Math.PI / 2) * 0.1;
 
-                        if (section.dir === "right")
+                        if (section.dir === 'right')
                         {
                             section.point1.add(mod, 0);
                             section.point2.add(mod, 0);
@@ -346,7 +346,7 @@
 
                 var s = this._options.colorSaturation,
                 l = this._options.colorBrightness,
-                c = "hsla(" + section.color + ", " + s + ", " + l + ", " + section.alpha + " )";
+                c = 'hsla(' + section.color + ', ' + s + ', ' + l + ', ' + section.alpha + ' )';
 
                 this._context.save();
 
@@ -365,7 +365,7 @@
                 {
                     this._context.lineWidth = this._options.strokeSize;
                     this._context.strokeStyle = c;
-                    this._context.lineCap = "round";
+                    this._context.lineCap = 'round';
                     this._context.stroke();
                 }
                 this._context.restore();

@@ -1,0 +1,255 @@
+.v[data-class="v"] * {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, sans-serif !important
+}
+
+.v[data-class="v"] .vcount {
+	padding: 5px 1px !important;
+	color: #666 !important;
+	font-size: 16px !important
+}
+
+.v[data-class="v"] .vcount .vnum {
+	font-size: 1.25em !important;
+	font-weight: 600 !important
+}
+
+.v[data-class="v"] .vcards {
+	padding: 1px !important
+}
+
+.v[data-class="v"] .vcards .vcard .vhead .vnick:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background: #1ABC9C;
+	-webkit-transition: width .3s ease;
+	transition: width .3s ease
+}
+
+.v[data-class="v"] .vcards .vcard .vhead .vnick:hover:before {
+	width: 100%;
+	left: 0;
+	right: auto
+}
+
+.v[data-class="v"] .vsys {
+	display: none
+}
+
+.v[data-class="v"] .vpower {
+	display: none !important
+}
+
+
+/* Dark Mode CSS */
+
+@media(prefers-color-scheme:dark) {
+
+	:root:not([color-scheme]) .v[data-class="v"] .vwrap {
+		border-color: #444444 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vwrap .vheader .vinput {
+		border-bottom: 1px dashed #444444 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vicon {
+		fill: #999999 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vbtn {
+		color: #999999 !important;
+		border: 1px solid #444444 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vinput, 
+	:root:not([color-scheme]) .v[data-class="v"] .veditor, 
+	:root:not([color-scheme]) .v[data-class="v"] p, 
+	:root:not([color-scheme]) .v[data-class="v"] pre code, 
+	:root:not([color-scheme]) .v[data-class="v"] .status-bar {
+		color: #999999 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vempty {
+		color: #999999 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcount {
+		color: #999999 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vimg {
+		border: 1px solid #555555 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vhead {
+		color: #AAAAAA !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vhead .vnick:hover { 
+		filter: brightness(80%) !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vhead .vnick:before {
+		filter: brightness(80%) !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vsys, 
+	:root:not([color-scheme]) .v[data-class="v"] .vtime {
+		color: #666666 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vh .vmeta .vat {
+		filter: brightness(80%) !important
+	}
+	
+	:root:not([color-scheme]) .v[data-class="v"] a {
+		filter: brightness(80%) !important
+	}
+	
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vh {
+		border-bottom: 1px dashed #444444 !important
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard:last-child .vh {
+		border-bottom: none !important
+	}
+
+
+	/* Default Dark Style */
+
+	:root:not([color-scheme]) .v[data-class="v"] pre,
+	:root:not([color-scheme]) .v[data-class="v"] code,
+	:root:not([color-scheme]) .v[data-class="v"] pre code {
+		color: #929298;
+		background-color: #444444
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vicon.actived {
+		fill: #66B1FF
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vbtn:hover {
+		color: #66B1FF;
+		border-color: #66B1FF
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] a:hover {
+		color: #D7191A
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vcontent.expand::before {
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.7)));
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))
+	}
+
+	:root:not([color-scheme]) .v[data-class="v"] .vcards .vcard .vcontent.expand::after {
+		background: rgba(0, 0, 0, .7)
+	}
+}
+
+
+[color-scheme=dark] .v[data-class="v"] .vwrap {
+    border-color: #444444 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vwrap .vheader .vinput {
+	border-bottom: 1px dashed #444444 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vicon {
+	fill: #999999 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vbtn {
+	color: #999999 !important;
+    border: 1px solid #444444 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vinput, 
+[color-scheme=dark] .v[data-class="v"] .veditor, 
+[color-scheme=dark] .v[data-class="v"] p, 
+[color-scheme=dark] .v[data-class="v"] pre code, 
+[color-scheme=dark] .v[data-class="v"] .status-bar {
+	color: #999999 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vempty {
+	color: #999999 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcount {
+	color: #999999 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vimg {
+	border: 1px solid #555555 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vhead {
+	color: #AAAAAA !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vhead .vnick:hover { 
+	filter: brightness(80%) !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vhead .vnick:before {
+	filter: brightness(80%) !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vsys, 
+[color-scheme=dark] .v[data-class="v"] .vtime {
+	color: #666666 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vh .vmeta .vat {
+	filter: brightness(80%) !important
+}
+
+[color-scheme=dark] .v[data-class="v"] a {
+	filter: brightness(80%) !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vh {
+	border-bottom: 1px dashed #444444 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard:last-child .vh {
+	border-bottom: none !important
+}
+
+
+/* Default Dark Style */
+
+[color-scheme=dark] .v[data-class="v"] pre,
+[color-scheme=dark] .v[data-class="v"] code,
+[color-scheme=dark] .v[data-class="v"] pre code {
+	color: #929298;
+	background-color: #444444 !important
+}
+
+[color-scheme=dark] .v[data-class="v"] .vicon.actived {
+	fill: #66B1FF
+}
+
+[color-scheme=dark] .v[data-class="v"] .vbtn:hover {
+	color: #66B1FF;
+	border-color: #66B1FF
+}
+
+[color-scheme=dark] .v[data-class="v"] a:hover {
+	color: #D7191A
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vcontent.expand::before {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.7)));
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))
+}
+
+[color-scheme=dark] .v[data-class="v"] .vcards .vcard .vcontent.expand::after {
+	background: rgba(0, 0, 0, .7)
+}

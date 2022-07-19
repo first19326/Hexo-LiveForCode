@@ -1,0 +1,581 @@
+.highlight, pre {
+    margin: 0 auto 20px;
+    color: #4D4D4C;
+    line-height: 1.6
+}
+
+pre, code {
+    font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
+}
+
+.highlight *::selection {
+    background: #D6D6D6
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 10px 0;
+    border: 0
+}
+
+.highlight table, .highlight tbody, .highlight tr {
+    display: block
+}
+
+.highlight td {
+    display: inline-block;
+}
+
+.highlight table {
+    margin: 0;
+    width: auto;
+    border: 0
+}
+
+.highlight td {
+    padding: 0;
+    border: 0
+}
+
+.highlight figcaption {
+    display: flex;
+    padding: 0.5em;
+    background: #EFF2F3;
+    color: #4D4D4C;
+    font-size: 0.875em;
+    line-height: 1.2;
+    justify-content: space-between
+}
+
+.highlight figcaption a {
+    color: #4D4D4C
+}
+
+.highlight figcaption a:hover {
+    border-bottom-color: #4D4D4C
+}
+
+.highlight .gutter {
+    border-right: 1px solid #EFF2F3;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.highlight .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #EFF2F3;
+    color: #869194;
+    text-align: right
+}
+
+.highlight .code pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #F7F7F7
+}
+
+.gist table {
+    width: auto
+}
+
+.gist table td {
+    border: 0
+}
+
+pre {
+    padding: 10px;
+    overflow: auto
+}
+
+pre code {
+    padding: 0;
+    background: none;
+    color: #4D4D4C;
+    font-size: 0.875em;
+    text-shadow: none
+}
+
+pre .deletion {
+    background: #FDD
+}
+
+pre .addition {
+    background: #DFD
+}
+
+pre .meta {
+    color: #EAB700;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+pre .comment {
+    color: #8E908C
+}
+
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .name,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+    color: #C82829
+}
+
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .builtin-name,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+    color: #F5871F
+}
+
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .symbol,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .formula {
+    color: #718C00
+}
+
+pre .title,
+pre .css .hexcolor {
+    color: #3E999F
+}
+
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+    color: #4271AE
+}
+
+pre .keyword,
+pre .javascript .function {
+    color: #8959A8
+}
+
+/* light code style update copy code button style */
+.clipboard {
+    background-color: rgba(100, 100, 100, 0.1) !important; 
+    color: rgb(100, 100, 100) !important
+}
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+
+    :root:not([color-scheme]) .highlight, 
+    :root:not([color-scheme]) pre {
+        margin: 0 auto 20px;
+        color: #CCC;
+        line-height: 1.6
+    }
+
+    :root:not([color-scheme]) pre, 
+    :root:not([color-scheme]) code {
+        font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
+    }
+
+    :root:not([color-scheme]) .highlight *::selection {
+        background: #515151
+    }
+
+    :root:not([color-scheme]) .highlight pre {
+        margin: 0;
+        padding: 10px 0;
+        border: 0
+    }
+
+    :root:not([color-scheme]) .highlight table, 
+    :root:not([color-scheme]) .highlight tbody, 
+    :root:not([color-scheme]) .highlight tr {
+        display: block
+    }
+
+    :root:not([color-scheme]) .highlight td {
+        display: inline-block;
+    }
+
+    :root:not([color-scheme]) .highlight table {
+        margin: 0;
+        width: auto;
+        border: 0
+    }
+
+    :root:not([color-scheme]) .highlight td {
+        padding: 0;
+        border: 0
+    }
+
+    :root:not([color-scheme]) .highlight figcaption {
+        display: flex;
+        padding: 0.5em;
+        background: #1B1B1B;
+        color: #CCC;
+        font-size: 0.875em;
+        line-height: 1.2;
+        justify-content: space-between
+    }
+
+    :root:not([color-scheme]) .highlight figcaption a {
+        color: #CCC
+    }
+
+    :root:not([color-scheme]) .highlight figcaption a:hover {
+        border-bottom-color: #CCC
+    }
+
+    :root:not([color-scheme]) .highlight .gutter {
+        border-right: 1px solid #555555;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none
+    }
+
+    :root:not([color-scheme]) .highlight .gutter pre {
+        padding-left: 10px;
+        padding-right: 10px;
+        background: #444444;
+        color: #999;
+        text-align: right;
+        border-radius: 5px 0 0 5px
+    }
+
+    :root:not([color-scheme]) .highlight .code pre {
+        padding-left: 10px;
+        padding-right: 10px;
+        background: #444444;
+        border-radius: 0 5px 5px 0
+    }
+
+    :root:not([color-scheme]) .gist table {
+        width: auto
+    }
+
+    :root:not([color-scheme]) .gist table td {
+        border: 0
+    }
+
+    :root:not([color-scheme]) pre {
+        padding: 10px;
+        overflow: auto
+    }
+
+    :root:not([color-scheme]) pre code {
+        padding: 0;
+        background: none;
+        color: #CCC;
+        font-size: 0.875em;
+        text-shadow: none
+    }
+
+    :root:not([color-scheme]) pre .deletion {
+        background: #800000
+    }
+
+    :root:not([color-scheme]) pre .addition {
+        background: #008000
+    }
+
+    :root:not([color-scheme]) pre .meta {
+        color: #FC6;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none
+    }
+
+    :root:not([color-scheme]) pre .comment {
+        color: #999
+    }
+
+    :root:not([color-scheme]) pre .variable,
+    :root:not([color-scheme]) pre .attribute,
+    :root:not([color-scheme]) pre .tag,
+    :root:not([color-scheme]) pre .name,
+    :root:not([color-scheme]) pre .regexp,
+    :root:not([color-scheme]) pre .ruby .constant,
+    :root:not([color-scheme]) pre .xml .tag .title,
+    :root:not([color-scheme]) pre .xml .pi,
+    :root:not([color-scheme]) pre .xml .doctype,
+    :root:not([color-scheme]) pre .html .doctype,
+    :root:not([color-scheme]) pre .css .id,
+    :root:not([color-scheme]) pre .css .class,
+    :root:not([color-scheme]) pre .css .pseudo {
+        color: #F2777A
+    }
+
+    :root:not([color-scheme]) pre .number,
+    :root:not([color-scheme]) pre .preprocessor,
+    :root:not([color-scheme]) pre .built_in,
+    :root:not([color-scheme]) pre .builtin-name,
+    :root:not([color-scheme]) pre .literal,
+    :root:not([color-scheme]) pre .params,
+    :root:not([color-scheme]) pre .constant,
+    :root:not([color-scheme]) pre .command {
+        color: #F99157
+    }
+
+    :root:not([color-scheme]) pre .ruby .class .title,
+    :root:not([color-scheme]) pre .css .rules .attribute,
+    :root:not([color-scheme]) pre .string,
+    :root:not([color-scheme]) pre .symbol,
+    :root:not([color-scheme]) pre .value,
+    :root:not([color-scheme]) pre .inheritance,
+    :root:not([color-scheme]) pre .header,
+    :root:not([color-scheme]) pre .ruby .symbol,
+    :root:not([color-scheme]) pre .xml .cdata,
+    :root:not([color-scheme]) pre .special,
+    :root:not([color-scheme]) pre .formula {
+        color: #9C9
+    }
+
+    :root:not([color-scheme]) pre .title,
+    :root:not([color-scheme]) pre .css .hexcolor {
+        color: #6CC
+    }
+
+    :root:not([color-scheme]) pre .function,
+    :root:not([color-scheme]) pre .python .decorator,
+    :root:not([color-scheme]) pre .python .title,
+    :root:not([color-scheme]) pre .ruby .function .title,
+    :root:not([color-scheme]) pre .ruby .title .keyword,
+    :root:not([color-scheme]) pre .perl .sub,
+    :root:not([color-scheme]) pre .javascript .title,
+    :root:not([color-scheme]) pre .coffeescript .title {
+        color: #69C
+    }
+
+    :root:not([color-scheme]) pre .keyword,
+    :root:not([color-scheme]) pre .javascript .function {
+        color: #C9C
+    }
+
+    /* dark code style update copy code button style */
+    :root:not([color-scheme]) .clipboard {
+        background-color: #555555 !important; 
+        color: #BBBBBB !important
+    }
+}
+
+[color-scheme=dark] .highlight, 
+[color-scheme=dark] pre {
+    margin: 0 auto 20px;
+    color: #CCC;
+    line-height: 1.6
+}
+
+[color-scheme=dark] pre, 
+[color-scheme=dark] code {
+    font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
+}
+
+[color-scheme=dark] .highlight *::selection {
+    background: #515151
+}
+
+[color-scheme=dark] .highlight pre {
+    margin: 0;
+    padding: 10px 0;
+    border: 0
+}
+
+[color-scheme=dark] .highlight table, 
+[color-scheme=dark] .highlight tbody, 
+[color-scheme=dark] .highlight tr {
+    display: block
+}
+
+[color-scheme=dark] .highlight td {
+    display: inline-block;
+}
+
+[color-scheme=dark] .highlight table {
+    margin: 0;
+    width: auto;
+    border: 0
+}
+
+[color-scheme=dark] .highlight td {
+    padding: 0;
+    border: 0
+}
+
+[color-scheme=dark] .highlight figcaption {
+    display: flex;
+    padding: 0.5em;
+    background: #1B1B1B;
+    color: #CCC;
+    font-size: 0.875em;
+    line-height: 1.2;
+    justify-content: space-between
+}
+
+[color-scheme=dark] .highlight figcaption a {
+    color: #CCC
+}
+
+[color-scheme=dark] .highlight figcaption a:hover {
+    border-bottom-color: #CCC
+}
+
+[color-scheme=dark] .highlight .gutter {
+    border-right: 1px solid #555555;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+[color-scheme=dark] .highlight .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #444444;
+    color: #999;
+    text-align: right;
+    border-radius: 5px 0 0 5px
+}
+
+[color-scheme=dark] .highlight .code pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #444444;
+    border-radius: 0 5px 5px 0
+}
+
+[color-scheme=dark] .gist table {
+    width: auto
+}
+
+[color-scheme=dark] .gist table td {
+    border: 0
+}
+
+[color-scheme=dark] pre {
+    padding: 10px;
+    overflow: auto
+}
+
+[color-scheme=dark] pre code {
+    padding: 0;
+    background: none;
+    color: #CCC;
+    font-size: 0.875em;
+    text-shadow: none
+}
+
+[color-scheme=dark] pre .deletion {
+    background: #800000
+}
+
+[color-scheme=dark] pre .addition {
+    background: #008000
+}
+
+[color-scheme=dark] pre .meta {
+    color: #FC6;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+[color-scheme=dark] pre .comment {
+    color: #999
+}
+
+[color-scheme=dark] pre .variable,
+[color-scheme=dark] pre .attribute,
+[color-scheme=dark] pre .tag,
+[color-scheme=dark] pre .name,
+[color-scheme=dark] pre .regexp,
+[color-scheme=dark] pre .ruby .constant,
+[color-scheme=dark] pre .xml .tag .title,
+[color-scheme=dark] pre .xml .pi,
+[color-scheme=dark] pre .xml .doctype,
+[color-scheme=dark] pre .html .doctype,
+[color-scheme=dark] pre .css .id,
+[color-scheme=dark] pre .css .class,
+[color-scheme=dark] pre .css .pseudo {
+    color: #F2777A
+}
+
+[color-scheme=dark] pre .number,
+[color-scheme=dark] pre .preprocessor,
+[color-scheme=dark] pre .built_in,
+[color-scheme=dark] pre .builtin-name,
+[color-scheme=dark] pre .literal,
+[color-scheme=dark] pre .params,
+[color-scheme=dark] pre .constant,
+[color-scheme=dark] pre .command {
+    color: #F99157
+}
+
+[color-scheme=dark] pre .ruby .class .title,
+[color-scheme=dark] pre .css .rules .attribute,
+[color-scheme=dark] pre .string,
+[color-scheme=dark] pre .symbol,
+[color-scheme=dark] pre .value,
+[color-scheme=dark] pre .inheritance,
+[color-scheme=dark] pre .header,
+[color-scheme=dark] pre .ruby .symbol,
+[color-scheme=dark] pre .xml .cdata,
+[color-scheme=dark] pre .special,
+[color-scheme=dark] pre .formula {
+    color: #9C9
+}
+
+[color-scheme=dark] pre .title,
+[color-scheme=dark] pre .css .hexcolor {
+    color: #6CC
+}
+
+[color-scheme=dark] pre .function,
+[color-scheme=dark] pre .python .decorator,
+[color-scheme=dark] pre .python .title,
+[color-scheme=dark] pre .ruby .function .title,
+[color-scheme=dark] pre .ruby .title .keyword,
+[color-scheme=dark] pre .perl .sub,
+[color-scheme=dark] pre .javascript .title,
+[color-scheme=dark] pre .coffeescript .title {
+    color: #69C
+}
+
+[color-scheme=dark] pre .keyword,
+[color-scheme=dark] pre .javascript .function {
+    color: #C9C
+}
+
+/* dark code style update copy code button style */
+[color-scheme=dark] .clipboard {
+    background-color: #555555 !important; 
+    color: #BBBBBB !important
+}

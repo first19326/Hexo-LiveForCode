@@ -1,0 +1,16 @@
+<div class="error-404">
+    <span class="title-404"><%- theme.Error.title %></span>
+    <% theme.Error.content.forEach((content) => { %>
+        <span class="content-404"><%- content %></span>
+    <% }) %>
+    <br>
+    <span class="iconfont <%- theme.Error.icon %>"></span>
+    <hr>
+    <span class="buttons-404">
+        <% theme.Error.buttons.forEach((button) => { %>
+            <a class="button <%- button.class %>" href="<%- button.href %>">
+                <span class="iconfont <%- button.icon %>"></span> <%- button.text %>
+            </a>
+        <% }) %>
+    </span>
+</div>

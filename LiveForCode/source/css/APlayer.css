@@ -72,7 +72,7 @@
 	left: 0;
 	right: 0;
 	margin: 0;
-	z-index: 99;
+	z-index: 990;
 	overflow: visible;
 	max-width: 400px;
 	box-shadow: none
@@ -105,8 +105,7 @@
 	right: 0;
 	margin: 0;
 	z-index: 98;
-	pointer-events: none;
-	text-shadow: -1px -1px 0 #fff
+	pointer-events: none
 }
 
 .aplayer.aplayer-fixed .aplayer-lrc:after,.aplayer.aplayer-fixed .aplayer-lrc:before {
@@ -706,4 +705,198 @@
 		-webkit-transform: rotate(1turn);
 		transform: rotate(1turn)
 	}
+}
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+
+	:root:not([color-scheme]) .aplayer {
+		background: #444444;
+		color: #BBBBBB
+	}
+
+	:root:not([color-scheme]) .aplayer.aplayer-fixed .aplayer-list {
+		border: 1px solid #555555;
+		border-bottom: none
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li {
+		border-top: 1px solid #555555
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li.aplayer-list-light {
+		background: #66666666
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li:first-child {
+		border-top: none
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li:hover {
+		background: #66666688
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li .aplayer-list-index {
+		color: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-list ol li .aplayer-list-author {
+		color: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer.aplayer-fixed .aplayer-body {
+		background: #444444
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-pic .aplayer-play {
+		border: 2px solid #BBBBBB
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-pic .aplayer-pause {
+		border: 2px solid #BBBBBB
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-pic .aplayer-button path {
+		fill: #BBBBBB
+	}
+
+	:root:not([color-scheme]) .aplayer.aplayer-fixed .aplayer-info {
+		border-top: 1px solid #555555
+	}
+
+	:root:not([color-scheme]) .aplayer.aplayer-withlist .aplayer-info {
+		border-bottom: 1px solid #555555
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-info .aplayer-music .aplayer-author {
+		color: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+		fill: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path {
+		fill: #FFFFFF
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+		background: #555555
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+		background: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-miniswitcher {
+		background: #555555
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-miniswitcher .aplayer-icon path {
+		fill: #999999
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-miniswitcher .aplayer-icon:hover path {
+		fill: #FFFFFF
+	}
+
+	:root:not([color-scheme]) .aplayer .aplayer-lrc p {
+		color: #999999
+	}
+}
+
+[color-scheme=dark] .aplayer {
+	background: #444444;
+	color: #BBBBBB
+}
+
+[color-scheme=dark] .aplayer.aplayer-fixed .aplayer-list {
+	border: 1px solid #555555;
+	border-bottom: none
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li {
+	border-top: 1px solid #555555
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: #66666666
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li:first-child {
+	border-top: none
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li:hover {
+	background: #66666688
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li .aplayer-list-index {
+	color: #999999
+}
+
+[color-scheme=dark] .aplayer .aplayer-list ol li .aplayer-list-author {
+	color: #999999
+}
+
+[color-scheme=dark] .aplayer.aplayer-fixed .aplayer-body {
+	background: #444444
+}
+
+[color-scheme=dark] .aplayer .aplayer-pic .aplayer-play {
+	border: 2px solid #CCCCCC
+}
+
+[color-scheme=dark] .aplayer .aplayer-pic .aplayer-pause {
+	border: 2px solid #CCCCCC
+}
+
+[color-scheme=dark] .aplayer .aplayer-pic .aplayer-button path {
+	fill: #CCCCCC
+}
+
+[color-scheme=dark] .aplayer.aplayer-fixed .aplayer-info {
+	border-top: 1px solid #555555
+}
+
+[color-scheme=dark] .aplayer.aplayer-withlist .aplayer-info {
+    border-bottom: 1px solid #555555
+}
+
+[color-scheme=dark] .aplayer .aplayer-info .aplayer-music .aplayer-author {
+	color: #999999
+}
+
+[color-scheme=dark] .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+	fill: #999999
+}
+
+[color-scheme=dark] .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path {
+	fill: #FFFFFF
+}
+
+[color-scheme=dark] .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+	background: #555555
+}
+
+[color-scheme=dark] .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+	background: #999999
+}
+
+[color-scheme=dark] .aplayer .aplayer-miniswitcher {
+	background: #555555
+}
+
+[color-scheme=dark] .aplayer .aplayer-miniswitcher .aplayer-icon path {
+	fill: #999999
+}
+
+[color-scheme=dark] .aplayer .aplayer-miniswitcher .aplayer-icon:hover path {
+	fill: #FFFFFF
+}
+
+[color-scheme=dark] .aplayer .aplayer-lrc p {
+	color: #999999
 }

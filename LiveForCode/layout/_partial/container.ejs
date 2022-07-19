@@ -1,0 +1,156 @@
+<div id="container">
+    <% if (is_post()) { %>
+        <!-- 文章页面 -->
+        <div id="article">
+            <%- partial('_partial/toc') %>
+            <div class="article-body">
+                <%- post.content %>
+                <% if (post.donate) { %>
+                    <%- partial('_partial/donate') %>
+                <% } %>
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <%- partial('_partial/suffix'), { post : post } %>
+                <% if (post.categories.count() > 0) { %>
+                    <div class="category">
+                        <%- __('post.categories') %>
+                        <% post.categories.each((category) => { %>
+                            <a href="<%- url_for(category.path) %>"><%- category.name %></a>
+                        <% }) %>
+                    </div>
+                <% } %>
+                <% if (post.tags.count() > 0) { %>
+                    <div class="tag">
+                        <%- __('post.tags') %>
+                        <% post.tags.each((tag) => { %>
+                            <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
+                        <% }) %>
+                    </div>
+                <% } %>
+                <div class="article-prev-next">
+                    <% if (post.prev) { %>
+                        <a href="<%- url_for(post.prev.path) %>" class="prev-prefix">« </a> <%- __('post.prev') %>    <a href="<%- url_for(post.prev.path) %>" title="<%- __('post.post') %> <%- date(post.prev.date, 'YYYY-MM-DD hh:mm') %>"><%- post.prev.title %></a>
+                        <br>
+                    <% } %>
+                    <% if (post.next) { %>
+                        <a href="<%- url_for(post.next.path) %>" class="next-prefix">» </a> <%- __('post.next') %>    <a href="<%- url_for(post.next.path) %>" title="<%- __('post.post') %> <%- date(post.next.date, 'YYYY-MM-DD hh:mm') %>"><%- post.next.title %></a>
+                    <% } %>
+                </div>
+            </div>
+            <%- partial('_partial/comment') %>
+        </div>
+    <% } else if (is_page()) { %>
+        <!-- 独立页面 -->
+        <% if (page.type == 'category') { %>
+            <div class="categories">
+                <div class="categories-title">
+                    <%- _p('category', site.categories.count()) %>
+                </div>
+                <div class="categories-content">
+                    <%- list_categories() %>
+                </div>
+            </div>
+        <% } else if (page.type == 'tag') { %>
+            <div class="tags">
+                <div class="tags-title">
+                    <%- _p('tag', site.tags.count()) %>
+                </div>
+                <div class="tags-content">
+                    <div class="tags-light">
+                        <%- tagcloud({ min_font : 12, max_font : 25, amount : 300, color : true, start_color : '#CCC', end_color : '#111' }) %>
+                    </div>
+                    <div class="tags-dark">
+                        <%- tagcloud({ min_font : 12, max_font : 25, amount : 300, color : true, start_color : '#666', end_color : '#EEE' }) %>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <div id="article">
+                <div class="article-body">
+                    <% if (page.type == 'friend') { %>
+                        <%- partial('_partial/friend') %>
+                    <% } else if (page.type == '404') { %>
+                        <%- partial('_partial/404') %>
+                    <% } %>
+                    <%- page.content %>
+                    <% if (page.donate) { %>
+                        <%- partial('_partial/donate') %>
+                    <% } %>
+                </div>
+                <%- partial('_partial/comment', { post : page }) %>
+            </div>
+        <% } %>
+    <% } else { %>
+        <% if (is_home()) { %>
+            <!-- 首页 -->
+            <div class="articles">
+                <% page.posts.each(function(post) { %>
+                    <div class="article">
+                        <div class="article-title">
+                            <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+                            <% if (post.sticky) { %>
+                                <span class="article-sticky"><%- __('post.sticky') %></span>
+                            <% } %>
+                        </div>
+                        <div class="article-abstract">
+                            <% if (post.description && post.description != '') { %>
+                                <%- __('post.description') %><%- post.description %>
+                                <a href="<%- url_for(post.path) %>"><%- __('post.more') %></a>
+                            <% } %>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="article-info">
+                            <span>
+                                <i class="iconfont icon-time"></i> <%- __('post.date') %><%- date(post.date, 'YYYY-MM-DD') %>
+                            </span>
+                            <% if (theme.Valine.visitor) { %>
+                                <span id="<%- config.url %>/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+                                    <i class="iconfont icon-browse"></i> <%- __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            <% } %>
+                            <span>
+                                <i class="iconfont icon-interactive"></i> <%- __('post.comment') %><span class="valine-comment-count" data-xid="<%- config.url %>/<%- post.path %>"></span>
+                            </span>
+                        </div>
+                        <div class="clear"></div>     
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <!-- 归档页面、分类归档页面、标签归档页面 -->
+            <div class="articles">
+                <div class="articles-wrap">
+                    <span class="archive-move-on"></span>
+                    <span class="archive-counter">
+                        <% if (is_archive()) { %>
+                            <%- __('archive.default', site.posts.count()) %>
+                        <% } else if (is_category()) { %>
+                            <%- __('archive.category') %><span class="category"><%- page.category %></span>
+                        <% } else if (is_tag) { %>
+                            <%- __('archive.tag') %><span class="tag"><%- page.tag %></span>
+                        <% } %>
+                    </span>
+                    <% let year; %>
+                    <% page.posts.each(function(post, i) { %>
+                        <% if (year != post.date.year()) { %>
+                            <div class="archive-title">
+                                <h2 class="archive-year"><%- post.date.year() %></h2>
+                            </div>
+                            <% year = post.date.year(); %>
+                        <% } %>   
+                        <div class="article">
+                            <div class="article-header">
+                                <h1 class="article-title"><a href="<%- url_for(post.path) %>"><span><%- post.title %></span></a></h1>
+                                <div class="article-meta">
+                                    <span class="article-time"><%- date(post.date, 'MM-DD') %></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        <% } %>    
+        <%- partial('_partial/pagination') %>
+    <% } %>
+</div>

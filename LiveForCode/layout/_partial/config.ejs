@@ -1,114 +1,119 @@
 ﻿<script>
     window.config = {
-        GitHubUserName     : '<%= theme.GitHubUserName %>',
-        GitHubRepositories : '<%= theme.GitHubRepositories %>',
+        GitHubUserName     : "<%- theme.GitHubUserName %>",
+        GitHubRepositories : "<%- theme.GitHubRepositories %>",
 
-        BlogUser      : '<%= theme.BlogUser %>',
-        BlogAvatar    : '<%= theme.BlogAvatar %>',
-        BlogStartDate : '<%= theme.BlogStartDate %>',
+        User             : "<%- theme.User %>",
+        UserAvatar       : "<%- theme.UserAvatar %>",
+        WebsiteStartDate : "<%- theme.WebsiteStartDate %>",
 
-        WebsiteTitleBlur         : '<%= theme.WebsiteTitleBlur %>',
-        WebsiteTitleBlurTimeOut  : <%= theme.WebsiteTitleBlurTimeOut %>,
-        WebsiteTitleFocus        : '<%= theme.WebsiteTitleFocus %>',
-        WebsiteTitleFocusTimeOut : <%= theme.WebsiteTitleFocusTimeOut %>,
-        WebsiteFavicon           : '<%= theme.WebsiteFavicon %>',
+        WebsiteTitleBlur         : "<%- theme.WebsiteTitleBlur %>",
+        WebsiteTitleBlurTimeOut  : <%- theme.WebsiteTitleBlurTimeOut %>,
+        WebsiteTitleFocus        : "<%- theme.WebsiteTitleFocus %>",
+        WebsiteTitleFocusTimeOut : <%- theme.WebsiteTitleFocusTimeOut %>,
+        WebsiteFavicon           : "<%- theme.WebsiteFavicon %>",
 
-        ProgressBar: {
-            id       : '<%= theme.ProgressBar.id %>',
-            color    : '<%= theme.ProgressBar.color %>',
-            height   : '<%= theme.ProgressBar.height %>',
-            duration : <%= theme.ProgressBar.duration %>
+        ProgressBar : {
+            id       : "<%- theme.ProgressBar.id %>",
+            color    : "<%- theme.ProgressBar.color %>",
+            height   : "<%- theme.ProgressBar.height %>",
+            duration : <%- theme.ProgressBar.duration %>
         },
 
         Loading: {
-            rebound: {
-                tension  : <%= theme.Loading.rebound.tension %>,
-                friction : <%= theme.Loading.rebound.friction %>
+            rebound : {
+                tension  : <%- theme.Loading.rebound.tension %>,
+                friction : <%- theme.Loading.rebound.friction %>
             },
-            spinner: {
-                id     : '<%= theme.Loading.spinner.id %>',
-                radius : <%= theme.Loading.spinner.radius %>,
-                sides  : <%= theme.Loading.spinner.sides %>,
-                depth  : <%= theme.Loading.spinner.depth %>,
+            spinner : {
+                id     : "<%- theme.Loading.spinner.id %>",
+                radius : <%- theme.Loading.spinner.radius %>,
+                sides  : <%- theme.Loading.spinner.sides %>,
+                depth  : <%- theme.Loading.spinner.depth %>,
                 colors : {
-                    background : '<%= theme.Loading.spinner.colors.background %>',
-                    stroke     : '<%= theme.Loading.spinner.colors.stroke %>',
-                    base       : '<%= theme.Loading.spinner.colors.base %>',
-                    child      : '<%= theme.Loading.spinner.colors.child %>'
+                    background : "<%- theme.Loading.spinner.colors.background %>",
+                    stroke     : "<%- theme.Loading.spinner.colors.stroke %>",
+                    base       : "<%- theme.Loading.spinner.colors.base %>",
+                    child      : "<%- theme.Loading.spinner.colors.child %>"
                 },
-                alwaysForward : <%= theme.Loading.spinner.alwaysForward %>,
-                restAt        : <%= theme.Loading.spinner.restAt %>,
-                renderBase    : <%= theme.Loading.spinner.renderBase %>
+                alwaysForward : <%- theme.Loading.spinner.alwaysForward %>,
+                restAt        : <%- theme.Loading.spinner.restAt %>,
+                renderBase    : <%- theme.Loading.spinner.renderBase %>
             }
         },
 
-        HomeHeaderAnimationRendered : <%= theme.HomeHeaderAnimationRendered %>,
+        HomeHeaderAnimationRendered : <%- theme.HomeHeaderAnimationRendered %>,
         HomeHeaderAnimation         : {
-            radius      : <%= theme.HomeHeaderAnimation.radius %>,
-            density     : <%= theme.HomeHeaderAnimation.density %>,
-            color       : '<%= theme.HomeHeaderAnimation.color %>',
-            clearOffset : <%= theme.HomeHeaderAnimation.clearOffset %>
+            radius      : <%- theme.HomeHeaderAnimation.radius %>,
+            density     : <%- theme.HomeHeaderAnimation.density %>,
+            color       : "<%- theme.HomeHeaderAnimation.color %>",
+            clearOffset : <%- theme.HomeHeaderAnimation.clearOffset %>
         },
 
-        ArticleHeaderAnimationRendered : <%= theme.ArticleHeaderAnimationRendered %>,
-        ArticleHeaderAnimation         : {
-            triW                  : <%= theme.ArticleHeaderAnimation.triW %>,
-            triH                  : <%= theme.ArticleHeaderAnimation.triH %>,
-            neighbours            : [
-                <% theme.ArticleHeaderAnimation.neighbours.forEach(function(neighbour){ %>
-                    '<%= neighbour %>',
-                <% }) %>
-            ],
-            speedTrailAppear      : <%= theme.ArticleHeaderAnimation.speedTrailAppear %>,
-            speedTrailDisappear   : <%= theme.ArticleHeaderAnimation.speedTrailDisappear %>,
-            speedTriOpen          : <%= theme.ArticleHeaderAnimation.speedTriOpen %>,
-            trailMaxLength        : <%= theme.ArticleHeaderAnimation.trailMaxLength %>,
-            trailIntervalCreation : <%= theme.ArticleHeaderAnimation.trailIntervalCreation %>,
-            delayBeforeDisappear  : <%= theme.ArticleHeaderAnimation.delayBeforeDisappear %>,
-            colors                : [
-                <% theme.ArticleHeaderAnimation.colors.forEach(function(color){ %>
-                    '<%= color %>',
-                <% }) %>
-            ]
-        },
-
-        BackAnimationRendered          : <%= theme.BackAnimationRendered %>,
-        IEBrowserBackAnimationRendered : <%= theme.IEBrowserBackAnimationRendered %>,
+        BackAnimationRendered          : <%- theme.BackAnimationRendered %>,
+        IEBrowserBackAnimationRendered : <%- theme.IEBrowserBackAnimationRendered %>,
         BackAnimation                  : {
-            colorSaturation  : '<%= theme.BackAnimation.colorSaturation %>',
-            colorBrightness  : '<%= theme.BackAnimation.colorBrightness %>',
-            colorAlpha       : <%= theme.BackAnimation.colorAlpha %>,
-            colorCycleSpeed  : <%= theme.BackAnimation.colorCycleSpeed %>,
-            verticalPosition : '<%= theme.BackAnimation.verticalPosition %>',
-            horizontalSpeed  : <%= theme.BackAnimation.horizontalSpeed %>,
-            ribbonCount      : <%= theme.BackAnimation.ribbonCount %>,
-            strokeSize       : <%= theme.BackAnimation.strokeSize %>,
-            parallaxAmount   : <%= theme.BackAnimation.parallaxAmount %>,
-            animateSections  : <%= theme.BackAnimation.animateSections %>
+            colorSaturation  : "<%- theme.BackAnimation.colorSaturation %>",
+            colorBrightness  : "<%- theme.BackAnimation.colorBrightness %>",
+            colorAlpha       : <%- theme.BackAnimation.colorAlpha %>,
+            colorCycleSpeed  : <%- theme.BackAnimation.colorCycleSpeed %>,
+            verticalPosition : "<%- theme.BackAnimation.verticalPosition %>",
+            horizontalSpeed  : <%- theme.BackAnimation.horizontalSpeed %>,
+            ribbonCount      : <%- theme.BackAnimation.ribbonCount %>,
+            strokeSize       : <%- theme.BackAnimation.strokeSize %>,
+            parallaxAmount   : <%- theme.BackAnimation.parallaxAmount %>,
+            animateSections  : <%- theme.BackAnimation.animateSections %>
         },
 
         HomeHeaderImage : [
             <% theme.HomeHeaderImage.forEach(function(homeHeaderImage){ %>
-                '<%= homeHeaderImage %>',
+                "<%- homeHeaderImage %>",
             <% }) %>
         ],
-        HomeBannerText  : '<%= theme.HomeBannerText %>',
+        HomeBannerText  : "<%- theme.HomeBannerText %>",
 
         ArticleHeaderImage : [
             <% theme.ArticleHeaderImage.forEach(function(articleHeaderImage){ %>
-                '<%= articleHeaderImage %>',
+                "<%- articleHeaderImage %>",
             <% }) %>
         ],
 
-        OtherBannerText : '<%= theme.OtherBannerText %>',
+        OtherBannerText : "<%- theme.OtherBannerText %>",
 
+        Error : {
+            icon    : "<%- theme.Error.icon %>",
+            title   : "<%- theme.Error.title %>",
+            content : [
+                <% theme.Error.content.forEach(function(content){ %>
+                    "<%- content %>",
+                <% }) %>
+            ],
+            buttons : [
+                <% theme.Error.buttons.forEach(function(button){ %>
+                    {
+                        icon  : "<%- button.icon %>",
+                        text  : "<%- button.text %>",
+                        href  : "<%- button.href %>",
+                        class : "<%- button.class %>"
+                    },
+                <% }) %>
+            ]
+        },
+
+        MenuNotice : {
+            enable : <%- theme.MenuNotice.enable %>,
+            notice : "<%- theme.MenuNotice.notice %>",
+            speed  : <%- theme.MenuNotice.speed %>
+        },
         MenuList : [
             <% theme.MenuList.forEach(function(menuList){ %>
                 {
-                    name   : '<%= menuList.name %>',
-                    href   : '<%= menuList.href %>',    
-                    target : '<%= menuList.target %>',
-                    class  : '<%= menuList.class %>'
+                    name   : "<%- menuList.name %>",
+                    icon   : "<%- menuList.icon %>",
+                    href   : "<%- menuList.href %>",
+                    type   : "<%- menuList.type %>",
+                    class  : "<%- menuList.class %>",
+                    target : "<%- menuList.target %>"
                 },
             <% }) %>
         ],
@@ -116,20 +121,19 @@
             <% if (theme.MenuLink) { %>
                 <% theme.MenuLink.forEach(function(menuLink){ %>
                     {
-                        icon : '<%= menuLink.icon %>', 
-                        url  : '<%= menuLink.url %>'
+                        name   : "<%- menuLink.name %>",
+                        icon   : "<%- menuLink.icon %>",
+                        href   : "<%- menuLink.href %>",
+                        class  : "<%- menuLink.class %>",
+                        target : "<%- menuLink.target %>",
+                        image  : "<%- menuLink.image %>"
                     },
                 <% }) %>
             <% } %>
         ],
 
-        FooterStyle : <%= theme.FooterStyle %>,
-        BottomText  : {
-            icon    : '<%= theme.BottomText.icon %>',
-            left    : '<%= theme.BottomText.left %>',
-            right   : '<%= theme.BottomText.right %>'
-        },
-        ThemeInfo   : <%= theme.ThemeInfo %>,
+        FooterStyle : <%- theme.FooterStyle %>,
+        BottomText  : "<%- theme.BottomText %>",
 
         ConsoleList : [
             <% if (theme.ConsoleList) { %>
@@ -137,7 +141,7 @@
                     [
                         <% if (consoleList) { %>
                             <% consoleList.forEach(function(console){ %>
-                                '<%= console %>',
+                                "<%- console %>",
                             <% }) %>
                         <% } %>
                     ],
@@ -145,167 +149,166 @@
             <% } %>
         ],
 
-        FontIconExtend : '<%= theme.FontIconExtend %>',
+        FontIconExtend : "<%- theme.FontIconExtend %>",
 
         Donate : {
-            paypal  : '<%= theme.Donate.paypal %>',
-            bitcoin : '<%= theme.Donate.bitcoin %>',
-            alipay  : '<%= theme.Donate.alipay %>',
-            wechat  : '<%= theme.Donate.wechat %>'
+            paypal  : "<%- theme.Donate.paypal %>",
+            bitcoin : "<%- theme.Donate.bitcoin %>",
+            alipay  : "<%- theme.Donate.alipay %>",
+            wechat  : "<%- theme.Donate.wechat %>"
         },
 
-        Code : {
-            style : '<%= theme.Code.style %>'
-        },  
-
         Search : {
-            applicationID : '<%= theme.Search.applicationID %>',
-            apiKey        : '<%= theme.Search.apiKey %>',
-            indexName     : '<%= theme.Search.indexName %>',
+            applicationID : "<%- theme.Search.applicationID %>",
+            apiKey        : "<%- theme.Search.apiKey %>",
+            indexName     : "<%- theme.Search.indexName %>",
             hits          : {
-                page : <%= theme.Search.hits.page %>
+                page : <%- theme.Search.hits.page %>
             },
             labels        : {
-                placeholder : '<%= theme.Search.labels.placeholder %>',
-                empty       : '<%= theme.Search.labels.empty %>',
-                stats       : '<%= theme.Search.labels.stats %>',
+                placeholder : "<%- theme.Search.labels.placeholder %>",
+                empty       : "<%- theme.Search.labels.empty %>",
+                stats       : "<%- theme.Search.labels.stats %>",
             }
         }, 
 
         Valine : {
-            switch         : <%= theme.Valine.switch %>,
-            el             : '<%= theme.Valine.el %>',
-            appId          : '<%= theme.Valine.appId %>',
-            appKey         : '<%= theme.Valine.appKey %>',
-            serverURLs     : '<%= theme.Valine.serverURLs %>',
-            placeholder    : '<%= theme.Valine.placeholder %>',
-            avatar         : '<%= theme.Valine.avatar %>',
-            meta           : '<%= theme.Valine.meta %>',
-            requiredFields : '<%= theme.Valine.requiredFields %>',
-            pageSize       : <%= theme.Valine.pageSize %>,
-            lang           : '<%= theme.Valine.lang %>',
-            visitor        : <%= theme.Valine.visitor %>,
-            enableQQ       : <%= theme.Valine.enableQQ %>
+            switch         : <%- theme.Valine.switch %>,
+            el             : "<%- theme.Valine.el %>",
+            appId          : "<%- theme.Valine.appId %>",
+            appKey         : "<%- theme.Valine.appKey %>",
+            serverURLs     : "<%- theme.Valine.serverURLs %>",
+            placeholder    : "<%- theme.Valine.placeholder %>",
+            avatar         : "<%- theme.Valine.avatar %>",
+            meta           : "<%- theme.Valine.meta %>",
+            requiredFields : "<%- theme.Valine.requiredFields %>",
+            pageSize       : <%- theme.Valine.pageSize %>,
+            lang           : "<%- theme.Valine.lang %>",
+            visitor        : <%- theme.Valine.visitor %>,
+            enableQQ       : <%- theme.Valine.enableQQ %>
         },
 
         Tocbot : {
-            switch                : <%= theme.Tocbot.switch %>,
-            tocSelector           : '<%= theme.Tocbot.tocSelector %>',
-            contentSelector       : '<%= theme.Tocbot.contentSelector %>',
-            headingSelector       : '<%= theme.Tocbot.headingSelector %>',
-            headingsOffset        : <%= theme.Tocbot.headingsOffset %>,
-            scrollSmooth          : <%= theme.Tocbot.scrollSmooth %>,
-            scrollSmoothOffset    : <%= theme.Tocbot.scrollSmoothOffset %>,
-            positionFixedSelector : '<%= theme.Tocbot.positionFixedSelector %>',
-            positionFixedClass    : '<%= theme.Tocbot.positionFixedClass %>',
-            fixedSidebarOffset    : '<%= theme.Tocbot.fixedSidebarOffset %>',
+            switch                : <%- theme.Tocbot.switch %>,
+            tocSelector           : "<%- theme.Tocbot.tocSelector %>",
+            contentSelector       : "<%- theme.Tocbot.contentSelector %>",
+            headingSelector       : "<%- theme.Tocbot.headingSelector %>",
+            headingsOffset        : <%- theme.Tocbot.headingsOffset %>,
+            scrollSmooth          : <%- theme.Tocbot.scrollSmooth %>,
+            scrollSmoothOffset    : <%- theme.Tocbot.scrollSmoothOffset %>,
+            positionFixedSelector : "<%- theme.Tocbot.positionFixedSelector %>",
+            positionFixedClass    : "<%- theme.Tocbot.positionFixedClass %>",
+            fixedSidebarOffset    : "<%- theme.Tocbot.fixedSidebarOffset %>",
         },
 
         Require : {
-            baseUrl     : '<%= theme.Require.baseUrl %>',
-            waitSeconds : <%= theme.Require.waitSeconds %>
+            baseUrl     : "<%- theme.Require.baseUrl %>",
+            waitSeconds : <%- theme.Require.waitSeconds %>
         },
 
         Music : {
-            type : '<%= theme.Music.type %>'
+            type : "<%- theme.Music.type %>"
         },
         APlayer : {
-            container : '<%= theme.APlayer.container %>',
-            fixed     : <%= theme.APlayer.fixed %>,
-            autoplay  : <%= theme.APlayer.autoplay %>,
-            loop      : '<%= theme.APlayer.loop %>',
-            order     : '<%= theme.APlayer.order %>',
-            preload   : '<%= theme.APlayer.preload %>',
-            volume    : <%= theme.APlayer.volume %>,
-            mutex     : <%= theme.APlayer.mutex %>,
-            lrcType   : <%= theme.APlayer.lrcType %>,
+            container : "<%- theme.APlayer.container %>",
+            fixed     : <%- theme.APlayer.fixed %>,
+            autoplay  : <%- theme.APlayer.autoplay %>,
+            loop      : "<%- theme.APlayer.loop %>",
+            order     : "<%- theme.APlayer.order %>",
+            preload   : "<%- theme.APlayer.preload %>",
+            volume    : <%- theme.APlayer.volume %>,
+            mutex     : <%- theme.APlayer.mutex %>,
+            lrcType   : <%- theme.APlayer.lrcType %>,
             audio     : [
                 <% theme.APlayer.audio.forEach(function(audio) { %>
                     {
-                        name   : '<%= audio.name %>',
-                        artist : '<%= audio.artist %>',
-                        cover  : '<%= audio.cover %>',
-                        url    : '<%= audio.url %>',
-                        lrc    : '<%= audio.lrc %>'
+                        name   : "<%- audio.name %>",
+                        artist : "<%- audio.artist %>",
+                        cover  : "<%- audio.cover %>",
+                        url    : "<%- audio.url %>",
+                        lrc    : "<%- audio.lrc %>"
                     },
                 <% }) %>
             ]
         },
         Meting : {
-            id       : '<%= theme.Meting.id %>', 
-            lrcshow  : <%= theme.Meting.lrcshow %>, 
-            server   : '<%= theme.Meting.server %>', 
-            type     : '<%= theme.Meting.type %>', 
-            fixed    : <%= theme.Meting.fixed %>, 
-            autoplay : <%= theme.Meting.autoplay %>, 
-            loop     : '<%= theme.Meting.loop %>', 
-            order    : '<%= theme.Meting.order %>', 
-            preload  : '<%= theme.Meting.preload %>', 
-            volume   : <%= theme.Meting.volume %>, 
-            mutex    : <%= theme.Meting.mutex %>
+            id       : "<%- theme.Meting.id %>", 
+            lrcshow  : <%- theme.Meting.lrcshow %>, 
+            server   : "<%- theme.Meting.server %>", 
+            type     : "<%- theme.Meting.type %>", 
+            fixed    : <%- theme.Meting.fixed %>, 
+            autoplay : <%- theme.Meting.autoplay %>, 
+            loop     : "<%- theme.Meting.loop %>", 
+            order    : "<%- theme.Meting.order %>", 
+            preload  : "<%- theme.Meting.preload %>", 
+            volume   : <%- theme.Meting.volume %>, 
+            mutex    : <%- theme.Meting.mutex %>
         },
 
         Mouse : {
-            enable  : <%= theme.Mouse.enable %>,
+            enable  : <%- theme.Mouse.enable %>,
             options : {
-                size  : <%= theme.Mouse.options.size %>,
-                sizeF : <%= theme.Mouse.options.sizeF %>
+                size  : <%- theme.Mouse.options.size %>,
+                sizeF : <%- theme.Mouse.options.sizeF %>
             }
         },
 
         LazyLoad : {
-            default : '<%= theme.LazyLoad.default %>'
+            default : "<%- theme.LazyLoad.default %>"
         },
   
         Style : {
-            aplayer          : '<%= theme.Style.aplayer %>',
-            archive          : '<%= theme.Style.archive %>',
-            donate           : '<%= theme.Style.donate %>',
-            fancybox         : '<%= theme.Style.fancybox %>',
-            footer           : '<%= theme.Style.footer %>',
-            iconfont         : '<%= theme.Style.iconfont %>',
-            index            : '<%= theme.Style.index %>',
-            menuBubble       : '<%= theme.Style.menuBubble %>',
-            page             : '<%= theme.Style.page %>',
-            post             : '<%= theme.Style.post %>',
-            search           : '<%= theme.Style.search %>',
-            tocbot           : '<%= theme.Style.tocbot %>',
-            normal           : '<%= theme.Style.normal %>',
-            night            : '<%= theme.Style.night %>',
-            clipboard        : '<%= theme.Style.clipboard %>',
-            mouse            : '<%= theme.Style.mouse %>'
+            aplayer          : "<%- theme.Style.aplayer %>",
+            archive          : "<%- theme.Style.archive %>",
+            base             : "<%- theme.Style.base %>",
+            clipboard        : "<%- theme.Style.clipboard %>",
+            code             : "<%- theme.Style.code %>",
+            donate           : "<%- theme.Style.donate %>",
+            fancybox         : "<%- theme.Style.fancybox %>",
+            footer           : "<%- theme.Style.footer %>",
+            iconfont         : "<%- theme.Style.iconfont %>",
+            index            : "<%- theme.Style.index %>",
+            menuBubble       : "<%- theme.Style.menuBubble %>",
+            mouse            : "<%- theme.Style.mouse %>",
+            page             : "<%- theme.Style.page %>",
+            post             : "<%- theme.Style.post %>",
+            search           : "<%- theme.Style.search %>",
+            tocbot           : "<%- theme.Style.tocbot %>",
+            valine           : "<%- theme.Style.valine %>"
         },
 
         Script: {
-            aplayer          : '<%= theme.Script.aplayer %>',
-            config           : '<%= theme.Script.config %>',
-            index            : '<%= theme.Script.index %>',
-            instantSearch    : '<%= theme.Script.instantSearch %>',
-            jQuery           : '<%= theme.Script.jQuery %>',
-            loading          : '<%= theme.Script.loading %>',
-            meting           : '<%= theme.Script.meting %>',
-            iscroll          : '<%= theme.Script.iscroll %>',
-            require          : '<%= theme.Script.require %>'
+            aplayer          : "<%- theme.Script.aplayer %>",
+            config           : "<%- theme.Script.config %>",
+            index            : "<%- theme.Script.index %>",
+            instantSearch    : "<%- theme.Script.instantSearch %>",
+            iscroll          : "<%- theme.Script.iscroll %>",
+            jQuery           : "<%- theme.Script.jQuery %>",
+            loading          : "<%- theme.Script.loading %>",
+            meting           : "<%- theme.Script.meting %>",
+            require          : "<%- theme.Script.require %>"
         },
 
         Font: {
-            LongCang   : '<%= theme.Font.LongCang %>',
-            Monda      : '<%= theme.Font.Monda %>',
-            NotoSansSC : '<%= theme.Font.NotoSansSC %>',
-            Playball   : '<%= theme.Font.Playball %>',
-            PTMono     : '<%= theme.Font.PTMono %>',
-            RobotoSlab : '<%= theme.Font.RobotoSlab %>',
-            Rosario    : '<%= theme.Font.Rosario %>',
-            UbuntuMono : '<%= theme.Font.UbuntuMono %>'
+            LongCang    : "<%- theme.Font.LongCang %>",
+            Monda       : "<%- theme.Font.Monda %>",
+            NotoSansSC  : "<%- theme.Font.NotoSansSC %>",
+            NotoSerifSC : "<%- theme.Font.NotoSerifSC %>",
+            Playball    : "<%- theme.Font.Playball %>",
+            PTMono      : "<%- theme.Font.PTMono %>",
+            Roboto      : "<%- theme.Font.Roboto %>",
+            RobotoSlab  : "<%- theme.Font.RobotoSlab %>",
+            Rosario     : "<%- theme.Font.Rosario %>",
+            UbuntuMono  : "<%- theme.Font.UbuntuMono %>"
         },
 
         Suffix : {
-            about : '<%= theme.Suffix.about %>'
+            about : "<%- theme.Suffix.about %>"
         },
             
         Theme : {
-            url  : '<%= theme.Theme.url %>',
-            name : '<%= theme.Theme.name %>'
+            url  : "<%- theme.Theme.url %>",
+            name : "<%- theme.Theme.name %>"
         }  
     };
 </script>

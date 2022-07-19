@@ -213,3 +213,17 @@
 		transform: rotateZ(40deg) scale(0.6, 0.6)
 	}
 }
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+
+	:root:not([color-scheme]) #QRBox {
+		background-color: rgba(51, 51, 51, .9)
+	}
+}
+
+[color-scheme=dark] #QRBox {
+	background-color: rgba(51, 51, 51, .9)
+}

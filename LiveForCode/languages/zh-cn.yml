@@ -1,7 +1,12 @@
+archive:
+  default: 目前共计 %d 篇日志，继续加油！
+  category: 当前分类：
+  tag: 当前标签：
+
 category:
   zero: 暂无分类
   one: 目前共计 1 个分类
-  other: "目前共计 %d 个分类"
+  other: 目前共计 %d 个分类
 
 comment:
   title: 评论列表
@@ -9,10 +14,15 @@ comment:
 donate:
   text: 赞赏
 
+friend:
+  about: 这家伙很懒 ~
+
 menu:
   home: 首页
-  tag: 标签
   category: 分类
+  category-archive: 分类归档
+  tag: 标签
+  tag-archive: 标签归档
   archive: 归档
 
 pagination:
@@ -33,15 +43,17 @@ post:
   next: 下一篇：
 
 suffix:
-  author: 文章作者
-  from: 文章出处
-  about: 作者签名
-  theme: 关于主题
-  license: 
-    title: 版权声明
-    content: 文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+  author: 文章作者：
+  from: 文章出处：
+  about: 作者签名：
+  theme: 关于主题：
+  copyright: 
+    title: 版权声明：
+    default: 文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+    prohibit: 未经许可，禁止转载引用
+    reproduce: 文章来自互联网，未知来源，侵权请联系删除
 
 tag:
   zero: 暂无标签
   one: 目前共计 1 个标签
-  other: "目前共计 %d 个标签"
+  other: 目前共计 %d 个标签

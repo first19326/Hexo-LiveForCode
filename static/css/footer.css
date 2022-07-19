@@ -61,3 +61,17 @@ footer footer-background .foreground {
     background-repeat: repeat-x !important;
     background-size: 225em 15em
 }
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+    
+    :root:not([color-scheme]) footer {
+        opacity: 0
+    }
+}
+
+[color-scheme=dark] footer {
+	opacity: 0
+}

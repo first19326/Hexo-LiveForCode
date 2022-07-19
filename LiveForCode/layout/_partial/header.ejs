@@ -1,0 +1,49 @@
+<div id="header" <% if (!is_home()) { %>class="header"<% } %>>
+    <div class="vertical">
+        <div class="inner">
+            <% if (is_home()) { %>
+                <h1 class="header-title"><%- theme.User %></h1>
+                <h2 class="header-description" id="hitokoto"></h2>
+                <h3 class="header-info" id="hitokotoAuthor"></h3>
+            <% } else if (is_post()) { %>
+                <h1 class="header-subtitle"><%- post.title %></h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> <%- __('post.date') %><%- date(post.date, 'YYYY-MM-DD') %>
+                        </span>
+                        <% if (theme.Valine.visitor) { %>
+                            <span id="<%- config.url %>/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+                                <i class="iconfont icon-browse"></i> <%- __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        <% } %>
+                        <span>
+                            <i class="iconfont icon-interactive"></i> <%- __('post.comment') %><span class="valine-comment-count" data-xid="<%- config.url %>/<%- post.path %>"></span>
+                        </span>  
+                    </p>
+                    <% if (post.categories.count() > 0) { %>
+                        <% post.categories.each((category) => { %>
+                            <span class="category-color"><%- category.name %></span>
+                        <% }) %>
+                    <% } %>
+                    <% if (post.tags.count() > 0) { %>
+                        <% post.tags.each((tag) => { %>
+                            <span class="tag-color"><%- tag.name %></span>
+                        <% }) %>
+                    <% } %>
+                </div>
+            <% } else { %>
+                <h1 class="header-subtitle"><%- title %></h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text Chinese"></p>
+                    <p class="article-info-text English"></p>                  
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <% if (is_home()) { %>
+        <a class="scroll-down" href="javascript:;" target="_self" data-offset="-45">
+            <i class="scroll-down-icon iconfont icon-return"></i>
+        </a>
+    <% } %>
+</div>

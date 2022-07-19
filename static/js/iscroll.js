@@ -109,7 +109,7 @@ var utils = (function () {
 		// Android browser is not a chrome browser.
 		if (/Android/.test(appVersion) && !(/Chrome\/\d/.test(appVersion))) {
 			var safariVersion = appVersion.match(/Safari\/(\d+.\d)/);
-			if(safariVersion && typeof safariVersion === "object" && safariVersion.length >= 2) {
+			if(safariVersion && typeof safariVersion === 'object' && safariVersion.length >= 2) {
 				return parseFloat(safariVersion[1]) < 535.19;
 			} else {
 				return true;
@@ -128,7 +128,7 @@ var utils = (function () {
 	});
 
 	me.hasClass = function (e, c) {
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)");
+		var re = new RegExp('(^|\\s)' + c + '(\\s|$)');
 		return re.test(e.className);
 	};
 
@@ -147,7 +147,7 @@ var utils = (function () {
 			return;
 		}
 
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)", 'g');
+		var re = new RegExp('(^|\\s)' + c + '(\\s|$)', 'g');
 		e.className = e.className.replace(re, ' ');
 	};
 
@@ -204,7 +204,7 @@ var utils = (function () {
 			}
 		},
 		circular: {
-			style: 'cubic-bezier(0.1, 0.57, 0.1, 1)',	// Not properly "circular" but this looks better, it should be (0.075, 0.82, 0.165, 1)
+			style: 'cubic-bezier(0.1, 0.57, 0.1, 1)',	// Not properly 'circular' but this looks better, it should be (0.075, 0.82, 0.165, 1)
 			fn: function (k) {
 				return Math.sqrt( 1 - ( --k * k ) );
 			}
@@ -303,7 +303,7 @@ function IScroll (el, options) {
 		HWCompositing: true,
 		useTransition: true,
 		useTransform: true,
-		bindToWrapper: typeof window.onmousedown === "undefined"
+		bindToWrapper: typeof window.onmousedown === 'undefined'
 	};
 
 	for ( var i in options ) {

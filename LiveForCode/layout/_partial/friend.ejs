@@ -26,11 +26,11 @@
     <div class="friends">
         <% if (friends.head) { %>
             <div class="friend-head">
-                <span><%= friends.head %></span>
+                <span><%- friends.head %></span>
             </div>
         <% } %>
         <% if (friends.description) { %>
-            <p><%= friends.description %></p>
+            <p><%- friends.description %></p>
         <% } %>
         <div class="friend-content">
             <% friends.friend.forEach(function(friend) { %>
@@ -39,9 +39,9 @@
                         <img class="avatar" src="<%- theme.LazyLoad.default %>" data-original="<%- friend.avatar %>"> 
                     </div>
                     <div class="friend-right">
-                        <p class="friend-name"><%= friend.name %></p>
+                        <p class="friend-name"><%- friend.name %></p>
                         <div class="friend-about">
-                            <p><%= friend.about ? friend.about : '这家伙很懒 ~' %></p>
+                            <p><%- friend.about ? friend.about : __('friend.about') %></p>
                         </div>
                     </div>
                 </a>

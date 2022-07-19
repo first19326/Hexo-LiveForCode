@@ -1,0 +1,18 @@
+<div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="<%- post.avatar ? post.avatar : theme.UserAvatar %>" alt="<%- post.author ? post.author : theme.User %>">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title"><%- __('suffix.author') %></span><%- post.author ? post.author : theme.User %>
+        <br>
+        <span class="suffix-box-title"><%- __('suffix.from') %></span><a href="<%- post.url ? post.url : url_for(post.path) %>" target="_blank"><%- post.from ? post.from : post.title %></a>
+        <br>
+        <span class="suffix-box-title"><%- __('suffix.about') %></span><%- post.about ? post.about : theme.Suffix.about %>
+        <br>
+        <span class="suffix-box-title"><%- __('suffix.theme') %></span><a href="<%- theme.Theme.url %>" target="_blank"><%- theme.Theme.name %></a>
+        <br>
+        <span class="suffix-box-title"><%- __('suffix.copyright.title') %></span><% if (post.copyright == 'prohibit') { %><%- __('suffix.copyright.prohibit') %><% } else if (post.copyright == 'reproduce') { %><%- __('suffix.copyright.reproduce') %><% } else { %><%- __('suffix.copyright.default') %><% } %>
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>

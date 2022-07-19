@@ -1,7 +1,8 @@
 ---
-title : 关于
-date  : 2020-01-01 00:00:00
-type  : about
+title    : 关于
+date     : 2020-01-01 00:00:00
+type     : about
+comments : false
 ---
 ## 关于我
 我是一个在命运长河里挣扎的小鱼，90后，目前是小白一枚。

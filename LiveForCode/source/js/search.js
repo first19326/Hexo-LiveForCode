@@ -82,20 +82,20 @@ $(document).ready(function () {
     $('body').on('click', '.search', function(e) {
         e.stopPropagation();
         // 打开搜索窗口时, 关闭菜单
-        $('.menu-button-close').click();
+        // $('.menu-button-close').click();
         $('body').append('<div class="search-cover"></div>').css('overflow', 'hidden');
         // 移动端防止滚动
-        $('.search-cover').on("touchmove", function(event){
+        $('.search-cover').on('touchmove', function(event){
             event.preventDefault;
         }, false);
-        // 移动端防止滚动-输出框获取焦点时
+        // 移动端防止滚动-输入框获取焦点时
         document.body.addEventListener('touchmove', handler, { passive: false });
         $('.search-window').toggle();
         $('#search-input').find('input').focus();
         // 初始化滚动条
-        let height = $(".search-content").outerHeight();
-        $(".search-scroll").css("height", "calc(100% - " + height + "px)");
-        scroll = new IScroll(".search-scroll", {
+        let height = $('.search-content').outerHeight();
+        $('.search-scroll').css('height', 'calc(100% - ' + height + 'px)');
+        scroll = new IScroll('.search-scroll', {
             scrollbars: true,
             mouseWheel: true,
             fadeScrollbars: true,
@@ -106,7 +106,7 @@ $(document).ready(function () {
     $('body').on('click', '.search-close-icon', function() {
         $('.search-window').hide();
         $('.search-cover').remove();
-        // 移除移动端防止滚动监听-输出框获取焦点时
+        // 移除移动端防止滚动监听-输入框获取焦点时
         document.body.removeEventListener('touchmove', handler, { passive: false });
         $('body').css('overflow', 'auto');
         // 关闭搜索窗口时, 搜索内容清空

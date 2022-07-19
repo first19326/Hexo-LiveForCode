@@ -3,39 +3,78 @@
 
     <% if (theme.Music.type == 'APlayer') { %>
         <div class="aplayer"></div>
-        <link type="text/css" rel="stylesheet" href="<%= theme.Style.aplayer %>">
-        <script type="text/javascript" src="<%= theme.Script.aplayer %>"></script>
+        <link type="text/css" rel="stylesheet" href="<%- theme.Style.aplayer %>">
+        <script type="text/javascript" src="<%- theme.Script.aplayer %>"></script>
         <script type="text/javascript">
             const aplayer = new APlayer({
-                container: document.querySelector("<%= theme.APlayer.container %>"),
-                fixed: <%= theme.APlayer.fixed %>,
-                autoplay: <%= theme.APlayer.autoplay %>,
-                loop: "<%= theme.APlayer.loop %>",
-                order: "<%= theme.APlayer.order %>",
-                preload: "<%= theme.APlayer.preload %>",
-                volume: <%= theme.APlayer.volume %>,
-                mutex: <%= theme.APlayer.mutex %>,
-                lrcType: <%= theme.APlayer.lrcType %>,
+                container: document.querySelector("<%- theme.APlayer.container %>"),
+                fixed: <%- theme.APlayer.fixed %>,
+                autoplay: <%- theme.APlayer.autoplay %>,
+                loop: "<%- theme.APlayer.loop %>",
+                order: "<%- theme.APlayer.order %>",
+                preload: "<%- theme.APlayer.preload %>",
+                volume: <%- theme.APlayer.volume %>,
+                mutex: <%- theme.APlayer.mutex %>,
+                lrcType: <%- theme.APlayer.lrcType %>,
                 audio: [
                     <% theme.APlayer.audio.forEach(function(audio) { %>
                         {
-                            name: "<%= audio.name %>",
-                            artist: "<%= audio.artist %>",
-                            cover: "<%= audio.cover %>",
-                            url: "<%= audio.url %>",
-                            lrc: "<%= audio.lrc %>"
+                            name: "<%- audio.name %>",
+                            artist: "<%- audio.artist %>",
+                            cover: "<%- audio.cover %>",
+                            url: "<%- audio.url %>",
+                            lrc: "<%- audio.lrc %>"
                         },
                     <% }) %>
                 ]
             });
         </script>
     <% } else { %>
-        <link type="text/css" rel="stylesheet" href="<%= theme.Style.aplayer %>">
-        <script type="text/javascript" src="<%= theme.Script.aplayer %>"></script>
-        <script type="text/javascript" src="<%= theme.Script.meting %>"></script>
-        <meting-js id="<%= theme.Meting.id %>" lrcshow="<%= theme.Meting.lrcshow %>" server="<%= theme.Meting.server %>" type="<%= theme.Meting.type %>" fixed="<%= theme.Meting.fixed %>" autoplay="<%= theme.Meting.autoplay %>" loop="<%= theme.Meting.loop %>" order="<%= theme.Meting.order %>" preload="<%= theme.Meting.preload %>" volume="<%= theme.Meting.volume %>" mutex="<%= theme.Meting.mutex %>"></meting-js>
+        <link type="text/css" rel="stylesheet" href="<%- theme.Style.aplayer %>">
+        <script type="text/javascript" src="<%- theme.Script.aplayer %>"></script>
+        <script type="text/javascript" src="<%- theme.Script.meting %>"></script>
+        <meting-js id="<%- theme.Meting.id %>" lrcshow="<%- theme.Meting.lrcshow %>" server="<%- theme.Meting.server %>" type="<%- theme.Meting.type %>" fixed="<%- theme.Meting.fixed %>" autoplay="<%- theme.Meting.autoplay %>" loop="<%- theme.Meting.loop %>" order="<%- theme.Meting.order %>" preload="<%- theme.Meting.preload %>" volume="<%- theme.Meting.volume %>" mutex="<%- theme.Meting.mutex %>"></meting-js>
     <% } %>
     
-    <div class="wrap-right"></div>
+    <div class="wrap-right">
+        <div class="setting">
+            <div class="iconbox favorites" switch="false">
+                <span class="iconfont icon-favorites"></span>
+                <span class="icontext">关注</span>
+            </div>
+            <div class="iconbox mode">
+                <div class="light">
+                    <span class="iconfont icon-daymode"></span>
+                    <span class="icontext">浅色模式</span>
+                </div>
+                <div class="dark">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                    <span class="icontext">深色模式</span>
+                </div>
+            </div>
+            <a href="javascript:;" target="_self" class="search">
+                <div class="iconbox">
+                    <span class="iconfont icon-search-menu"></span>
+                    <span class="icontext">搜索</span>
+                </div>
+            </a>
+            <div class="iconbox bottom">
+                <div style="display: inline-block; transform: rotate(180deg);">
+                    <span class="iconfont icon-top"></span>
+                </div>
+                <span class="icontext">跳至底部</span>
+            </div>
+        </div>
+        <div class="iconbox set">
+            <div style="display: inline-block;">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="iconbox top">
+            <span class="iconfont icon-top"></span>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
     <div class="loading"></div>
 </div>

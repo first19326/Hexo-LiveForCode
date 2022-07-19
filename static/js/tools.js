@@ -1,15 +1,15 @@
 function websiteTools() {
     const tools = this;
     const colors      = {
-        "gray": "color: #1B2B34; font-size: 12px; line-height: 18px;",
-        "red": "color: #EC5F67; font-size: 12px; line-height: 18px;",
-        "orange": "color: #F99157; font-size: 12px; line-height: 18px;",
-        "yellow": "color: #FAC863; font-size: 12px; line-height: 18px;",
-        "green": "color: #99C794; font-size: 12px; line-height: 18px;",
-        "teal": "color: #5FB3B3; font-size: 12px; line-height: 18px;",
-        "blue": "color: #6699CC; font-size: 12px; line-height: 18px;",
-        "purple": "color: #C594C5; font-size: 12px; line-height: 18px;",
-        "brown": "color: #AB7967; font-size: 12px; line-height: 18px;"
+        'gray': 'color: #1B2B34; font-size: 12px; line-height: 18px;',
+        'red': 'color: #EC5F67; font-size: 12px; line-height: 18px;',
+        'orange': 'color: #F99157; font-size: 12px; line-height: 18px;',
+        'yellow': 'color: #FAC863; font-size: 12px; line-height: 18px;',
+        'green': 'color: #99C794; font-size: 12px; line-height: 18px;',
+        'teal': 'color: #5FB3B3; font-size: 12px; line-height: 18px;',
+        'blue': 'color: #6699CC; font-size: 12px; line-height: 18px;',
+        'purple': 'color: #C594C5; font-size: 12px; line-height: 18px;',
+        'brown': 'color: #AB7967; font-size: 12px; line-height: 18px;'
     };
 
     /**
@@ -109,7 +109,7 @@ function websiteTools() {
      */
     this.htmlFiltrationScript = function(str) {
         var subStr = new RegExp('\<script.*\<\/script\>', 'ig');
-        return str.replace(subStr, "");
+        return str.replace(subStr, '');
     };
 
     /**
@@ -148,15 +148,15 @@ function websiteTools() {
      */
     this.getNowFormatDate = function() {
         var date = new Date();
-        var seperator = "-";
+        var seperator = '-';
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var strDate = date.getDate();
         if (month >= 1 && month <= 9) {
-            month = "0" + month;
+            month = '0' + month;
         }
         if (strDate >= 0 && strDate <= 9) {
-            strDate = "0" + strDate;
+            strDate = '0' + strDate;
         }
         return year + seperator + month + seperator + strDate;
     };
@@ -166,7 +166,7 @@ function websiteTools() {
      * @return {String}
      */
     this.HTMLEncode = function(html) {
-        var t = document.createElement("div");
+        var t = document.createElement('div');
         (t.textContent != null) ? (t.textContent = html) : (t.innerText = html);
         var output = t.innerHTML;
         t = null;
@@ -177,7 +177,7 @@ function websiteTools() {
      * 判断是否为IE浏览器 包括非Chromium内核的Edge浏览器
      */
     this.isIE = function() {
-        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        if (!!window.ActiveXObject || 'ActiveXObject' in window) {
             return true;
         } else {
             return false;

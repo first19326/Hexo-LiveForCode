@@ -51,7 +51,7 @@
     max-height: 50px;
     padding: 10px 15px 5px;
     background: #F5F5F5;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #FFF;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px
 }
@@ -68,7 +68,7 @@
     padding: 5px 0;
     background: transparent;
     outline: none;
-    border: none    
+    border: none
 }
 
 .search-scroll {
@@ -193,7 +193,7 @@
 
 .search-close-icon {
     position: absolute;
-    top: 10px;
+    top: 9px;
     right: 14px;
     padding-left: 15px;
     font-size: 14px;
@@ -218,4 +218,140 @@
 .search-content-icon .iconfont {
     font-size: 18px;
     font-weight: bold
+}
+
+
+/* Dark Mode CSS */
+
+@media (prefers-color-scheme: dark) {
+        
+    :root:not([color-scheme]) .search-window {
+        background: #333333;
+        color: #DDDDDD
+    }
+
+    :root:not([color-scheme]) .search-window a:hover {
+        color: #DDDDDD !important;
+        border-bottom-color: #EEEEEE
+    }
+
+    :root:not([color-scheme]) .search-content {
+        background: #3D3D3D;
+        border-bottom: 1px solid #333333
+    }
+
+    :root:not([color-scheme]) .search-input input {
+        color: #DDDDDD
+    }
+
+    :root:not([color-scheme]) .search-close-icon {
+        border-left: 1px solid #444444
+    }
+
+    :root:not([color-scheme]) .search-close-icon:hover .iconfont {
+        color: #EEEEEE
+    }
+
+    :root:not([color-scheme]) .search-result hr {
+        background-color: #555555;
+        background-image: repeating-linear-gradient(-45deg, #333333, #333333 4px, transparent 4px, transparent 8px)
+    }
+
+    :root:not([color-scheme]) .search-result em {
+        background: #3B3B3B
+    }
+
+    :root:not([color-scheme]) .search-hit-link {
+        color: #BBBBBB !important;
+        border-bottom: 1px dashed #666666
+    }
+
+    :root:not([color-scheme]) .search-pagination .page-number {
+        border-bottom: 1px solid #333333
+    }
+
+    :root:not([color-scheme]) .search-pagination .page-number:hover {
+        border-bottom: 1px solid #EEEEEE
+    }
+
+    :root:not([color-scheme]) .search-pagination .current .page-number {
+        color: #333333 !important;
+        background: #666666
+    }
+
+    :root:not([color-scheme]) .search-pagination a {
+        color: #BBBBBB !important
+    }
+
+    /* Dark Mode Scroll Style */
+
+    :root:not([color-scheme]) .iScrollIndicator {
+        background: rgba(255, 255, 255, 0.5) !important;
+        border: 1px solid rgba(51, 51, 51, 0.9) !important
+    }
+}
+
+[color-scheme=dark] .search-window {
+    background: #333333;
+    color: #DDDDDD
+}
+
+[color-scheme=dark] .search-window a:hover {
+    color: #DDDDDD !important;
+    border-bottom-color: #EEEEEE
+}
+
+[color-scheme=dark] .search-content {
+    background: #3D3D3D;
+    border-bottom: 1px solid #333333
+}
+
+[color-scheme=dark] .search-input input {
+    color: #DDDDDD
+}
+
+[color-scheme=dark] .search-close-icon {
+    border-left: 1px solid #444444
+}
+
+[color-scheme=dark] .search-close-icon:hover .iconfont {
+    color: #EEEEEE
+}
+
+[color-scheme=dark] .search-result hr {
+    background-color: #555555;
+    background-image: repeating-linear-gradient(-45deg, #333333, #333333 4px, transparent 4px, transparent 8px)
+}
+
+[color-scheme=dark] .search-result em {
+    background: #3B3B3B
+}
+
+[color-scheme=dark] .search-hit-link {
+    color: #BBBBBB !important;
+    border-bottom: 1px dashed #666666
+}
+
+[color-scheme=dark] .search-pagination .page-number {
+    border-bottom: 1px solid #333333
+}
+
+[color-scheme=dark] .search-pagination .page-number:hover {
+    border-bottom: 1px solid #EEEEEE
+}
+
+[color-scheme=dark] .search-pagination .current .page-number {
+    color: #333333 !important;
+    background: #666666
+}
+
+[color-scheme=dark] .search-pagination a {
+    color: #BBBBBB !important
+}
+
+/* Dark Mode Scroll Style */
+
+[color-scheme=dark] .iScrollIndicator {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(51, 51, 51, 0.9) !important
 }
