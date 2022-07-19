@@ -566,7 +566,7 @@ function Base() {
             });
         }
 
-        if ($('#index').length == 1) {
+        if ($('#count').length == 1) {
             // 初始化评论列表（用于获取文章阅读数以及评论数）
             timers.setCommentsTimer  = window.setInterval( script.initComments, 1000 );
         }
