@@ -220,7 +220,7 @@ MenuLink:
     href: "javascript:;"
     class: "image"
     target: "_self"
-    image: "/image/sidebar/qq.png"
+    image: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/sidebar/qq.png"
   -
     name: "微信"
     icon: "icon-wechat"
