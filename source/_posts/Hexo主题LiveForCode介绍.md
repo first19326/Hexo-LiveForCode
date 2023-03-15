@@ -253,7 +253,9 @@ feed:
 ```
 
 ### 文章数据统计
-文章数据统计基于 `Valine.js` 实现方式：在文章列表页面加载 `Valine.js`， 只要 Valine 配置项中的 `el` 元素不存在即不会加载评论框相关内容。
+#### 基于 `Valine.js` 实现方式
+
+在文章列表页面加载 `Valine.js`， 只要 Valine 配置项中的 `el` 元素不存在即不会加载评论框相关内容。
 
 1.文章评论数统计  
 Valine 会自动查找页面中 class 值为 `valine-comment-count` 的元素，获取其 `data-xid` 为查询条件。并将得到的值填充到其 class 的值为 `valine-comment-count` 的元素里：  
@@ -286,7 +288,7 @@ Valine 会自动查找页面中 class 值为 `leancloud_visitors` 的元素，�
 
 > 特别说明 使用 __国际版的 LeanCloud__ 的时候，需要配置 __主题配置文件__ 中 Valine 的 `serverURLs`，内容为 LeanCloud 的 `Request Domain`，国内版则需要 **域名备案**。
 
-文章数据统计基于 `Waline.js` 实现方式：
+#### 基于 `Waline.js` 实现方式
 
 1.文章评论数统计
 
@@ -338,7 +340,7 @@ CDN 可以在阿里云购买相关的 CDN 服务器，效果肯定是更好，�
 
 ### 关于 Waline
 
-Valine 评论功能简单，不支持评论管理以及通知功能，虽说可以通过 [Valine-Admin]() 实现评论管理以及通知等功能，但非常麻烦。其他的评论系统有些需要服务器，例如 Artalk。所以选择集成了 Waline，通过在 Vercel 部署以达到无需服务器的目的。如果考虑到 **访问速度** 的问题，可以选择部署在 **华为云** 的 Serverless 上，每个月都有免费的资源。
+Valine 评论功能简单，不支持评论管理以及通知功能，虽说可以通过 [Valine-Admin](https://github.com/DesertsP/Valine-Admin) 实现评论管理以及通知等功能，但非常麻烦。其他的评论系统有些需要服务器，例如 Artalk。所以选择集成了 Waline，通过在 Vercel 部署以达到无需服务器的目的。如果考虑到 **访问速度** 的问题，可以选择部署在 **华为云** 的 Serverless 上，每个月都有免费的资源。
 
 ### 关于 Vercel
 Github Pages 内容部署的服务器在美国，可能会导致国内部分地区加载速度较慢，大家可以将项目部署到 __Vercel__ ，来提高网站的访问速度，同时也 __方便百度对站点内容进行收录__ 。如果 __网站域名已经备案__ ，则可以考虑 __国内的阿里云或腾讯云的相关产品__ ，效果会更好。
