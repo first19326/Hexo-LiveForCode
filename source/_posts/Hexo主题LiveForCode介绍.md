@@ -1,6 +1,7 @@
 ---
 title: Hexo主题LiveForCode介绍
 comments: true
+donate: true
 tags: Hexo
 categories: Web
 description: Hexo主题LiveForCode介绍.
@@ -194,15 +195,15 @@ hexo algolia --flush true --layouts post
 
 选择 **Clone Template**，点击下方的 **Browse All Templates**，然后找到 **Hexo** 模版。
 
-![template](/image/article/template.PNG)
+![template](/image/article/1112885395/template.png)
 
 选择模板后，进入到创建仓库界面，设置好仓库名称，然后点击 **Create** 即可。至于是否设置成私有仓库，根据个人意愿选择，目前 Github 的私有仓库是 **免费** 的。
 
-![repository](/image/article/repository.PNG)
+![repository](/image/article/1112885395/repository.png)
 
 等待 Vercel 部署完成，跳转到部署成功的页面。点击 **Go to Dashboard** 即可查看刚刚的项目。
 
-![congratulations](/image/article/congratulations.PNG)
+![congratulations](/image/article/1112885395/congratulations.png)
 
 部署好的模板项目是 Hexo 默认的主题，需要将 Github 对应的项目下载到本地进行修改。项目想要在本地进行运行，需要**安装相关依赖**，通过`npm install` 或 `cnpm install` 或`yarn install`皆可进行安装。依赖安装完成后，即可进行主题安装等相关操作。
 
@@ -210,11 +211,11 @@ hexo algolia --flush true --layouts post
 
 创建新的项目，选择 **Import Git Repository**，然后选择 Hexo 网站对应的仓库，点击 **Import**。
 
-![import](/image/article/import.PNG)
+![import](/image/article/1112885395/import.png)
 
 跳转到 **Configure Project** 页面，项目名称可以自行修改，其他的自定义选项，**建议不要修改**，除非有什么特殊需求。
 
-![configure](/image/article/configure.PNG)
+![configure](/image/article/1112885395/configure.png)
 
 点击 **Deploy**，然后等待部署完成即可。部署完成后，Vercel 会提供几个默认的域名，可以在对应项目中查看。
 
@@ -230,7 +231,7 @@ hexo algolia --flush true --layouts post
 
 添加 DNS 解析记录之后，在 **Vercel Domains** 界面对应域名下方显示对号即表明验证成功。
 
-![invalid](/image/article/invalid.PNG)
+![invalid](/image/article/1112885395/invalid.png)
 
 > 特别说明 Github 仓库的分支尽量选择 **master**，否则 Github 推送之后，还需到 Vercel 手动部署项目。
 
@@ -252,8 +253,7 @@ feed:
 ```
 
 ### 文章数据统计
-文章数据统计基于 `Valine.js` 插件实现。  
-实现方式：在文章列表页面加载 `Valine.js`， 只要 Valine 配置项中的 `el` 元素不存在即不会加载评论框相关内容。
+文章数据统计基于 `Valine.js` 实现方式：在文章列表页面加载 `Valine.js`， 只要 Valine 配置项中的 `el` 元素不存在即不会加载评论框相关内容。
 
 1.文章评论数统计  
 Valine 会自动查找页面中 class 值为 `valine-comment-count` 的元素，获取其 `data-xid` 为查询条件。并将得到的值填充到其 class 的值为 `valine-comment-count` 的元素里：  
@@ -284,12 +284,23 @@ Valine 会自动查找页面中 class 值为 `leancloud_visitors` 的元素，�
 </span>
 ```
 
-> 特别说明 使用 __国际版的 LeanCloud__ 的时候，需要配置 __主题配置文件__ 中 Valine 的 `serverURLs`，内容为 LeanCloud 的 `Request Domain`，国内版则无需配置。
+> 特别说明 使用 __国际版的 LeanCloud__ 的时候，需要配置 __主题配置文件__ 中 Valine 的 `serverURLs`，内容为 LeanCloud 的 `Request Domain`，国内版则需要 **域名备案**。
+
+文章数据统计基于 `Waline.js` 实现方式：
+
+1.文章评论数统计
+
+详情请参见 [Waline 文档-评论数统计](https://waline.js.org/guide/features/comment.html)
+
+2.文章阅读量统计
+
+详情请参见 [Waline 文档-浏览量统计](https://waline.js.org/guide/features/pageview.html)
 
 ### 评论列表
-评论功能使用的是 `Valine.js` 插件，配置详情请参见 [Valine](https://valine.js.org/)。  
 
-> 特别说明 __主题配置文件__ 中 Valine 的 `appId` 与 `appKey` 请大家自行配置自己的参数。如果评论数据提交到我的 LeanCloud 工作空间，我并不能保证数据的完整性。  
+评论功能可以选择 `Valine.js` 或 `Waline.js`，配置详情参见 [Valine](https://valine.js.org/)、[Waline](https://waline.js.org/) 。
+
+> 特别说明 __主题配置文件__ 中评论的数据存储如果使用 LeanCloud，则 `appId` 与 `appKey` 请大家自行配置自己的参数。另外，由于 LeanCloud **不再提供默认域名**，**国内版本需要域名备案**，否则无法使用。
 
 ### 赞赏页面
 赞赏页面使用了 [Sponsor Page](https://github.com/Kaiyuan/sponsor-page)，并做了相关修改使其适应博客样式。感兴趣的小伙伴自行去了解吧。  
@@ -325,13 +336,18 @@ CDN 可以在阿里云购买相关的 CDN 服务器，效果肯定是更好，�
 ### 关于 Valine
 由于很多小伙伴直接使用主题中 Valine 的 `appId` 以及 `appKey`，而且 Valine 默认设置的 `path` 为 `window.location.pathname`，会导致大家的留言板数据出现异常。所以这里还是建议大家设置自己的 LeanCloud，__推荐使用国际版__ ，后续如果想要添加邮件提醒，这样会方便很多。
 
+### 关于 Waline
+
+Valine 评论功能简单，不支持评论管理以及通知功能，虽说可以通过 [Valine-Admin]() 实现评论管理以及通知等功能，但非常麻烦。其他的评论系统有些需要服务器，例如 Artalk。所以选择集成了 Waline，通过在 Vercel 部署以达到无需服务器的目的。如果考虑到 **访问速度** 的问题，可以选择部署在 **华为云** 的 Serverless 上，每个月都有免费的资源。
+
 ### 关于 Vercel
 Github Pages 内容部署的服务器在美国，可能会导致国内部分地区加载速度较慢，大家可以将项目部署到 __Vercel__ ，来提高网站的访问速度，同时也 __方便百度对站点内容进行收录__ 。如果 __网站域名已经备案__ ，则可以考虑 __国内的阿里云或腾讯云的相关产品__ ，效果会更好。
+目前 Vercel 提供的默认 `.app` 域名由于 **DNS 污染** 国内无法访问，**需要添加自己的域名（无需备案）**。
 
 ### Cannot read property 'LongCang' of undefined  
 这个问题比较常见，是主题文件路径不正确导致的。因为很多小伙伴都询问这个问题，所以在这里进行一个说明。    
 
-![Hexo-LiveForCode](/image/article/structure.png)
+![Hexo-LiveForCode](/image/article/1112885395/structure.png)
 
 直接从 Github 下载 `Zip` 格式的文件解压后或 Github `Clone` 后的文件结构应该如上图所示。这里需要注意，是将解压后文件夹中的 `LiveForCode` 文件夹复制到 `Hexo` 的 `themes` 文件夹下，而不是将解压后的 `Hexo-LiveForCode` 复制到 `themes` 文件夹下。
 
@@ -347,10 +363,11 @@ category_dir: category
 
 ## 阶段计划
 1.使用 Vue.js 重构项目  
-2.整理模板的样式文件  
-3.加入 Pjax，优化页面加载速度  
-4.补充国际化支持语言  
-5.考虑是否加入黑夜模式  
+2.加入 Pjax，优化页面加载速度  
+3.补充国际化支持语言  
+4.卡片式风格（文章列表）
+5.图片懒加载
+6.标签外挂（Tag Plugins）
 
 
 ## 总结

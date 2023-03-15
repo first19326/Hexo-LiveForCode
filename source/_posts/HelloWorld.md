@@ -10,7 +10,7 @@ author: Hexo
 # 文章作者签名 #
 about: 快速、简洁且高效的博客框架
 # 文章作者头像 #
-avatar: https://www.notes.worstone.cn/image/hexo.png
+avatar: /image/article/hexo.png
 # 是否开启评论 #
 comments: true
 # 文章标签 #
