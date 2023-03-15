@@ -1,0 +1,253 @@
+:root {
+    /* Waline Style */
+    --waline-avatar-size: 50px;
+    --waline-border-color: #F5F5F5;
+    --waline-badge-color: #3884FF;
+    --waline-theme-color: #3884FF;
+    --waline-active-color: #1968E6;
+    --waline-color: #555555;
+    --waline-dark-grey: #999999;
+
+    /* Custom Style */
+    --comment-border-color: #F0F0F0;
+    --input-border-color: #DEDEDE;
+    --input-border-color-focus: #3884FF;
+    --avatar-border-color: #F5F5F5;
+}
+
+[data-waline] {
+    text-align: left;
+    font-size: 16px;
+}
+
+[data-waline] * {
+    line-height: 1.75;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+.wl-comment {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--comment-border-color);
+    border-radius: 4px;
+}
+
+.wl-panel {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0);
+}
+
+.wl-header {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.wl-header-item {
+    border-bottom-width: 1px !important;
+    border-bottom-style: dashed;
+    border-bottom-color: var(--input-border-color);
+}
+
+.wl-header-item > label {
+    padding: 10px 5px;
+    text-align: left !important;
+}
+
+.wl-input,
+.wl-editor {
+    max-width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    font-size: .775em;
+}
+
+.wl-input:focus,
+.wl-editor:focus {
+    background-color: transparent;
+}
+
+.wl-editor {
+    width: calc(100% - 10px) !important;
+    min-height: 8.75em;
+    margin: 0;
+    background-image: url(../image/comment/valine.png) !important;
+    background-size: 200px 140px !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    resize: vertical !important;
+    font-size: .875em;
+    font-family: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+/* Chrome Autofill Style */
+.wl-input:-webkit-autofill,
+.wl-input:-webkit-autofill:hover,
+.wl-input:-webkit-autofill:focus,
+.wl-input:-webkit-autofill:active {
+    transition-delay: 360000s;
+    transition: color 360000s ease-out, background-color 360000s ease-out;
+    -webkit-transition-delay: 360000s;
+    -webkit-transition: color 360000s ease-out, background-color 360000s ease-out;
+}
+
+[data-waline] > .wl-comment .wl-preview {
+    font-size: .875em;
+}
+
+.wl-preview {
+    padding: 0 0 10px;   
+}
+
+.wl-preview h4 {
+    margin: 5px;
+    color: #666666;
+}
+
+.wl-preview .wl-content {
+    padding: 5px;
+}
+
+.wl-footer {
+    margin: 0;
+    padding: 10px 0 10px 5px;
+}
+
+.wl-count {
+    padding: 5px 1px;
+    color: #666666;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.wl-count .wl-num {
+    font-weight: bold;
+}
+
+.wl-meta-head {
+    padding: 10px 1px;
+}
+
+.wl-card .wl-badge {
+    line-height: 1.5;
+}
+
+.wl-cards .wl-card-item {
+    padding: 1.25em 0 0;
+}
+
+.wl-cards .wl-card-item:first-child {
+    padding: 0;
+}
+
+.wl-cards .wl-user {
+    margin: 0;
+}
+
+.wl-cards .wl-user img {
+    float: left;
+    margin-right: 0.7525em;
+    padding: 0.125em;
+    border: 1px solid var(--avatar-border-color);
+    border-radius: 50%;
+}
+
+.wl-cards .wl-user .verified-icon {
+    top: calc(var(--avatar-size) * 3/4 + 0.125em);
+    inset-inline-start: calc(var(--avatar-size) * 3/4 + 0.125em);
+}
+
+.wl-card .wl-quote {
+    border: 0;
+}
+
+.wl-reply-wrapper .wl-nick {
+    margin-right: 0;
+    font-weight: normal;
+}
+
+.wl-reply-wrapper .wl-close {
+    top: -10px;
+    inset-inline-end: -10px;
+    line-height: 0;
+}
+
+.wl-login-info {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    padding: 10px 10px 0 0;
+    border-right: 1px dashed var(--comment-border-color);
+}
+
+.wl-logout-btn {
+    line-height: 0;
+}
+
+.wl-comment-actions > button {
+    margin-right: 10px;
+}
+
+.wl-comment-actions > button:last-child {
+    margin-right: 0;
+}
+
+.wl-card-item:last-child .wl-card {
+    border-bottom: 1px dashed var(--waline-border-color);
+}
+
+.wl-card-item:last-child > .wl-card {
+    border-bottom: none;
+}
+
+
+/* Dark Mode CSS */
+
+@media(prefers-color-scheme:dark) {
+
+    :root:not([color-scheme]) {
+        --waline-info-bgcolor: #3B3B3B;
+        --waline-border-color: #444444;
+        --waline-bgcolor: #333333;
+        --borders: #555555;
+
+        --comment-border-color: #444444;
+        --input-border-color: #555555;
+        --avatar-border-color: #555555;
+    }
+
+    :root:not([color-scheme]) .wl-preview h4 {
+        color: #999999;
+    }
+
+    :root:not([color-scheme]) .wl-count {
+        color: #999999;
+    }
+}
+
+:root[color-scheme=dark] {
+    --waline-info-bgcolor: #3B3B3B;
+    --waline-border-color: #444444;
+    --waline-bgcolor: #333333;
+    --borders: #555555;
+
+    --comment-border-color: #444444;
+    --input-border-color: #555555;
+    --avatar-border-color: #555555;
+}
+
+[color-scheme=dark] .wl-preview h4 {
+    color: #999999;
+}
+
+[color-scheme=dark] .wl-count {
+    color: #999999;
+}

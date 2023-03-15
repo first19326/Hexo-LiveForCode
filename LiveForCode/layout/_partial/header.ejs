@@ -12,14 +12,29 @@
                         <span>
                             <i class="iconfont icon-time"></i> <%- __('post.date') %><%- date(post.date, 'YYYY-MM-DD') %>
                         </span>
-                        <% if (theme.Valine.visitor) { %>
-                            <span id="/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
-                                <i class="iconfont icon-browse"></i> <%- __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
-                            </span>
+                        <% if (theme.Comment.type == "Waline") { %>
+                            <% if (theme.Waline.pageview) { %>
+                                <span>
+                                    <i class="iconfont icon-browse"></i> <%- __('post.visitor') %><span class="waline-pageview-count" data-path="/<%- post.path %>"></span>
+                                </span>
+                            <% } %>
+                            <% if (theme.Comment.switch && theme.Waline.comment && post.comments) { %>
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> <%- __('post.comment') %><span class="waline-comment-count" data-path="/<%- post.path %>"></span>
+                                </span>
+                            <% } %>  
+                        <% } else { %>
+                            <% if (theme.Valine.visitor) { %>
+                                <span id="/<%- post.path %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+                                    <i class="iconfont icon-browse"></i> <%- __('post.visitor') %><sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            <% } %>
+                            <% if (theme.Comment.switch && post.comments) { %>
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> <%- __('post.comment') %><span class="valine-comment-count" data-xid="/<%- post.path %>"></span>
+                                </span>
+                            <% } %>  
                         <% } %>
-                        <span>
-                            <i class="iconfont icon-interactive"></i> <%- __('post.comment') %><span class="valine-comment-count" data-xid="/<%- post.path %>"></span>
-                        </span>  
                     </p>
                     <% if (post.categories.count() > 0) { %>
                         <% post.categories.each((category) => { %>

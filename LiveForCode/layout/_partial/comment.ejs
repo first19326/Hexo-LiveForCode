@@ -1,4 +1,4 @@
-<% if (post.comments) { %>
+<% if (theme.Comment.switch && post.comments) { %>
     <div class="article-comments">
         <% if (is_post()) { %>
             <div class="comments-title">
@@ -7,4 +7,52 @@
         <% } %>
         <div class="comments-content"></div>
     </div>
-<% } %>
+    <% if (theme.Comment.type == "Waline") { %>
+        <!-- 样式文件 -->
+        <link rel="stylesheet" href="<%- theme.Style.waline %>"/>
+        <link rel="stylesheet" href="<%- theme.Style.walineCustom %>"/>
+        <!-- 脚本文件 -->
+        <script type="module">
+            import { init } from "<%- theme.Script.waline %>";
+
+            const WalineInstance = init({
+                el              : "<%- theme.Waline.el %>",
+                serverURL       : "<%- theme.Waline.serverURL %>",
+                path            : <%- theme.Waline.path %>,
+                meta            : <%- theme.Waline.meta %>,
+                requiredMeta    : <%- theme.Waline.requiredMeta %>,
+                pageSize        : <%- theme.Waline.pageSize %>,
+                lang            : "<%- theme.Waline.lang %>",
+                locale: {
+                    admin       : "<%- theme.Waline.locale.admin %>",
+                    anonymous   : "<%- theme.Waline.locale.anonymous %>",
+                    sofa        : "<%- theme.Waline.locale.sofa %>",
+                    placeholder : "<%- theme.Waline.locale.placeholder %>",
+                },
+                dark            : "<%- theme.Waline.dark %>",
+                search          : <%- theme.Waline.search %>,
+                pageview        : <%- theme.Waline.pageview %>,
+                comment         : <%- theme.Waline.comment %>,
+                copyright       : <%- theme.Waline.copyright %>,
+            });
+
+            // Waline 输入框选中动画
+            $(document).on("focus", ".wl-header-item .wl-input", function() {
+                $(this).parent().css("border-bottom-color", "var(--input-border-color-focus)");
+            });
+
+            $(document).on("blur", ".wl-header-item .wl-input", function() {
+                $(this).parent().css("border-bottom-color", "var(--input-border-color)");
+            });
+        </script>
+    <% } %>
+<% } else if (theme.Comment.type == "Waline" && theme.Waline.pageview) { %>
+    <script type="module">
+        import { pageviewCount } from "<%- theme.Script.pageview %>";
+      
+        pageviewCount({
+          serverURL: "<%- theme.Waline.serverURL %>",
+          path: <%- theme.Waline.path %>,
+        });
+    </script>
+<% } %> 

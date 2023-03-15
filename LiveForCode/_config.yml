@@ -282,13 +282,18 @@ Search:
     stats: "${hits} 条相关条目，使用了 ${time} 毫秒"
 
 
+# ---- Comment配置 ----
+Comment:
+  switch: true
+  # 默认类型为 Valine, 可选项 Waline Valine
+  type: "Valine" 
+
 # ---- Valine配置 ----
 Valine: 
-  switch: true
   el: ".comments-content"
   appId: "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz"
   appKey: "8uVSP1q6UlALVC5igYfIfv2h"
-  # 国内版本 LeanCloud 可以不用设置
+  # 必须设置, 国内版本需域名备案
   serverURLs: 
   placeholder: "你是我一生只会遇见一次的惊喜..."
   avatar: "mm"
@@ -298,6 +303,26 @@ Valine:
   lang: "zh-cn"
   visitor: true
   enableQQ: true
+
+# ---- Waline配置 ----
+Waline:
+  el: ".comments-content"
+  serverURL: 
+  path: window.location.pathname
+  meta: "['nick', 'mail', 'link']"
+  requiredMeta: "['nick', 'mail']"
+  pageSize: 10
+  lang: "zh-cn"
+  locale: 
+      admin: "博主"
+      anonymous: "匿名用户"
+      sofa: "快来做第一个评论的人吧 ~"
+      placeholder: "你是我一生只会遇见一次的惊喜..."
+  dark: "html[color-scheme='dark']"
+  search: false
+  pageview: true
+  comment: false
+  copyright: false
 
 
 # ---- Tocbot配置 ----
@@ -388,6 +413,8 @@ Style:
   search: "/css/search.css"
   tocbot: "/css/tocbot.css"
   valine: "/css/valine.css"
+  waline: "/css/waline.css"
+  walineCustom: "/css/waline-custom.css"
 
 # ---- Script配置 ----
 Script:
@@ -400,6 +427,9 @@ Script:
   loading: "/js/loading.js"
   meting: "/js/Meting.min.js"
   require: "/js/require.min.js"
+  waline: "/js/waline.mjs"
+  pageview: "/js/pageview.mjs"
+  comment: "/js/comment.mjs"
 
 
 # ---- Font配置 ----

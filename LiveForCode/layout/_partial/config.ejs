@@ -172,8 +172,33 @@
             }
         }, 
 
+        Comment : {
+            switch : <%- theme.Comment.switch %>,
+            type   : "<%- theme.Comment.type %>",
+        },
+
+        Waline : {
+            el              : "<%- theme.Waline.el %>",
+            serverURL       : "<%- theme.Waline.serverURL %>",
+            path            : <%- theme.Waline.path %>,
+            meta            : "<%- theme.Waline.meta %>",
+            requiredMeta    : "<%- theme.Waline.requiredMeta %>",
+            pageSize        : <%- theme.Waline.pageSize %>,
+            lang            : "<%- theme.Waline.lang %>",
+            locale: {
+                admin       : "<%- theme.Waline.locale.admin %>",
+                anonymous   : "<%- theme.Waline.locale.anonymous %>",
+                sofa        : "<%- theme.Waline.locale.sofa %>",
+                placeholder : "<%- theme.Waline.locale.placeholder %>",
+            },
+            dark            : "<%- theme.Waline.dark %>",
+            search          : <%- theme.Waline.search %>,
+            pageview        : <%- theme.Waline.pageview %>,
+            comment         : <%- theme.Waline.comment %>,
+            copyright       : <%- theme.Waline.copyright %>,
+        },
+
         Valine : {
-            switch         : <%- theme.Valine.switch %>,
             el             : "<%- theme.Valine.el %>",
             appId          : "<%- theme.Valine.appId %>",
             appKey         : "<%- theme.Valine.appKey %>",
@@ -274,7 +299,9 @@
             post             : "<%- theme.Style.post %>",
             search           : "<%- theme.Style.search %>",
             tocbot           : "<%- theme.Style.tocbot %>",
-            valine           : "<%- theme.Style.valine %>"
+            valine           : "<%- theme.Style.valine %>",
+            waline           : "<%- theme.Style.waline %>",
+            walineCustom     : "<%- theme.Style.walineCustom %>"
         },
 
         Script: {
@@ -286,7 +313,10 @@
             jQuery           : "<%- theme.Script.jQuery %>",
             loading          : "<%- theme.Script.loading %>",
             meting           : "<%- theme.Script.meting %>",
-            require          : "<%- theme.Script.require %>"
+            require          : "<%- theme.Script.require %>",
+            waline           : "<%- theme.Script.waline %>",
+            pageview         : "<%- theme.Script.pageview %>",
+            comment          : "<%- theme.Script.comment %>",
         },
 
         Font: {

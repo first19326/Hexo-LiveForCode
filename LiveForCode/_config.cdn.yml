@@ -282,9 +282,14 @@ Search:
     stats: "${hits} 条相关条目，使用了 ${time} 毫秒"
 
 
+# ---- Comment配置 ----
+Comment:
+  switch: true
+  # 默认类型为 Valine, 可选项 Waline Valine
+  type: "Valine" 
+
 # ---- Valine配置 ----
 Valine: 
-  switch: true
   el: ".comments-content"
   appId: "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz"
   appKey: "8uVSP1q6UlALVC5igYfIfv2h"
@@ -298,6 +303,26 @@ Valine:
   lang: "zh-cn"
   visitor: true
   enableQQ: true
+
+# ---- Waline配置 ----
+Waline:
+  el: ".comments-content"
+  serverURL: 
+  path: window.location.pathname
+  meta: "['nick', 'mail', 'link']"
+  requiredMeta: "['nick', 'mail']"
+  pageSize: 10
+  lang: "zh-cn"
+  locale: 
+      admin: "博主"
+      anonymous: "匿名用户"
+      sofa: "快来做第一个评论的人吧 ~"
+      placeholder: "你是我一生只会遇见一次的惊喜..."
+  dark: "html[color-scheme='dark']"
+  search: false
+  pageview: true
+  comment: false
+  copyright: false
 
 
 # ---- Tocbot配置 ----
@@ -388,6 +413,8 @@ Style:
   search: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/search.min.css"
   tocbot: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/tocbot.min.css"
   valine: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/valine.min.css"
+  waline: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/waline.css"
+  walineCustom: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/waline-custom.css"
 
 # ---- Script配置 ----
 Script:
@@ -400,6 +427,9 @@ Script:
   loading: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/loading.min.js"
   meting: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/Meting.min.js"
   require: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/require.min.js"
+  waline: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/waline.mjs"
+  pageview: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/pageview.mjs"
+  comment: "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/js/comment.mjs"
 
 
 # ---- Font配置 ----

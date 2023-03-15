@@ -121,8 +121,11 @@
                 stats: '${hits} 条相关条目，使用了 ${time} 毫秒'
             }
         },
-        Valine: {
+        Comment: {
             switch: true,
+            type: 'Valine' 
+        },
+        Valine: {
             el: '.comments-content',
             appId: 'srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz',
             appKey: '8uVSP1q6UlALVC5igYfIfv2h',
@@ -216,7 +219,9 @@
             post: '/css/post.css',
             search: '/css/search.css',
             tocbot: '/css/tocbot.css',
-            valine: '/css/valine.css'
+            valine: '/css/valine.css',
+            waline: '/css/waline.css',
+            walineCustom: '/css/waline-custom.css'
         },
         Script: {
             aplayer: '/js/APlayer.min.js',
@@ -227,7 +232,10 @@
             jQuery: '/js/jquery-3.4.1.min.js',
             loading: '/js/loading.js',
             meting: '/js/Meting.min.js',
-            require: '/js/require.min.js'
+            require: '/js/require.min.js',
+            waline: '/js/waline.mjs',
+            pageview: '/js/pageview.mjs',
+            comment: '/js/comment.mjs'
         },
         Font: {
             LongCang: '/font/LongCang.css',

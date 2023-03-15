@@ -476,10 +476,6 @@ function Base() {
     this.addFooter = function() {
         
         const footer = $('#footer');
-        
-        if (window.config.BottomText != '' && window.config.BottomText != null) {
-            footer.append(window.config.BottomText);
-        }
 
         switch (parseInt(window.config.FooterStyle)) {
             case 1:
@@ -579,7 +575,7 @@ function Base() {
             });
         }
 
-        if ($('#count').length == 1) {
+        if ($('#count').length == 1 && window.config.Comment.type != "Waline") {
             // 初始化评论列表（用于获取文章阅读数以及评论数）
             timers.setCommentsTimer  = window.setInterval( script.initComments, 1000 );
         }
@@ -888,7 +884,7 @@ function Base() {
      * 初始化评论列表
      */
     this.initComments = function() {
-        if (window.config.Valine.switch) {
+        if (window.config.Comment.type != "Waline") {
             require(['LeanCloud', 'Valine'], function(LeanCloud, Valine) {
                 window.AV    = LeanCloud;
                 let metaStr  = window.config.Valine.meta;
@@ -912,7 +908,7 @@ function Base() {
                     visitor        : window.config.Valine.visitor,
                     enableQQ       : window.config.Valine.enableQQ
                 });
-            })
+            });
         }
 
         script.clearIntervalTimer(timers.setCommentsTimer);    
