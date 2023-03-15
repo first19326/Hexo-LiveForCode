@@ -1,3 +1,13 @@
+.veditor {
+	background-image: url(../image/comment/valine.png) !important;
+    background-size: 200px 140px !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important;
+    background-color: rgba(255,255,255,0) !important;
+	resize: vertical !important;
+	font-family: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif
+}
+
 .v[data-class="v"] * {
 	font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, sans-serif !important
 }

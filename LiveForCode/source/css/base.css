@@ -1,6 +1,6 @@
 :root {
     --boxes: #F5F7F9;
-    --boxes-darker: #D8E0E7;
+    --boxes-darker: hsl(208, 24%, 88%);
 	--primary-color: #3884FF; 
 	--primary-color-darker: #1968E6;
 	--primary-color-hover: #FF5722;
@@ -391,8 +391,7 @@ mjx-container {
 	box-shadow: 0 0 2rem 1rem rgba(220, 220, 220, .3);
 	-ms-text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-	overflow: hidden
+	text-overflow: ellipsis
 }
 
 #footer {
@@ -771,13 +770,13 @@ mjx-container {
 .article-comments {
 	margin-top: 30px;
 	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-	overflow: hidden
+	text-overflow: ellipsis
 }
 
 .comments-title {
 	color: #666;
-	font: normal normal 16px/35px "Microsoft YaHei"
+	font: normal normal 16px/35px "Microsoft YaHei";
+	overflow: hidden
 }
 
 .comments-title::after {
@@ -795,16 +794,6 @@ mjx-container {
 	margin-top: 20px;
 }
 
-.veditor {
-	background-image: url(../image/comment/valine.png) !important;
-    background-size: 200px 140px !important;
-    background-repeat: no-repeat !important;
-    background-position: right bottom !important;
-    background-color: rgba(255,255,255,0) !important;
-	resize: vertical !important;
-	font-family: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif
-}
-
 
 /* Footer CSS */
 
@@ -817,6 +806,14 @@ mjx-container {
 #footer i {
 	margin: 0 0.5rem;
 	font-size: 1.2rem !important
+}
+
+#footer a {
+	color: #888888
+}
+
+#footer a:hover {
+	color: var(--primary-color)
 }
 
 
