@@ -25,6 +25,18 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2023/03/12
+
+1. `F` 修复了文章列表样式出现的问题。
+
+<br/>
+
+1. `A` 新增了 **Waline** 适配，可以在 **主题配置文件** 中配置并使用 Waline 相关功能。
+2. `A` 新增了 `Hexo主题LiveForCode介绍` 文章中，关于 Waline 相关内容。
+3. `U` 修改了 **主题配置文件** 中评论相关的属性。（说明：由于引入了 Waline 相关内容，所以对 **主题配置文件** 相关属性进行调整）
+4. `U` 修改了 `Hexo主题LiveForCode介绍` 文章中，关于 Valine 相关内容。
+5. `U` 更新了 **浏览量**、**评论数** 展示的逻辑。对于评论数而言，`theme.Comment.switch`（全局）、`theme.Waline.comment`（Waline）、`post.comments`（文章）优先级由高到低。对于浏览量而言，`theme.Valine.visitor`（Valine）或 `theme.Waline.pageview`（Waline）直接控制。
+
 - 2022/07/15
 
 1. `U` 修改了首页样式。
