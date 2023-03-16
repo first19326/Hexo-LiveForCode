@@ -307,7 +307,7 @@ Valine:
 # ---- Waline配置 ----
 Waline:
   el: ".comments-content"
-  serverURL: 
+  serverURL: ""
   path: window.location.pathname
   meta: "['nick', 'mail', 'link']"
   requiredMeta: "['nick', 'mail']"
@@ -321,7 +321,7 @@ Waline:
   dark: "html[color-scheme='dark']"
   search: false
   pageview: true
-  comment: false
+  comment: true
   copyright: false
 
 
