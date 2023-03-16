@@ -124,7 +124,7 @@
 .wl-count {
     padding: 5px 1px;
     color: #666666;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: normal;
 }
 
@@ -206,6 +206,13 @@
 
 .wl-card-item:last-child > .wl-card {
     border-bottom: none;
+}
+
+@media only screen and (max-width:720px) {
+
+    [data-waline] {
+        font-size: 14px;
+    }
 }
 
 
