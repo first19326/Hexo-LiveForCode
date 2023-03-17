@@ -1,0 +1,80 @@
+<head>
+    <style type="text/css">
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            text-decoration: none;
+        }
+        .content {
+            margin: 50px auto;
+            width: 666px;
+            max-width: 100%;
+            border: 1px solid #EEE;
+            border-radius: 10px 10px 10px 10px;
+            background: #FFFFFF repeating-linear-gradient(-45deg, #FFF, #FFF 1.125rem, transparent 1.125rem, transparent 2.25rem);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+            color: #555555;
+            font-size: 14px;
+            font-family: 'Century Gothic', 'Trebuchet MS', 'Hiragino Sans GB', 微软雅黑, 'Microsoft Yahei', Tahoma, Helvetica, Arial, 'SimSun', sans-serif;
+        }
+        .content .title {
+            width: 100%;
+            background: #49BDAD;
+            background-image: -moz-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));
+            background-image: -webkit-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));
+            border-radius: 10px 10px 0 0;
+            color: #FFFFFF;
+        }
+        .content .title p {
+            margin: 0;
+            padding: 23px calc(5%);
+            background-color: hsla(0, 0%, 100%, .4);
+            border-radius: 10px 10px 0 0;
+            font-size: 15px;
+            word-break: break-all;
+        }
+        .content .title p a {
+            color: #FFFFFF;
+        }
+        .content .comment {
+            margin: 40px auto;
+            width: 90%;
+        }
+        .content .comment .comment-self {
+            margin: 20px 0px;
+            padding: 15px;
+            background: #FAFAFA repeating-linear-gradient(-45deg, #FFF, #FFF 1.125rem, transparent 1.125rem, transparent 2.25rem);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            color: #555555;
+            font-size: 14px;
+        }
+        .content .comment .comment-button a {
+            color: #12ADDB;
+        }
+        .content .comment .line {
+            border-bottom: 1px solid #EEEEEE;
+        }
+        .content .comment .notice {
+            font-size: 12px;
+            color: #B7ADAD;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title">
+            <p>您的 <a href="{{site.url}}" target="_blank">{{site.name}}</a> 上有新的留言啦！</p>
+        </div>
+        <div class="comment">
+            <p>
+                <strong>{{self.nick}}</strong> 给您的留言如下：
+            </p>
+            <div class="comment-self">{{self.comment | safe}}</div>
+            <p class="comment-button">您可以点击<a href="{{site.postUrl}}" target="_blank">查看留言的完整內容</a>。</p>
+            <div class="line"></div>
+            <p class="notice">本邮件为系统自动发送，请勿直接回复邮件。</p>
+        </div>
+    </div>
+</body>
