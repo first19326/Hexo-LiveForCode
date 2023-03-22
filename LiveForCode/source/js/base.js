@@ -803,7 +803,7 @@ function Base() {
         function loadCodeStyle() {
             if (codeBlock.length > 0) {             
                 codeBlock.each(function (i, block) {
-                    let lineNumWidth = $(block).find('.gutter').outerWidth();
+                    let lineNumWidth = $(block).find('.gutter').outerWidth() + 1;
                     $(block).find('.code').css('width', 'calc(100% - ' + ( lineNumWidth ? lineNumWidth : 0 ) + 'px)');
                 });
             }
