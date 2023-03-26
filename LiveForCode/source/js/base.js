@@ -814,7 +814,6 @@ function Base() {
         function setCopyBtn() {
             require(['Clipboard'], function (Clipboard) {
                 pre.each(function (i) {
-                    window.Clipboard = Clipboard;
                     let object = $(this), id = tools.randomString(8);
                     object.wrap('<code-box id="' + id + '" style="position: relative; display: block;"></code-box>');
                     object.attr('code-id', id);
@@ -844,7 +843,11 @@ function Base() {
                     }
                 });
 
-                new Clipboard('.clipboard');
+                let clipboard = new Clipboard('.clipboard');
+                clipboard.on('success', function (e) {
+                    // 清除选中样式
+                    e.clearSelection();
+                });
             });
         }
     };
