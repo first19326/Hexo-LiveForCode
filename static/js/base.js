@@ -97,6 +97,8 @@ function Base() {
      * Loading后初始化
      */
     this.loadingAfterInit = function () {
+        // 触发一次滚动事件, 设置菜单按钮样式
+        script.scrollMonitor();
 
         // 设置右下角菜单事件
         timers.setWrapRightEventTimer = window.setInterval( script.setWrapRightEvent, 1000 );
@@ -567,7 +569,6 @@ function Base() {
         });
 
         script.setHitokoto();
-        script.scrollMonitor();
 
         if (window.config.HomeHeaderAnimationRendered) {
             require(['CircleMagic'], function() {
