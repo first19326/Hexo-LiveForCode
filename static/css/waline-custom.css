@@ -248,6 +248,10 @@
         color:#666666;
     }
 
+    :root:not([color-scheme]) .wl-header-item .wl-input::first-line {
+        color: #888888;
+    }
+
     :root:not([color-scheme]) .wl-preview h4 {
         color: #999999;
     }
@@ -282,6 +286,10 @@
 
 [color-scheme=dark] .wl-editor:-ms-input-placeholder {
     color:#666666;
+}
+
+:root:not([color-scheme]) .wl-header-item .wl-input::first-line {
+    color: #888888;
 }
 
 [color-scheme=dark] .wl-preview h4 {
