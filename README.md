@@ -24,6 +24,17 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2023/03/29
+
+1. `F` 修复了深色模式下 Safari 浏览器中 Waline 输入框字体颜色不正确的问题。
+
+<br/>
+
+1. `A` 新增了深色模式下 Waline 关于 `<textarea>` 标签 placeholder 字体颜色的样式。
+2. `U` 修改了 base.css 中的样式。
+3. `U` 修改了 fancybox.css 中的样式。
+4. `U` 修改了 clipboard.css 中的样式，修复 Safari 浏览器下复制代码按钮点击后出现蓝色外边框的问题。
+
 - 2023/03/27
 
 1. `F` 修复了菜单按钮消失的问题。
