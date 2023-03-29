@@ -232,6 +232,22 @@
         --avatar-border-color: #555555;
     }
 
+    :root:not([color-scheme]) .wl-editor::-webkit-input-placeholder {
+        color:#666666;
+    }
+
+    :root:not([color-scheme]) .wl-editor::-moz-placeholder {
+        color:#666666;
+    }
+
+    :root:not([color-scheme]) .wl-editor:-moz-placeholder {
+        color:#666666;
+    }
+
+    :root:not([color-scheme]) .wl-editor:-ms-input-placeholder {
+        color:#666666;
+    }
+
     :root:not([color-scheme]) .wl-preview h4 {
         color: #999999;
     }
@@ -250,6 +266,22 @@
     --comment-border-color: #444444;
     --input-border-color: #555555;
     --avatar-border-color: #555555;
+}
+
+[color-scheme=dark] .wl-editor::-webkit-input-placeholder {
+    color:#666666;
+}
+
+[color-scheme=dark] .wl-editor::-moz-placeholder {
+    color:#666666;
+}
+
+[color-scheme=dark] .wl-editor:-moz-placeholder {
+    color:#666666;
+}
+
+[color-scheme=dark] .wl-editor:-ms-input-placeholder {
+    color:#666666;
 }
 
 [color-scheme=dark] .wl-preview h4 {
