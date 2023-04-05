@@ -77,6 +77,7 @@
     background-position: right bottom !important;
     background-color: rgba(255, 255, 255, 0) !important;
     resize: vertical !important;
+    color: #888888;
     font-size: .875em;
     font-family: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     -webkit-transition: all .25s ease;
@@ -92,7 +93,7 @@
 }
 
 .wl-header-item .wl-input::first-line {
-    color: var(--waline-color);
+    color: #888888;
 }
 
 .wl-input:-webkit-autofill,
@@ -214,6 +215,10 @@
     :root {
         --waline-font-size: 1.4rem;
     }
+
+    .wl-editor {
+        background-image: none !important;
+    }
 }
 
 
@@ -246,10 +251,6 @@
 
     :root:not([color-scheme]) .wl-editor:-ms-input-placeholder {
         color:#666666;
-    }
-
-    :root:not([color-scheme]) .wl-header-item .wl-input::first-line {
-        color: #888888;
     }
 
     :root:not([color-scheme]) .wl-preview h4 {
@@ -286,10 +287,6 @@
 
 [color-scheme=dark] .wl-editor:-ms-input-placeholder {
     color:#666666;
-}
-
-:root:not([color-scheme]) .wl-header-item .wl-input::first-line {
-    color: #888888;
 }
 
 [color-scheme=dark] .wl-preview h4 {
