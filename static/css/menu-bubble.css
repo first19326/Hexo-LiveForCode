@@ -36,6 +36,7 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menu-button-open::before {
@@ -65,7 +66,8 @@
     color: transparent;
     text-indent: 16px;
     border: none;
-    overflow: hidden;  
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menu-button-close::before,
