@@ -53,6 +53,13 @@
 	display: none !important
 }
 
+@media only screen and (max-width:720px) {
+
+    .veditor {
+        background-image: none !important;
+    }
+}
+
 
 /* Dark Mode CSS */
 
