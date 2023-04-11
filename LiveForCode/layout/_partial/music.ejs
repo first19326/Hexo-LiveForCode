@@ -1,0 +1,34 @@
+<% if (theme.Music.type == 'APlayer') { %>
+    <div class="aplayer"></div>
+    <link type="text/css" rel="stylesheet" href="<%- theme.Style.aplayer %>">
+    <script type="text/javascript" src="<%- theme.Script.aplayer %>"></script>
+    <script type="text/javascript">
+        const aplayer = new APlayer({
+            container: document.querySelector("<%- theme.APlayer.container %>"),
+            fixed: <%- theme.APlayer.fixed %>,
+            autoplay: <%- theme.APlayer.autoplay %>,
+            loop: "<%- theme.APlayer.loop %>",
+            order: "<%- theme.APlayer.order %>",
+            preload: "<%- theme.APlayer.preload %>",
+            volume: <%- theme.APlayer.volume %>,
+            mutex: <%- theme.APlayer.mutex %>,
+            lrcType: <%- theme.APlayer.lrcType %>,
+            audio: [
+                <% theme.APlayer.audio.forEach(function(audio) { %>
+                    {
+                        name: "<%- audio.name %>",
+                        artist: "<%- audio.artist %>",
+                        cover: "<%- audio.cover %>",
+                        url: "<%- audio.url %>",
+                        lrc: "<%- audio.lrc %>"
+                    },
+                <% }) %>
+            ]
+        });
+    </script>
+<% } else { %>
+    <link type="text/css" rel="stylesheet" href="<%- theme.Style.aplayer %>">
+    <script type="text/javascript" src="<%- theme.Script.aplayer %>"></script>
+    <script type="text/javascript" src="<%- theme.Script.meting %>"></script>
+    <meting-js id="<%- theme.Meting.id %>" lrcshow="<%- theme.Meting.lrcshow %>" server="<%- theme.Meting.server %>" type="<%- theme.Meting.type %>" fixed="<%- theme.Meting.fixed %>" autoplay="<%- theme.Meting.autoplay %>" loop="<%- theme.Meting.loop %>" order="<%- theme.Meting.order %>" preload="<%- theme.Meting.preload %>" volume="<%- theme.Meting.volume %>" mutex="<%- theme.Meting.mutex %>"></meting-js>
+<% } %>
