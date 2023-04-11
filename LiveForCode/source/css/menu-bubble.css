@@ -42,7 +42,7 @@
 .menu-button-open::before {
     position: absolute;
     top: 13px;
-    left: 13px;
+    left: 14px;
     width: 11px;
     height: 9px;
     content: '';
