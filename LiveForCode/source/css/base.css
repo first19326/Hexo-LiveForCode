@@ -15,6 +15,9 @@
 	--selection-background-color: rgba(33, 150, 243, .2);
     --cover-background-color: #F0F0F0;
     --container-background-color: rgba(255, 255, 255, 0.9);
+	--wrap-right-button-background-color: #EEEEEE;
+	--wrap-right-button-hover-background-color: #DDDDDD;
+	--wrap-right-button-color: #444444;
     --footer-color: #888
 }
 
@@ -837,79 +840,97 @@ mjx-container {
 
 .wrap-right {
 	position: fixed;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	flex-direction: column;
-	bottom: -2px;
-	right: 5px;
-	width: 28px;
-	z-index: 900
-}
-
-.wrap-right .setting {
-	display: none;
-	width: 28px;
-	text-align: center
-}
-
-.iconbox {
-	position: relative;
-	display: block;
-	width: 28px;
-	height: 28px;
-	padding: 4px 0;
-	line-height: 28px;
-	text-align: center;
-	cursor: pointer;
-	opacity: 0.5;
-	filter: Alpha(opacity = 50);
+	opacity: 0.3;
+	right: 10px;
+	bottom: 40px;
+	z-index: 900;
 	-webkit-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out
 }
 
-.iconbox:hover {
+.wrap-right:hover {
+	opacity: 0.6
+}
+
+.wrap-right-hide {
+	height: 0;
+	opacity: 0;
+	transition: transform .4s;
+	transform: translate(45px, 0)
+}
+
+.wrap-right-hide.status {
+	height: auto;
+	opacity: 1
+}
+
+.wrap-right-hide.show {
+	height: auto;
 	opacity: 1;
-	filter: Alpha(opacity = 100)
+	transform: translate(0, 0)
 }
 
-.iconbox span {
+.wrap-right .wrap-right-button {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin-bottom: 5px;
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	outline: 0;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--wrap-right-button-background-color);
+	color: var(--wrap-right-button-color);
+	text-align: center;
+	font-size: 16px;
+	line-height: 36px;
+	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.wrap-right .wrap-right-button:hover {
+	background-color: var(--wrap-right-button-hover-background-color)
+}
+
+.wrap-right-button .iconbox {
 	display: inline-block;
-	color: #555;
-	font-weight: bold
+	height: 36px;
+	width: 36px
 }
 
-.iconbox .iconfont,
-.iconbox.set div {
-	transform: scale(1.25)
-}
-
-.iconbox .icontext {
-	position: absolute;
+.wrap-right-button .icontext {
 	display: none;
-	right: 35px;
+	position: absolute;
+	right: 45px;
 	width: 60px;
 	font-size: 14px;
 	text-align: right
 }
 
-.iconbox:hover .icontext {
+.wrap-right-button:hover .icontext {
 	display: inline-block
 }
 
-.light.show,
-.dark.show {
+.wrap-right-button.mode .light.show,
+.wrap-right-button.mode .dark.show {
 	-webkit-animation: translateXR 0.3s linear forwards;
 	animation: translateXR 0.3s linear forwards
 }
 
-.light.hide,
-.dark.hide {
+.wrap-right-button.mode .light.hide,
+.wrap-right-button.mode .dark.hide {
 	-webkit-animation: translateXL 0.3s linear forwards;
 	animation: translateXL 0.3s linear forwards
 }
 
-.set .iconfont {
+.wrap-right-button.bottom .iconbox {
+	transform: rotate(180deg)
+}
+
+.wrap-right-button.set .iconbox {
 	transform-origin: 50% 50%;
 	-webkit-animation: rotate 2s linear infinite;
 	animation: rotate 2s linear infinite
@@ -980,14 +1001,12 @@ mjx-container {
 		max-width: 100vw
     }
     
-	#animationSwitch,
 	#homeHeaderCanvas,
-	#articleHeaderCanvas,
 	.scroll-down {
 		display: none !important
     }
     
-    .iconbox .icontext {
+    .wrap-right-button .icontext {
         font-size: 13px
     }
 }
@@ -1003,12 +1022,9 @@ mjx-container {
 		width: auto
 	}
 
+	#animationSwitch,
     #backCanvas {
 		display: none !important
-    }
-
-	.iconbox span {
-		font-weight: normal
     }
 }
 
@@ -1090,13 +1106,8 @@ mjx-container {
 		padding: 10px;
 		font-size: 1.4rem
 	}
-
-	.iconbox .iconfont,
-	.iconbox.set div {
-		transform: scale(1)
-	}
     
-    .iconbox .icontext {
+    .wrap-right-button .icontext {
         font-size: 12px
     }
 }
@@ -1105,6 +1116,12 @@ mjx-container {
 /* Dark Mode CSS */
 
 @media (prefers-color-scheme: dark) {
+
+	:root:not([color-scheme]) {
+		--wrap-right-button-background-color: #555555;
+		--wrap-right-button-hover-background-color: #666666;
+		--wrap-right-button-color: #CCCCCC
+	}
 
 	:root:not([color-scheme]) body {
 		background-color: #333333
@@ -1219,14 +1236,6 @@ mjx-container {
 		border-bottom: 1px dashed #444444
 	}
 	
-	:root:not([color-scheme]) .iconbox {
-		opacity: 1
-	}
-	
-	:root:not([color-scheme]) .iconbox span {
-		color: #999999
-	}
-	
 	@media only screen and (max-width:720px) {
 			
 		:root:not([color-scheme]) #container {
@@ -1234,6 +1243,12 @@ mjx-container {
 			box-shadow: unset
 		}
 	}
+}
+
+:root[color-scheme=dark] {
+	--wrap-right-button-background-color: #555555;
+	--wrap-right-button-hover-background-color: #666666;
+	--wrap-right-button-color: #CCCCCC
 }
 
 [color-scheme=dark] body {
@@ -1347,14 +1362,6 @@ mjx-container {
 
 [color-scheme=dark] .comments-title::after {
 	border-bottom: 1px dashed #444444
-}
-
-[color-scheme=dark] .iconbox {
-	opacity: 1
-}
-
-[color-scheme=dark] .iconbox span {
-	color: #999999
 }
 
 @media only screen and (max-width:720px) {
