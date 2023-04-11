@@ -39,6 +39,15 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2023/04/12
+
+1. `A` 新增了右下角菜单按钮并绑定对应事件。
+2. `U` 修改了 iconfont 内容。
+3. `U` 修改了 menu-bubble.css 样式。
+4. `U` 修改了 tools 代码结构，拆分出了 music 以及 wrap-right 模块。
+5. `U` 修改了 waline 代码样式。
+6. `U` 修改了 wrap-right 代码结构、样式以及动画效果。
+
 - 2023/04/06
 
 1. `F` 修复了 Waline 样式错误的地方。
@@ -46,7 +55,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 <br/>
 
 1. `U` 修改了评论模块背景图片，并且重新命名（相关样式文件进行了同步修改）。
-2. `U` 修改了 menu.css 样式，关闭了在 Safari 浏览器中 button 点击的默认样式。
+2. `U` 修改了 menu-bubble.css 样式，关闭了在 Safari 浏览器中 button 点击的默认样式。
 3. `U` 修改了 valine.css 样式，在移动端不显示评论模块的背景图片（`<textarea>` 标签在移动端不可以手动调整高度）。
 4. `U` 修改了 waline-custom.css 样式，在移动端不显示评论模块的背景图片；修改了输入框以及文本框字体颜色（CSS 中的伪类不可以动态修改样式，即使是使用变量）。
 
