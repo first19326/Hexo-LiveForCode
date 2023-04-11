@@ -429,8 +429,15 @@ function Base() {
             });
             
             // 设置
-            $('.wrap-right .set').on('click', function() {
-                $('.setting').slideToggle(350);
+            $('.wrap-right .set').on('click', function(e) {
+                $('.wrap-right-hide').hasClass('show') ? $('.wrap-right-hide').removeClass('show') : $('.wrap-right-hide').addClass('show');
+                if ($(this).hasClass('show')) {
+                    $('.wrap-right-hide').addClass('status');
+                    setTimeout(() => {
+                        $('.wrap-right-hide').removeClass('status');
+                    }, 300);
+                }
+                $(this).hasClass('show') ? $(this).removeClass('show') : $(this).addClass('show');
             });
 
             // 返回顶部
