@@ -21,6 +21,8 @@
 
 	function initEvents() {
 		openbtn.addEventListener( 'click', toggleMenu );
+		// wrap-right menu button
+		document.querySelector( '.menu-button' ).addEventListener( 'click', toggleMenu );
 		if( closebtn ) {
 			closebtn.addEventListener( 'click', toggleMenu );
 		}
