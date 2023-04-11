@@ -8,6 +8,8 @@
     --waline-active-color: #1968E6;
     --waline-color: #555555;
     --waline-dark-grey: #999999;
+    --waline-code-bgcolor: #F7F7F7;
+    --waline-bgcolor-light: #E6ECF1;
 
     /* Custom Style */
     --comment-border-color: #F0F0F0;
@@ -231,6 +233,8 @@
         --waline-border-color: #444444;
         --waline-bgcolor: #333333;
         --borders: #555555;
+        --waline-code-bgcolor: #444444;
+        --waline-bgcolor-light: #555555;
 
         --comment-border-color: #444444;
         --input-border-color: #555555;
@@ -267,6 +271,8 @@
     --waline-border-color: #444444;
     --waline-bgcolor: #333333;
     --borders: #555555;
+    --waline-code-bgcolor: #444444;
+    --waline-bgcolor-light: #555555;
 
     --comment-border-color: #444444;
     --input-border-color: #555555;
