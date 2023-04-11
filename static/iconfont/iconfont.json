@@ -6,6 +6,13 @@
   "description": "Hexo 主题 LiveForCode 图标",
   "glyphs": [
     {
+      "icon_id": "1304947",
+      "name": "菜单",
+      "font_class": "menu",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
       "icon_id": "30641210",
       "name": "swimming",
       "font_class": "swimming",
