@@ -39,36 +39,43 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2023/04/19
+
+1. `A` 新增了深色模式下的 **Github SVG** 文件。
+2. `U` 修改了 `code.css` 样式。
+3. `U` 修改了 `waline-custom.css` 样式，并修复了 **Waline** 在不同模式下代码高亮样式不一致的问题。
+4. `U` 修改了 `donate.css` 样式，添加深色模式下 **Donate** 样式。
+
 - 2023/04/12
 
 1. `A` 新增了右下角菜单按钮并绑定对应事件。
-2. `U` 修改了 iconfont 内容。
-3. `U` 修改了 menu-bubble.css 样式。
-4. `U` 修改了 tools 代码结构，拆分出了 music 以及 wrap-right 模块。
-5. `U` 修改了 waline 代码样式。
-6. `U` 修改了 wrap-right 代码结构、样式以及动画效果。
+2. `U` 修改了 **iconfont** 内容。
+3. `U` 修改了 `menu-bubble.css` 样式。
+4. `U` 修改了 **Tools** 代码结构，拆分出了 **Music** 以及 **Wrap-Right** 模块。
+5. `U` 修改了 **Waline** 代码样式。
+6. `U` 修改了 **Wrap-Right** 代码结构、样式以及动画效果。
 
 - 2023/04/06
 
-1. `F` 修复了 Waline 样式错误的地方。
+1. `F` 修复了 **Waline** 样式错误的地方。
 
 <br/>
 
 1. `U` 修改了评论模块背景图片，并且重新命名（相关样式文件进行了同步修改）。
-2. `U` 修改了 menu-bubble.css 样式，关闭了在 Safari 浏览器中 button 点击的默认样式。
-3. `U` 修改了 valine.css 样式，在移动端不显示评论模块的背景图片（`<textarea>` 标签在移动端不可以手动调整高度）。
-4. `U` 修改了 waline-custom.css 样式，在移动端不显示评论模块的背景图片；修改了输入框以及文本框字体颜色（CSS 中的伪类不可以动态修改样式，即使是使用变量）。
+2. `U` 修改了 `menu-bubble.css` 样式，关闭了在 **Safari** 浏览器中 `button` 点击的默认样式。
+3. `U` 修改了 `valine.css` 样式，在移动端不显示评论模块的背景图片（`<textarea>` 标签在移动端不可以手动调整高度）。
+4. `U` 修改了 `waline-custom.css` 样式，在移动端不显示评论模块的背景图片；修改了输入框以及文本框字体颜色（CSS 中的伪类不可以动态修改样式，即使是使用变量）。
 
 - 2023/03/29
 
-1. `F` 修复了深色模式下 Safari 浏览器中 Waline 输入框字体颜色不正确的问题。
+1. `F` 修复了深色模式下 **Safari** 浏览器中 **Waline** 输入框字体颜色不正确的问题。
 
 <br/>
 
-1. `A` 新增了深色模式下 Waline 关于 `<textarea>` 标签 `placeholder` 字体颜色的样式。
-2. `U` 修改了 base.css 中的样式。
-3. `U` 修改了 fancybox.css 中的样式。
-4. `U` 修改了 clipboard.css 中的样式，修复 Safari 浏览器下复制代码按钮点击后出现蓝色外边框的问题。
+1. `A` 新增了深色模式下 **Waline** 关于 `<textarea>` 标签 `placeholder` 字体颜色的样式。
+2. `U` 修改了 `base.css` 中的样式。
+3. `U` 修改了 `fancybox.css` 中的样式。
+4. `U` 修改了 `clipboard.css` 中的样式，修复 **Safari** 浏览器下复制代码按钮点击后出现蓝色外边框的问题。
 
 - 2023/03/27
 
@@ -86,7 +93,7 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 <br/>
 
 1. `A` 新增了邮件模板相关内容。
-2. `U` 修改了 Waline 样式，并对 720px 一下屏幕尺寸进行适配。
+2. `U` 修改了 **Waline** 样式，并对 `720px` 以下屏幕尺寸进行适配。
 
 - 2023/03/12
 
