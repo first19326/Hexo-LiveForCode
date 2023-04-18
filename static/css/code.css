@@ -198,11 +198,6 @@ pre .javascript .function {
         line-height: 1.6
     }
 
-    :root:not([color-scheme]) pre, 
-    :root:not([color-scheme]) code {
-        font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
-    }
-
     :root:not([color-scheme]) .highlight *::selection {
         background: #515151
     }
@@ -391,11 +386,6 @@ pre .javascript .function {
     margin: 0 auto 20px;
     color: #CCC;
     line-height: 1.6
-}
-
-[color-scheme=dark] pre, 
-[color-scheme=dark] code {
-    font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei"
 }
 
 [color-scheme=dark] .highlight *::selection {
