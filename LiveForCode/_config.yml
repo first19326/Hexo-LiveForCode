@@ -24,7 +24,7 @@ WebsiteTitleFocus: "(*´∇｀*) 欢迎回来!"
 # 当前页获取焦点, 页面title变化, 延时时间, 单位毫秒
 WebsiteTitleFocusTimeOut: 1000
 # 网站图标
-WebsiteFavicon: "/image/website/logo.png"
+WebsiteFavicon: "/image/website/logo/logo.png"
 
 
 # ---- 进度条配置 ----
