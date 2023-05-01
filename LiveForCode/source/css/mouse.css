@@ -6,7 +6,7 @@
 .cursor-f {
     top: 0;
     left: 0;
-    background-image: url("../image/website/mouse.svg");
+    background-image: url("../image/website/mouse/mouse.svg");
     background-size: cover;
     opacity: 0.7;
 }
@@ -30,7 +30,7 @@
     }
 
     :root:not([color-scheme]) .cursor-f {
-        background-image: url("../image/website/mouse-dark.svg");
+        background-image: url("../image/website/mouse/mouse-dark.svg");
     }
 }
 
@@ -40,5 +40,5 @@
 }
 
 [color-scheme=dark] .cursor-f {
-    background-image: url("../image/website/mouse-dark.svg");
+    background-image: url("../image/website/mouse/mouse-dark.svg");
 }
