@@ -9,7 +9,7 @@
         WebsiteTitleBlurTimeOut: 500,
         WebsiteTitleFocus: '(*´∇｀*) 欢迎回来!',
         WebsiteTitleFocusTimeOut: 1000,
-        WebsiteFavicon: '/image/website/logo.png',
+        WebsiteFavicon: '/image/website/logo/logo.png',
         ProgressBar: {
             id: 'topProgressBar',
             color: '#77B6FF',
@@ -109,9 +109,9 @@
             wechat : '/image/donate/wechat.png'
         },
         Search: {
-            applicationID: 'U8CZAW9G9Z',
-            apiKey: 'b479add179b24524aa5f8773e9694c62',
-            indexName: 'Notes',
+            applicationID: '',
+            apiKey: '',
+            indexName: '',
             hits: {
                 page: 10
             },
@@ -127,8 +127,8 @@
         },
         Valine: {
             el: '.comments-content',
-            appId: 'srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz',
-            appKey: '8uVSP1q6UlALVC5igYfIfv2h',
+            appId: '',
+            appKey: '',
             serverURLs: '',
             placeholder: '你是我一生只会遇见一次的惊喜...',
             notify: false,
