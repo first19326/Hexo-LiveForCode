@@ -9,7 +9,10 @@
         WebsiteTitleBlurTimeOut: 500,
         WebsiteTitleFocus: '(*´∇｀*) 欢迎回来!',
         WebsiteTitleFocusTimeOut: 1000,
-        WebsiteFavicon: '/image/website/logo/logo.png',
+        WebsiteFavicon: {
+            light: '/image/website/logo/logo.png',
+            dark: '/image/website/logo/logo-dark.png'
+        },
         ProgressBar: {
             id: 'topProgressBar',
             color: '#77B6FF',
