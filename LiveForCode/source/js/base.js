@@ -17,6 +17,7 @@ function Base() {
                     // 触发一次动画效果
                     script.toggleModeAnimation('light');
                 }
+                script.setWebsiteFavicon(window.config.WebsiteFavicon.light);
             }
         },
         dark: (mediaQueryList) => {
@@ -26,6 +27,7 @@ function Base() {
                     // 触发一次动画效果
                     script.toggleModeAnimation('dark');
                 }
+                script.setWebsiteFavicon(window.config.WebsiteFavicon.dark);
             }
         }
     }
@@ -112,17 +114,8 @@ function Base() {
         // 设置鼠标动画
         script.setMouseAnimation();
 
-        // 更换网站图标
-        let favicon = $('link[rel="shortcut icon"]');
-        if (favicon.length) {
-            favicon.attr('href', window.config.WebsiteFavicon);
-        } else {
-            let link  = document.createElement('link');
-            link.type = 'image/x-icon';
-            link.rel  = 'shortcut icon';
-            link.href = window.config.WebsiteFavicon;
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
+        // 初始化网站图标
+        script.initWebsiteFavicon();
 
         // 滚动监听
         $(window).scroll( function() { script.scrollMonitor(); });
@@ -247,6 +240,22 @@ function Base() {
     }
 
     /**
+     * 设置网站图标
+     */
+    this.setWebsiteFavicon = function(websiteFavicon) {
+        let favicon = $('link[rel="shortcut icon"]');
+        if (favicon.length) {
+            favicon.attr('href', websiteFavicon);
+        } else {
+            let link  = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel  = 'shortcut icon';
+            link.href = websiteFavicon;
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    }
+
+    /**
      * 从 Media 中获取浅色/深色模式
      */
     this.getModeFromMedia =  function() {
@@ -297,6 +306,18 @@ function Base() {
     this.resetModeSetting = function() {
         rootElement.removeAttribute(modeAttributeName);
         localStorage.removeItem(modeLocalStorageKey);
+    }
+
+    /**
+     * 初始化网站图标 （根据从 Media 中获取浅色/深色模式值）
+     */
+    this.initWebsiteFavicon = function() {
+        let mediaMode = script.getModeFromMedia();
+        let websiteFavicon = window.config.WebsiteFavicon.light;
+        if (mediaMode == 'dark') {
+            websiteFavicon = window.config.WebsiteFavicon.dark;
+        }
+        script.setWebsiteFavicon(websiteFavicon);
     }
 
 //=================== 逻辑处理：页面公共处理
@@ -462,7 +483,7 @@ function Base() {
     }
 
     /**
-     * 切换浅色/深色模式
+     * 切换浅色/深色模式动画
      */
     this.toggleModeAnimation = function(mode) {
         let show = $('.light'), hide = $('.dark');
