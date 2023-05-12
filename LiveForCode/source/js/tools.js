@@ -1,6 +1,6 @@
 function websiteTools() {
-    const tools = this;
-    const colors      = {
+    const tools  = this;
+    const colors = {
         'gray': 'color: #1B2B34; font-size: 12px; line-height: 18px;',
         'red': 'color: #EC5F67; font-size: 12px; line-height: 18px;',
         'orange': 'color: #F99157; font-size: 12px; line-height: 18px;',
@@ -25,7 +25,7 @@ function websiteTools() {
      * 控制台输出图片
      */
     this.consoleImg = function(url) {
-        console.log('%c', 'padding:50px 300px; line-height:120px; background:url(' + url + ') no-repeat;');
+        console.log('%c', 'padding: 50px 300px; line-height: 120px; background: url(' + url + ') no-repeat;');
     };
 
     /**
@@ -39,18 +39,18 @@ function websiteTools() {
                 $.each(list, function (i) {
                     var str = (list[i]).toString();
                     var ind = tools.randomNum(0, colorList.length - 1);
-                    console.log('%c'+str, colorList[ind]);
+                    console.log('%c' + str, colorList[ind]);
                 });
                 break;
             case 'banner':
                 $.each(list, function (i) {
-                    var fl = list[i];
-                    console.log('\n' + ' %c '+(fl[0])+' %c '+(fl[1])+' ' + '\n', 'color: #FADFA3; background: #030307; padding:5px 0;', 'background: #FADFA3; padding:5px 0;');
+                    var arr = list[i];
+                    console.log('\n' + ' %c ' + (arr[0]) + ' %c ' + (arr[1]) + ' ' + '\n', 'color: #FADFA3; background: #030307; padding: 5px 0;', 'background: #FADFA3; padding: 5px 0;');
                 });
                 break;
 
             default:
-                console.log('%c'+list.join('\n'), colors.gray);
+                console.log('%c' + list.join('\n'), colors.gray);
                 break;
         }
     };
