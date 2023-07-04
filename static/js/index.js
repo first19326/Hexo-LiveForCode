@@ -182,19 +182,18 @@
             ]
         },
         Meting: {
-            setting: {
-                id: '3778678', 
-                lrcshow: false, 
-                server: 'netease', 
-                type: 'playlist', 
-                fixed: true, 
-                autoplay: false, 
-                loop: 'all', 
-                order: 'random', 
-                preload: 'auto', 
-                volume: 0.67, 
-                mutex: true
-            }
+            api: 'https://api.i-meto.com/meting/api',
+            id: '3778678', 
+            lrcshow: false, 
+            server: 'netease', 
+            type: 'playlist', 
+            fixed: true, 
+            autoplay: false, 
+            loop: 'all', 
+            order: 'random', 
+            preload: 'auto', 
+            volume: 0.67, 
+            mutex: true
         },
         Mouse: {
             enable: false,
