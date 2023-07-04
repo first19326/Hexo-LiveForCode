@@ -183,4 +183,32 @@ function websiteTools() {
             return false;
         }
     }
+
+    /**
+     * 函数防抖
+     */
+    let debounceTimer = null
+    this.debounce = function(fn, delay) {
+        return function() {
+            if (debounceTimer) clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(function() {
+                fn.apply(this, arguments);
+                debounceTimer = null;
+            }, delay);
+        }
+    }
+
+    /**
+     * 函数节流
+     */
+    let throttleTimer = null;
+    this.throttle = function(fn, delay) {
+        return function() {
+            if (throttleTimer) return ;
+            throttleTimer = setTimeout(function() {
+                fn.apply(this, arguments);
+                throttleTimer = null;
+            }, delay);
+        }
+    }
 }
