@@ -14,7 +14,13 @@
                     <img src="<%- theme.UserAvatar %>">
                 </div> 
                 <div class="introduce-info"> 
-                    <div class="introduce-user"><span><%- theme.User %></span></div>
+                    <div class="introduce-user">
+                        <% if (theme.Home.trim() === '') { %>
+                            <a href="javascript:;" target="_self"><span><%- theme.User %></span></a>
+                        <% } else { %>
+                            <a href="<%- theme.Home %>" target="_blank"><span><%- theme.User %></span></a>
+                        <% } %>
+                    </div>
                 </div> 
             </div> 
             <div class="menu-list">

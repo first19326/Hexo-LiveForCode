@@ -12,6 +12,8 @@ User: "Live For Code"
 UserAvatar: "/image/sidebar/avatar.jpg"
 # 创建时间
 WebsiteStartDate: "2020-01-01"
+# 个人主页URL
+Home: "https://worstone.cn"
 
 
 # ---- 网站配置 ----
