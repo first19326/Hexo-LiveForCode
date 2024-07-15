@@ -39,6 +39,10 @@ Hexo - Live For Code 主题介绍以及使用说明：[Hexo主题LiveForCode介�
 
 ## 修改说明
 
+- 2024/07/15
+
+1. `F` 修复了页脚样式不生效的问题
+
 - 2023/07/04
 
 1. `F` 修复了 **README.md** 中 《**Hexo主题LiveForCode介绍**》文章链接错误的问题
