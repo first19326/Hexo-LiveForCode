@@ -4,13 +4,12 @@
     width: 100%;
 	height: 368px;
     z-index: 1;
-    background: url(../footer/image/footer.png) no-repeat 50%;
+    background: url(../image/footer/footer.png) no-repeat 50%;
     pointer-events: none
 }
 
 .footer-v1 {
-    margin: 250px 0 0 0 !important;
-    background: #232323
+    margin: 250px 0 0 0 !important
 }
 
 footer footer-background {
